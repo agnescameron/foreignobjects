@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Migrant';
+    src: url("migrant_offshore_studio_regular.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0000ff;
+  color: #fff;
+  font-family: 'Migrant', 'Inter UI', sans-serif;
+  cursor: url(cursor.png), auto;
+}
+
+h1 {
+  font-size: 15rem;
+  font-weight: normal;
+  /* border: 1px solid; */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 25vh;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+h1:hover {
+  filter: blur(5px) grayscale(5%);
+}
