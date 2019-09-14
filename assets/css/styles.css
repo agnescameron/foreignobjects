@@ -15,24 +15,7 @@ body {
 a {
   color: white;
   text-decoration: none; /* no underline */
-  cursor: url(../img/cursor.png), auto;  
-}
-
-h1 {
-  font-size: 15rem;
-  font-weight: normal;
-  /* border: 1px solid; */
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  top: 20vh;
-  text-transform: uppercase;
-  line-height: 0.8;
-}
-
-h1:hover {
-  filter: blur(5px) grayscale(5%);
+  cursor: url(../img/cursor.png), auto;
 }
 
 
@@ -44,7 +27,34 @@ h1:hover {
   grid-template-rows: 75px 1fr 75px;
   grid-gap: 0em 0em;
   height: 100vh;
+  width: 100vw;
 }
+
+#container-responsive {
+  display: none;
+}
+
+#centralPanel {
+  grid-area: 2 / 2 / 3 / 3;
+  /* border: 1px solid; */
+}
+
+h1 {
+  font-size: 15rem;
+  font-weight: normal;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  text-transform: uppercase;
+  line-height: 0.8;
+  /* border: 1px solid; */
+}
+
+h1:hover {
+  filter: blur(5px) grayscale(5%);
+}
+
 
 /*BORDERS*/
 
@@ -82,7 +92,6 @@ h1:hover {
   transform-origin: 50% 50%;
 }
 
-
 #westBorder {
   grid-area: 2 / 1 / 3 / 2;
 }
@@ -111,8 +120,91 @@ h1:hover {
   position: relative;
 }
 
-#centralPanel {
-  grid-area: 2 / 2 / 3 / 3;
+
+/*
+  RESPONSIVENESS
+*/
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #container {
+    display: none;
+  }
+
+  #container-responsive {
+    display: block;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  #eastBorder, #northBorder, #southBorder {
+    width: 70vw;
+    padding: 2vh 0;
+    font-size: 4rem;
+  }
+
 }
 
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
 
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  /* h1 {
+    font-size: 10rem;
+  }
+  body {
+    background-color: magenta;
+  } */
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  /* h1 {
+    font-size: 5rem;
+  }
+
+  body {
+    background-color: red;
+  } */
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  #container {
+    display: none;
+  }
+
+  #container-responsive {
+    display: block;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  #eastBorder, #northBorder, #southBorder {
+    width: 70vw;
+    padding: 2vh 0;
+    font-size: 2rem;
+  }
+}
