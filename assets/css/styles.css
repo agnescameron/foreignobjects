@@ -120,6 +120,14 @@ h1:hover {
   position: relative;
 }
 
+.centerText {
+  font-size: 6em;
+  font-style: bold;
+}
+
+#textOne, #textTwo, #textThree, #textFour, #textFive {
+  text-decoration: underline;
+}
 
 /*
   RESPONSIVENESS
