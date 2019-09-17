@@ -20,7 +20,7 @@ function textItem() {
       .html(blurb[key][n])
       .appendTo($('.centerText'))
       .click(function() {
-        n = (n + 1) % 3;
+        n = (n + 1) % blurb[key].length;
         $(this).html(blurb[key][n])
         console.log("n is " + n);
       })
