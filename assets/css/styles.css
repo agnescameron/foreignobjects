@@ -36,7 +36,7 @@ a {
 
 #centralPanel {
   grid-area: 2 / 2 / 3 / 3;
-  /* border: 1px solid; */
+   border: 1px solid;
 }
 
 h1 {
@@ -125,8 +125,8 @@ h1:hover {
   font-style: bold;
 }
 
-#textOne, #textTwo, #textThree, #textFour, #textFive, .textReplace {
-  text-decoration: underline;
+.textSpan {
+  word-break: break-all;
 }
 
 /*
@@ -152,7 +152,7 @@ h1:hover {
     font-size: 8rem;
   }
 
-  #eastBorder, #northBorder, #southBorder {
+  #eastBorder, #northBorder, #southBorder{
     width: 70vw;
     padding: 2vh 0;
     font-size: 4rem;

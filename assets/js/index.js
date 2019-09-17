@@ -20,7 +20,9 @@ function textItem() {
     
       // prints the nth value of the nth value of blurb
       var n = 0;
-      $('<span/>')
+      $('<span/>', {
+        class: 'textSpan',
+      })
       .html(blurb[obj][key][n])
       .appendTo($('.centerText'))
       .click(function() {

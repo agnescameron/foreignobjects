@@ -64,32 +64,34 @@ var blurb = {
 	  	],
 	},
 
-// "secondPara" : {
+	"secondPara" : {
 
-// 	"array1" : ["placeholder",
-// 	"placeholder",
-// 	"placeholder",
-// 	"placeholder",
-// 	"placeholder",
-// 	"placeholder",
-// 	],
+		"array1" : [
+			"placeholder",
+			"placeholder",
+			"placeholder",
+			"placeholder",
+			"placeholder",
+			"placeholder",
+		],
 
+		"array2" : [
+			"placeholder2",
+			"placeholder2",
+			"placeholder2",
+			"placeholder2",
+			"placeholder2",
+			"placeholder2",
+		],
 
-// 	"array2" : ["placeholder2",
-// 	"placeholder2",
-// 	"placeholder2",
-// 	"placeholder2",
-// 	"placeholder2",
-// 	"placeholder2",
-// 	],
+		"array3" : [
+			"placeholder3",
+			"placeholder3",
+			"placeholder3",
+			"placeholder3",
+			"placeholder3",
+			"placeholder3",
+		],
 
-// 		"array3" : ["placeholder3",
-// 	"placeholder3",
-// 	"placeholder3",
-// 	"placeholder3",
-// 	"placeholder3",
-// 	"placeholder3",
-// 	],
-
-// 	}
+	}
 }
