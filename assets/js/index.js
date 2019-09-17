@@ -22,12 +22,12 @@ function textItem() {
       var n = 0;
       $('<span/>')
       .html(blurb[obj][key][n])
-      .appendTo($('#firstPara'))
+      .appendTo($('.centerText'))
       .click(function() {
         n = (n + 1) % (blurb.firstPara[key].length);
         $(this).html(blurb.firstPara[key][n]);
         console.log("n is " + n)
-      })
+        })
       // underline on mouseover
       .mouseover(function() {
         $(this).css("text-decoration", "underline")
@@ -36,7 +36,7 @@ function textItem() {
         $(this).css("text-decoration", "none")
       })
       // adds spaces between segments
-      .after("&nbsp;")
+      .after("&nbsp;");
 
       // $('#that')
       // .click( function() {
@@ -45,11 +45,10 @@ function textItem() {
       //   .appendTo($('#secondPara'))
       //   .html("placeholder text")
       //   })
+})
 
-
-    })
+    }
   }
-}
 
 textItem();
 

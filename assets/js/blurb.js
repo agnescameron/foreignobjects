@@ -19,7 +19,7 @@ var blurb = {
 	 	"Objects is a unnecessary institute",
 	  ],
 
-	  "that" : ["<span id='that'>that</span>",
+	  "that" : ["that",
 	  ],
 
 		'array2' : ["works", 
@@ -31,7 +31,7 @@ var blurb = {
 	  "clean",
 	  "incubate",
 	  "sleep",
-	  "write"
+	  "write",
 	  ],
 
 		'array3' : ["with artists and institutions that",
@@ -61,32 +61,32 @@ var blurb = {
 	  	],
 	  },
 
-"secondPara" : {
+// "secondPara" : {
 
-	"array1" : ["placeholder",
-	"placeholder",
-	"placeholder",
-	"placeholder",
-	"placeholder",
-	"placeholder",
-	],
+// 	"array1" : ["placeholder",
+// 	"placeholder",
+// 	"placeholder",
+// 	"placeholder",
+// 	"placeholder",
+// 	"placeholder",
+// 	],
 
 
-	"array2" : ["placeholder2",
-	"placeholder2",
-	"placeholder2",
-	"placeholder2",
-	"placeholder2",
-	"placeholder2",
-	],
+// 	"array2" : ["placeholder2",
+// 	"placeholder2",
+// 	"placeholder2",
+// 	"placeholder2",
+// 	"placeholder2",
+// 	"placeholder2",
+// 	],
 
-		"array3" : ["placeholder3",
-	"placeholder3",
-	"placeholder3",
-	"placeholder3",
-	"placeholder3",
-	"placeholder3",
-	],
+// 		"array3" : ["placeholder3",
+// 	"placeholder3",
+// 	"placeholder3",
+// 	"placeholder3",
+// 	"placeholder3",
+// 	"placeholder3",
+// 	],
 
-	}
+// 	}
 }
