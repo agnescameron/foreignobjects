@@ -125,7 +125,7 @@ h1:hover {
   font-style: bold;
 }
 
-#textOne, #textTwo, #textThree, #textFour, #textFive {
+#textOne, #textTwo, #textThree, #textFour, #textFive, .textReplace {
   text-decoration: underline;
 }
 
