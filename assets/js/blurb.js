@@ -14,12 +14,12 @@ var blurb = {
 
 		"array1" : [
 			"Objects", 
-		  	"Objects is a collaborative research studio", 
-		 	"Objects is a cultural consultancy", 
-		 	"Objects is a limited liability company",
-		 	"Objects is an imaginary city",
-		 	"Objects is a collection of non-resident aliens",
-		 	"Objects is a unnecessary institute",
+		  	"Objects is a collaborative research studio that", 
+		 	"Objects is a cultural consultancy which", 
+		 	"Objects is a limited liability company who",
+		 	"Objects is an imaginary city that",
+		 	"Objects is a collection of non-resident aliens which",
+		 	"Objects is a unnecessary institute who",
 	  	],
 
 		'array2' : [
