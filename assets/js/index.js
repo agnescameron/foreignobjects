@@ -9,24 +9,47 @@
 // clicks = 0;
 
 function textItem() {
-// makes a span into which a text segment from blurb.array1[i] is rendered and appended to centerText div
-    Object.keys(blurb).forEach(function (key) {
-    // Object.key takes blurb and forEach spits out each entry (e.g. array1's values)
-      console.log(blurb[key][0])
-      // prints the nth value of the nth value of blurb
+  // makes a span into which a text segment from blurb.array1[i] is rendered and appended to centerText div
 
+  for (obj in blurb) {
+    //firstPara, secondPara
+
+    Object.keys(blurb[obj]).forEach(function (key) {
+    // Object.key takes blurb and forEach spits out each key's entry (e.g. firstPara's values)
+        console.log(blurb.firstPara[key])
+    
+      // prints the nth value of the nth value of blurb
       var n = 0;
       $('<span/>')
-      .html(blurb[key][n])
-      .appendTo($('.centerText'))
+      .html(blurb[obj][key][n])
+      .appendTo($('#firstPara'))
       .click(function() {
-        n = (n + 1) % blurb[key].length;
-        $(this).html(blurb[key][n])
-        console.log("n is " + n);
+        n = (n + 1) % (blurb.firstPara[key].length);
+        $(this).html(blurb.firstPara[key][n]);
+        console.log("n is " + n)
       })
-  }
-  )}
+      // underline on mouseover
+      .mouseover(function() {
+        $(this).css("text-decoration", "underline")
+      })
+      .mouseleave(function() {
+        $(this).css("text-decoration", "none")
+      })
+      // adds spaces between segments
+      .after("&nbsp;")
 
+      // $('#that')
+      // .click( function() {
+
+      //   $('<span/>')
+      //   .appendTo($('#secondPara'))
+      //   .html("placeholder text")
+      //   })
+
+
+    })
+  }
+}
 
 textItem();
 
