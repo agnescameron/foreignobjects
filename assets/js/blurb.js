@@ -23,7 +23,7 @@ var blurb = {
 	  	],
 
 		'array2' : [
-			"works", 
+			"<span id='works'>works</span>", 
 			"makes",
 			"eats",
 			"drives",
@@ -43,6 +43,7 @@ var blurb = {
 		],
 
 	  	'array4' : [
+	  		"engage",
 			"have to live",
 			"are down",
 			"sleep in the tall grasses",
