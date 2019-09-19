@@ -6,14 +6,7 @@ export default class Buttom extends React.Component{
   render() {
     return (
       <div className="Bottom">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bottom!
-        </a>
+        We create websites, installations, field reports, simulations, and other critical tools.
       </div>
     );
   }

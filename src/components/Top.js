@@ -6,14 +6,7 @@ export default class Top extends React.Component{
   render() {
     return (
       <div className="Top">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Top!
-        </a>
+        FOREIGN OBJECTS consists of kalli retzepi, sam ghantous, gary zhexi zhang and agnes cameron
       </div>
     );
   }

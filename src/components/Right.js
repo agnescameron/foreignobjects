@@ -6,14 +6,7 @@ export default class Right extends React.Component{
   render() {
     return (
       <div className="Right">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Right!
-        </a>
+        We are a research studio and consultancy based in NYC.
       </div>
     );
   }

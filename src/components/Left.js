@@ -8,11 +8,11 @@ export default class Left extends React.Component{
       <div className="Left">
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="mailto:agnesfcameron@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          LEFT!
+          Click the page to get in touch!
         </a>
       </div>
     );
