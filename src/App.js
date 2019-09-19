@@ -6,7 +6,6 @@ import Bottom from './components/Bottom';
 import Center from './components/Center';
 
 import './App.css';
-import './normalize.css'
 
 class App extends React.Component {
   constructor(props) {
