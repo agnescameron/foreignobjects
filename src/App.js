@@ -1,19 +1,28 @@
 import React from 'react';
+import Left from './components/Left';
+import Top from './components/Top';
+import Right from './components/Right';
+import Bottom from './components/Bottom';
+import Center from './components/Center';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="App">
+        <Top />
+        <Left />
+        <Right />
+        <Bottom />
+        <Center />
+      </div>
+    );
+  }
 }
 
 export default App;
