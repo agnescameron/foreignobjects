@@ -5,7 +5,7 @@ import './Components.css';
 export default class Left extends React.Component{
   render() {
     return (
-      <div className="Left">
+      <div className="aside Left">
         <a
           className="App-link"
           href="mailto:agnesfcameron@gmail.com"

@@ -1,9 +1,10 @@
+
 @font-face {
-    font-family: 'Migrant';
-    src: url('./assets/migrant_offshore_studio_regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Migrant';
+  src: url('./assets/migrant_offshore_studio_regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   margin: 0;
