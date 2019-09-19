@@ -22,6 +22,10 @@ class App extends React.Component {
     event.preventDefault()
     this.setState(prevState => ({hovering: !prevState.hovering}))
   }
+  handleClick= (event) => {
+    event.preventDefault()
+    window.location = "mailto:hello@foreignobjects.net";
+  }
 
   render() {
     return (
@@ -30,6 +34,7 @@ class App extends React.Component {
         <div className="Center"
         onMouseEnter={this.handleEnter}
         onMouseLeave={this.handleLeave}
+        onClick={this.handleClick}
         >
           FOREIGN OBJECTS
         </div>
