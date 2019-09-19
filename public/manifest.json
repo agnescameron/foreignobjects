@@ -1,0 +1,8 @@
+{
+  "short_name": "Foreign Objects",
+  "name": "Research studio based in NY",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
