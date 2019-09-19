@@ -16,8 +16,13 @@
 
 
 .Top, .Right, .Bottom, .Left {
+  visibility: visible;
   font-size: 2rem;
   /* border: 1px solid; */
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .Center {
