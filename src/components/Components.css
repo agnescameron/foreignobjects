@@ -18,6 +18,8 @@
 .Top, .Right, .Bottom, .Left {
   visibility: visible;
   font-size: 2rem;
+  line-height: 1;
+  margin: 1vh;
   /* border: 1px solid; */
 }
 
@@ -27,7 +29,7 @@
 
 .Bottom .font {
   font-size: 1rem;
-  margin: 2vh 0;
+  margin: 2vh 0 0 0;
   text-align: right;
 }
 
@@ -44,6 +46,30 @@
 
 .Center:hover {
   filter: blur(5px) grayscale(5%);
+}
+
+
+@media all and (max-width: 600px) {
+
+  .App {
+    text-align: left;
+  }
+
+  /* make sure the side texts are visible all the time */
+  .hidden {
+    visibility: visible;
+  }
+
+  .Center {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .Bottom .font {
+    margin-top: 5vh;
+    text-align: left;
+  }
+
 }
 
 @media all and (min-width: 600px) {
