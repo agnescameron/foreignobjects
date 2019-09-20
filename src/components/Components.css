@@ -24,6 +24,11 @@
 }
 
 .hidden {
+  -webkit-transition: 10s;
+  -moz-transition: 10s;
+  -o-transition: 10s;
+  transition: 10s;
+  opacity: 0;
   visibility: hidden;
 }
 

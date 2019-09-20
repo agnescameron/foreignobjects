@@ -7,7 +7,32 @@ export default class Buttom extends React.Component{
     const className= this.props.hovering ? 'Bottom' : 'hidden Bottom'
     return (
       <div className={className}>
-        We create websites, installations, field reports, simulations, and other critical tools.
+        We create <a
+            className="App-link"
+            href="http://propspaper.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >websites</a>, <a
+            className="App-link"
+            href="http://yveyang.com/exhibitions/arch-mixes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >installations</a>, <a
+            className="App-link"
+            href="https://internetas.city"
+            target="_blank"
+            rel="noopener noreferrer"
+          >workshops</a>, <a
+            className="App-link"
+            href="http://root.schloss-post.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >simulations</a>, and other <a
+          className="App-link"
+          href="https://kalli-retzepi.com/clickhere/"
+          target="_blank"
+            rel="noopener noreferrer"
+          >critical tools</a>.
         <div className='font'>
           Website typeset in 'Migrant', by the awesome team at <a
             className="App-link"

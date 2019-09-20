@@ -16,7 +16,7 @@ class App extends React.Component {
 
   handleEnter = (event) => {
     event.preventDefault()
-    this.setState(prevState => ({hovering: !prevState.hovering}))
+    this.setState(prevState => ({hovering: true}))
   }
   handleLeave = (event) => {
     event.preventDefault()

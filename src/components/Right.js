@@ -7,8 +7,20 @@ export default class Right extends React.Component{
     const className= this.props.hovering ? 'aside Right' : 'aside hidden Right'
     return (
       <div className={className}>
-        We are a research studio and consultancy based in NYC.
+        We are a <a
+            className="App-link"
+            href="https://www.are.na/foreign-objects"
+            target="_blank"
+            rel="noopener noreferrer"
+          >research studio</a> and <a
+            className="App-link"
+            href="https://www.newinc.org/year-6-members/foreign-objects"
+            target="_blank"
+            rel="noopener noreferrer"
+          >consultancy</a>  based in NYC.
       </div>
     );
   }
 }
+
+

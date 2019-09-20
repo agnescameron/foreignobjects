@@ -11,7 +11,6 @@ export default class Left extends React.Component{
         <a
           className="App-link"
           href="mailto:hello@foreignobjects.net"
-          target="_blank"
           rel="noopener noreferrer"
         >
           Click to get in touch!
