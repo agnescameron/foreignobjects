@@ -34,7 +34,6 @@ class App extends React.Component {
         <div className="Center"
         onMouseEnter={this.handleEnter}
         onMouseLeave={this.handleLeave}
-        onClick={this.handleClick}
         >
           FOREIGN OBJECTS
         </div>

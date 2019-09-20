@@ -10,10 +10,10 @@ export default class Left extends React.Component{
       <div className={className}>
         <a
           className="App-link"
-          href="mailto:hello@foreignobjects.net"
+          href="mailto:hello@foreignobjects.net?subject='hello objects!'"
           rel="noopener noreferrer"
         >
-          Click to get in touch!
+          get in touch!
         </a>
       </div>
     );
