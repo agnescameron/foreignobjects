@@ -1,0 +1,96 @@
+
+/* FLEXBOX stuff we want to render right here for App*/
+
+.App {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.App > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+
+.Top, .Right, .Bottom, .Left {
+  visibility: visible;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 1vh;
+  /* border: 1px solid; */
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.Bottom .font {
+  font-size: 1rem;
+  margin: 2vh 0 0 0;
+  text-align: right;
+}
+
+.Center {
+  font-size: 15rem;
+  text-transform: uppercase;
+  line-height: 0.8;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* border: 1px solid; */
+}
+
+.Center:hover {
+  filter: blur(5px) grayscale(5%);
+}
+
+
+@media all and (max-width: 600px) {
+
+  .App {
+    text-align: left;
+  }
+
+  /* make sure the side texts are visible all the time */
+  .hidden {
+    visibility: visible;
+  }
+
+  .Center {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .Bottom .font {
+    margin-top: 5vh;
+    text-align: left;
+  }
+
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex:  1 0 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+
+  .Center { flex: 3 0px; }
+  .Left {
+    order: 1;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+  }
+  .Center { order: 2; }
+  .Right {
+    order: 3;
+    writing-mode: tb-rl;
+  }
+  .Bottom  { order: 4; }
+
+}
