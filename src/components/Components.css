@@ -81,6 +81,7 @@
 @media all and (min-width: 800px) {
 
   .Center { flex: 3 0px; }
+
   .Left {
     order: 1;
     writing-mode: tb-rl;
