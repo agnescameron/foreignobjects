@@ -2,16 +2,25 @@
 /* FLEXBOX stuff we want to render right here for App*/
 
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
 .App > * {
   padding: 10px;
-  flex: 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
 }
 
 
@@ -25,7 +34,6 @@
 
 .hidden {
   -webkit-transition: 10s;
-  -moz-transition: 10s;
   -o-transition: 10s;
   transition: 10s;
   opacity: 0;
@@ -42,15 +50,24 @@
   font-size: 15rem;
   text-transform: uppercase;
   line-height: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* border: 1px solid; */
 }
 
 .Center:hover {
-  filter: blur(5px) grayscale(5%);
+  -webkit-filter: blur(5px) grayscale(5%);
+          filter: blur(5px) grayscale(5%);
 }
 
 
@@ -79,24 +96,36 @@
 
 @media all and (min-width: 600px) {
   .aside {
-    flex:  1 0 0;
+    -webkit-box-flex:  1;
+        -ms-flex:  1 0 0px;
+            flex:  1 0 0;
   }
 }
 
 @media all and (min-width: 800px) {
 
-  .Center { flex: 3 0px; }
+  .Center { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
 
   .Left {
-    order: 1;
-    writing-mode: tb-rl;
-    transform: rotate(180deg);
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-writing-mode: tb-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
-  .Center { order: 2; }
+  .Center { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
   .Right {
-    order: 3;
-    writing-mode: tb-rl;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-writing-mode: tb-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: tb-rl;
   }
-  .Bottom  { order: 4; }
+  .Bottom  { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
 
 }
