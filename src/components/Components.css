@@ -14,7 +14,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  overflow: scroll;
 }
 
 .App > * {
@@ -72,6 +71,8 @@
 }
 
 
+/* MOBILE - PORTRAIT  */
+
 @media all and (max-width: 600px) {
 
   .App {
@@ -84,8 +85,16 @@
   }
 
   .Center {
-    font-size: 20vw;
+    font-size: 5.5rem;
     text-align: center;
+  }
+
+  .Center::after {
+    content: "Our website, like many others, is best viewed on desktop - you can still tap here for more info about us though!";
+    font-size: 1rem;
+    margin-top: 2vh;
+    text-transform: none;
+    line-height: 1.1;
   }
 
   .Bottom .font {
@@ -95,6 +104,7 @@
 
 }
 
+
 @media all and (min-width: 600px) {
   .aside {
     -webkit-box-flex:  1;
@@ -102,6 +112,9 @@
             flex:  1 0 0;
   }
 }
+
+/* DESKTOP  */
+
 
 @media all and (min-width: 800px) {
 
