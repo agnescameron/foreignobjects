@@ -30,17 +30,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Top hovering={this.state.hovering}/>
+        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="Center"
+        //for mobile
         onClick={this.handleEnter}
         onMouseEnter={this.handleEnter}
+        //for desktop
         onMouseLeave={this.handleLeave}
         >
           FOREIGN OBJECTS
         </div>
-        <Left hovering={this.state.hovering}/>
-        <Right hovering={this.state.hovering}/>
-        <Bottom hovering={this.state.hovering}/>
+        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
       </div>
     );
   }

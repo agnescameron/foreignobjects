@@ -29,7 +29,6 @@
   font-size: 2rem;
   line-height: 1;
   margin: 1vh;
-  /* border: 1px solid; */
 }
 
 .hidden {
@@ -100,6 +99,10 @@
     margin-top: 5vh;
     text-align: left;
   }
+
+  .Top, .Right, .Bottom, .Left {
+  font-size: 1.6rem;
+}
 
 }
 
