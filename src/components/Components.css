@@ -77,7 +77,6 @@
 
   .App {
     text-align: left;
-    overflow: hidden;
   }
 
   /* make sure the side texts are visible all the time */
@@ -91,8 +90,7 @@
   }
 
   .Center::after {
-    /*content: "Our website, like many others, is best viewed on desktop - since you are on your phone though, you can check out @foreignobj on Instagram.";*/
-    font-size: 1rem;
+   font-size: 1rem;
     margin-top: 2vh;
     text-transform: none;
     line-height: 1.1;
