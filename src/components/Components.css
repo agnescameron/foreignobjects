@@ -91,7 +91,7 @@
   }
 
   .Center::after {
-    content: "Our website, like many others, is best viewed on desktop - since you are on your phone though, you can check out @foreignobj on Instagram.";
+    /*content: "Our website, like many others, is best viewed on desktop - since you are on your phone though, you can check out @foreignobj on Instagram.";*/
     font-size: 1rem;
     margin-top: 2vh;
     text-transform: none;

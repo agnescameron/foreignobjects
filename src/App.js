@@ -32,6 +32,7 @@ class App extends React.Component {
       <div className="App">
         <Top hovering={this.state.hovering}/>
         <div className="Center"
+        onClick={this.handleEnter}
         onMouseEnter={this.handleEnter}
         onMouseLeave={this.handleLeave}
         >
