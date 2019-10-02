@@ -1,49 +1,19 @@
 import React from 'react';
-import Left from './components/Left';
-import Top from './components/Top';
-import Right from './components/Right';
-import Bottom from './components/Bottom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
+import Home from './routes/Home';
+import About from './routes/About';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hovering : false
-    }
-  }
-
-  handleEnter = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: true}))
-  }
-  handleLeave = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: !prevState.hovering}))
-  }
-  handleClick= (event) => {
-    event.preventDefault()
-    window.location = "mailto:hello@foreignobjects.net";
-  }
-
   render() {
     return (
-      <div className="App">
-        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <div className="Center"
-        //for mobile
-        onClick={this.handleEnter}
-        onMouseEnter={this.handleEnter}
-        //for desktop
-        onMouseLeave={this.handleLeave}
-        >
-          FOREIGN OBJECTS
-        </div>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
-      </div>
+      <Router>
+        {/* <Link to="/" className="App-link">Home</Link>
+        <Link to="/about" className="App-link">About</Link> */}
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+    </Router>
     );
   }
 }
