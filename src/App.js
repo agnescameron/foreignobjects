@@ -10,8 +10,8 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        {/* <Link to="/" className="App-link">Home</Link>
-        <Link to="/about" className="App-link">About</Link> */}
+        {/*<Link to="/" className="App-link">Home</Link>*/}
+        <Link to="/about" className="App-link">About</Link>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
     </Router>

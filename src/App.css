@@ -9,5 +9,9 @@
 }
 
 .App-link {
-  color: #fff;
+  display: none;
+}
+
+.App-link:hover {
+  cursor:  url('./assets/cursor.png'), auto;
 }
