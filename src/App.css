@@ -12,10 +12,6 @@
   color: #fff;
 }
 
-.App-link-about {
-  display: none;
-}
-
 .App-link:hover {
   cursor:  url('./assets/cursor.png'), auto;
 }
