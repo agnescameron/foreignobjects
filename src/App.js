@@ -9,6 +9,7 @@ import './App.css';
 
 class App extends React.Component {
   render() {
+    console.log(window.innerWidth, window.innerHeight)
     return (
       <Router>
 
