@@ -7,7 +7,7 @@ export default class Buttom extends React.Component{
     const className= this.props.hovering ? 'Bottom' : 'hidden Bottom'
     return (
       <div className={className}>
-        We create <a
+        We make <a
             className="App-link"
             href="http://propspaper.com"
             target="_blank"
@@ -32,7 +32,7 @@ export default class Buttom extends React.Component{
           href="https://kalli-retzepi.com/clickhere/"
           target="_blank"
             rel="noopener noreferrer"
-          >critical tools</a>.
+          >critical tools</a> in digital and physical space.
         <div className='font'>
           Website typeset in 'Migrant', by the awesome team at <a
             className="App-link"
