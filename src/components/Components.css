@@ -96,7 +96,6 @@
           filter: blur(5px) grayscale(5%);
 }
 
-
 @media all and (max-width: 600px) {
 
   .App {
@@ -115,7 +114,6 @@
 
   .Center::after {
    font-size: 1rem;
-    margin-top: 2vh;
     text-transform: none;
     line-height: 1.1;
   }

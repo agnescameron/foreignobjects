@@ -22,8 +22,8 @@ export default class Center extends React.Component{
       <div className="Blurb" onClick={() => this.setState({Blurb: false})}>
 		<p>
 		Foreign Objects helps clients to research and execute projects in the field of art and technology, with an emphasis on web-based products and experiences.
-		</p>
-		<p>
+		<br/>
+		<br/>
 		With expertise in architectural design, web development, electrical engineering and conceptual art practice, Foreign Objects combines experimentation, research and practice to realize ambitious projects that probe the boundaries of technology and culture.      
 		</p>
 		</div>
