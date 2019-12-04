@@ -4,6 +4,7 @@ import Left from '../components/Left';
 import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
+import Center from '../components/Center';
 
 import './Home.css';
 
@@ -31,7 +32,6 @@ export default class Home extends React.Component{
   render() {
     return (
       <div className="App">
-        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="Center"
         //for mobile
         onClick={this.handleEnter}
@@ -39,8 +39,9 @@ export default class Home extends React.Component{
         //for desktop
         onMouseLeave={this.handleLeave}
         >
-          FOREIGN OBJECTS
+          <Center />
         </div>
+        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
