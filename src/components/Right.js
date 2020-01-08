@@ -14,7 +14,7 @@ export default class Right extends React.Component{
             rel="noopener noreferrer"
           >research studio</a> and <a
             className="App-link"
-            href="https://www.newinc.org/year-6-members/foreign-objects"
+            href="https://www.newinc.org/year-6-members/agnes-cameron-gary-zhexi-zhang-kalli-retzepi-sam-ghantous"
             target="_blank"
             rel="noopener noreferrer"
           >consultancy</a>  based in NYC.
