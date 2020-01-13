@@ -136,13 +136,15 @@
 }
 
 .projectModule {
-  width: 200px;
-  height: 300px;
+  /*draggable window for projects and news*/
+  width: 350px;
+  height: 400px;
   position: absolute;
   font-size: 1.4rem;
-  border: 5px solid;
+  border: 0;
   background-color: #FF0000;
   vertical-align: center;
+  opacity: 70%;
   z-index: 10;
 }
 
@@ -191,13 +193,7 @@
     font-size: 5.2rem;
     text-align: center;
   }
-
-/*  .Center::after {
-   font-size: 1rem;
-    text-transform: none;
-    line-height: 1.1;
-  }
-*/
+  
   .bottomContainer {
     align-items: flex-start;
   }
