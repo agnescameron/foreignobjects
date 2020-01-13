@@ -53,15 +53,7 @@ export default class Center extends React.Component{
             rel="noopener noreferrer"
           >NEW INC.</a>, at the New Museum in NYC. 
 				</p>
-
 			</div>
-
-	{/*				<img src={ufo} /> */}
-
-	{/*			<div className="arrows">
-	  	  	<div className="leftArrow" onClick={() => this.setState({Blurb: false})}>L</div> 
-		  		<div className="rightArrow" onClick={() => this.setState({Blurb: true})}>R</div> 
-	  		</div>    */}
   	  	</div>	
 
   	);} else {
@@ -71,11 +63,6 @@ export default class Center extends React.Component{
 	      <div className="centerText" onClick={() => this.setState({Blurb: true})}>
 	        FOREIGN OBJECTS
 	      </div>
-
-	{/*			<div className="arrows">
-		  	  	<div className="leftArrow" onClick={() => this.setState({Blurb: false})}>L</div> 
-		  	  <div className="rightArrow" onClick={() => this.setState({Blurb: true})}>R</div>    
-	  	  	</div> */}
 	    </div>  
     );
   }

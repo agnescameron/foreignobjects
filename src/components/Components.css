@@ -131,14 +131,6 @@
   /* border: 1px solid; */
 }
 
-/*.ufo {
-  position: absolute;
-  right: 20%;
-  top: 20%;
-  opacity: 100%;
-  width: 60px;
-}*/
-
 .arrows {
   font-size: 2rem;
   line-height: 0.8;
@@ -202,8 +194,10 @@
 }
 
 .centerText:hover {
-  -webkit-filter: blur(3px) grayscale(5%);
-          filter: blur(3px) grayscale(5%);
+  -webkit-filter: blur(4px) grayscale(5%);
+          filter: blur(4px) grayscale(5%);
+  cursor:  url('../assets/cursor-click.png'), auto;
+
 }
 
 @media all and (max-width: 600px) {
