@@ -2,7 +2,7 @@ import React from 'react';
 import './Components.css';
 
 
-export default class Buttom extends React.Component{
+export default class Bottom extends React.Component{
   render() {
     const className= this.props.hovering ? 'Bottom' : 'hidden Bottom'
     return (

@@ -34,17 +34,19 @@ export default class Home extends React.Component{
       <div className="App">
         <div className="Center"
         //for mobile
-        onClick={this.handleEnter}
         onMouseEnter={this.handleEnter}
         //for desktop
         onMouseLeave={this.handleLeave}
         >
           <Center />
         </div>
+
         <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <div className="bottomContainer">
+          <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
+        </div>
       </div>
     );
   }
