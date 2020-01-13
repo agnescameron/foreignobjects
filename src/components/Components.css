@@ -131,19 +131,24 @@
 .centerText:hover {
   -webkit-filter: blur(4px) grayscale(5%);
           filter: blur(4px) grayscale(5%);
+  /*changes cursor to clicky finger on centerText - otherwise default on App-link*/
   cursor:  url('../assets/cursor-click.png'), auto;
-
 }
 
-.littleArrow {
-  font-size: 1.5rem;
-  line-height: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: flex-end;
+.projectModule {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  font-size: 1.4rem;
+  border: 5px solid;
+  background-color: #FF0000;
+  vertical-align: center;
+  z-index: 10;
 }
 
+.projectModule img {
+  width: 200px;
+}
 
 /*animation settings*/
 @keyframes fadein {

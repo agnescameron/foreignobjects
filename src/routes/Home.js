@@ -1,4 +1,6 @@
 import React from 'react';
+import Draggable from 'react-draggable';
+import ProjectModule from '../components/ProjectModule';
 
 import Left from '../components/Left';
 import Top from '../components/Top';
@@ -37,16 +39,19 @@ export default class Home extends React.Component{
         onMouseEnter={this.handleEnter}
         //for desktop
         onMouseLeave={this.handleLeave}
-        >
+        >          
           <Center />
         </div>
 
-        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <ProjectModule />
+        
+        <Top hovering={this.state.hovering}/>
+        <Left hovering={this.state.hovering}/>
+        <Right hovering={this.state.hovering}/>
         <div className="bottomContainer">
-          <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
+          <Bottom hovering={this.state.hovering}/>
         </div>
+
       </div>
     );
   }
