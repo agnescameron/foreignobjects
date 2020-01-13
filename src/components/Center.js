@@ -22,10 +22,10 @@ export default class Center extends React.Component{
 	      	<div className="Blurb">
 				<p>
 				<div onClick={() => this.setState({Blurb: false})}>&#8598;</div>
-				Foreign Objects is a design studio and consultancy that helps clients execute creative and critical projects in physical, computational and networked space. We are based at NEW INC., at the New Museum in NYC.
+				Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
 				<br/>
 				<br/>
-				Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architectural design, web development, electrical engineering and contemporary art. Combining experimentation and research, our work probes at the boundaries of technology, culture and society.      
+				Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.      
 				<br/>
 				<br/>
 				Clients we have worked with recently include <a className="App-link"
@@ -43,7 +43,15 @@ export default class Center extends React.Component{
             	rel="noopener noreferrer">Science Gallery London</a>, <a className="App-link"
             	href="https://www.armitagegonedance.org/"
             	target="_blank"
-            	rel="noopener noreferrer">Karole Armitage</a>. 
+            	rel="noopener noreferrer">Karole Armitage</a>.
+            	<br/>
+            	<br/>
+            	We are based at <a
+            className="App-link"
+            href="https://www.newinc.org/year-6-members/agnes-cameron-gary-zhexi-zhang-kalli-retzepi-sam-ghantous"
+            target="_blank"
+            rel="noopener noreferrer"
+          >NEW INC.</a>, at the New Museum in NYC. 
 				</p>
 
 			</div>
