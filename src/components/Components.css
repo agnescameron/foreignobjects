@@ -174,8 +174,20 @@
   }
 
   .Center .centerText {
-    font-size: 5.2rem;
-    text-align: center;
+    font-size: 4rem;
+    text-align: left;
+    margin: 2vh;
+  }
+  
+  .Blurb {
+    font-size: 1.6rem;
+    margin-left: 2vh;
+    margin-right: 2vh; 
+
+  }
+
+  .Blurb .blurbArrow {
+    font-size: 1.6rem;
   }
 
   .bottomContainer {
@@ -193,11 +205,6 @@
     margin: 2vh;
 }
 
-  .Blurb {
-    font-size: 1.6rem;
-    margin-left: 2vh;
-    margin-right: 2vh; 
-  }
 }
 
 
@@ -215,6 +222,11 @@
 @media all and (min-width: 800px) {
 
   .Center { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
+
+  .centerArrow {
+    /*arrow from centerText to Blurb disappears for desktop*/
+    display: none;
+  }
 
   .Blurb { -webkit-box-flex: 4; -ms-flex: 4 0px; flex: 4 0px; }
 
