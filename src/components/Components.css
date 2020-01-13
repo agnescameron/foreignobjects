@@ -80,20 +80,6 @@
   /* border: 1px solid; */
 }
 
-.centerContainer {
- display: flex;
- flex-grow: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; 
-}
 
 .centerText {
   font-size: 15rem;
@@ -101,7 +87,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-grow: 2;
   align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -128,34 +113,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   text-align: left;
-  /* border: 1px solid; */
-}
-
-.arrows {
-  font-size: 2rem;
-  line-height: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-      -ms-flex-pack: space-between;
-          justify-content: space-between;
-  -ms-flex-line-pack: flex-end;
-      align-items: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  /* border: 1px solid; */
-}
-
-.leftArrow {
-  line-height: 0.8;
-  /* border: 1px solid; */
-}
-
-.rightArrow {
-  line-height: 0.8;
   /* border: 1px solid; */
 }
 

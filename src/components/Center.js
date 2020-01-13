@@ -18,7 +18,6 @@ export default class Center extends React.Component{
   render() {
   	if(this.state.Blurb){
     return (
-      	<div className="centerContainer">
 	      	<div className="Blurb">
 				<p>
 				<div onClick={() => this.setState({Blurb: false})}>&#8598;</div>
@@ -54,16 +53,13 @@ export default class Center extends React.Component{
           >NEW INC.</a>, at the New Museum in NYC. 
 				</p>
 			</div>
-  	  	</div>	
 
   	);} else {
  	return (
- 		<div className="centerContainer">
 
 	      <div className="centerText" onClick={() => this.setState({Blurb: true})}>
 	        FOREIGN OBJECTS
 	      </div>
-	    </div>  
     );
   }
 }
