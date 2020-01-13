@@ -43,7 +43,7 @@ export default class Center extends React.Component{
             	rel="noopener noreferrer">Science Gallery London</a>, <a className="App-link"
             	href="https://www.armitagegonedance.org/"
             	target="_blank"
-            	rel="noopener noreferrer">Karole Armitage</a>.</a> 
+            	rel="noopener noreferrer">Karole Armitage</a>. 
 				</p>
 
 			</div>
