@@ -47,7 +47,7 @@
   -webkit-transition: 10s;
   -o-transition: 10s;
   transition: 10s;
-  opacity: 0%;
+  opacity: 0;
   visibility: hidden;
 }
 
@@ -131,19 +131,10 @@
 .centerText:hover {
   -webkit-filter: blur(4px) grayscale(5%);
           filter: blur(4px) grayscale(5%);
+  /*cursor becomes clicky finger on hover*/
   cursor:  url('../assets/cursor-click.png'), auto;
 
 }
-
-.littleArrow {
-  font-size: 1.5rem;
-  line-height: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: flex-end;
-}
-
 
 /*animation settings*/
 @keyframes fadein {
@@ -179,7 +170,7 @@
   /* make sure the side texts are visible all the time */
   .hidden {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
   }
 
   .Center .centerText {
