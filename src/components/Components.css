@@ -25,12 +25,20 @@
           flex: 1 100%;
 }
 
-.Top, .Right, .Bottom, .Left {
+.Top, .Right, .Left {
 
   visibility: visible;
   font-size: 1.5rem;
   line-height: 1;
   margin: 2vh;
+  /*border: 1px solid;*/
+}
+
+.Bottom {
+  visibility: visible;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 4vh;
   /*border: 1px solid;*/
 }
 
@@ -57,11 +65,14 @@
           flex-direction: row;
 }
 
-.Bottom .font {
-  font-size: 1rem;
+.bottomContainer .font {
+  font-size: 0.8rem;
   margin: 2vh 0 0 0;
-  text-align: right;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 1vh;
+  padding-right: 1vh;
 }
 
 .Center {
@@ -79,7 +90,6 @@
           flex-direction: column;
   /* border: 1px solid; */
 }
-
 
 .centerText {
   font-size: 15rem;
@@ -116,6 +126,13 @@
   /* border: 1px solid; */
 }
 
+.centerText:hover {
+  -webkit-filter: blur(4px) grayscale(5%);
+          filter: blur(4px) grayscale(5%);
+  cursor:  url('../assets/cursor-click.png'), auto;
+
+}
+
 .littleArrow {
   font-size: 1.5rem;
   line-height: 0.8;
@@ -148,13 +165,6 @@
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-.centerText:hover {
-  -webkit-filter: blur(4px) grayscale(5%);
-          filter: blur(4px) grayscale(5%);
-  cursor:  url('../assets/cursor-click.png'), auto;
-
 }
 
 @media all and (max-width: 600px) {
@@ -240,6 +250,7 @@
         -ms-writing-mode: tb-rl;
             writing-mode: tb-rl;
   }
+  
   .Bottom  {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 6; 
