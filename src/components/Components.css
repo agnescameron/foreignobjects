@@ -38,6 +38,7 @@
   visibility: visible;
   font-size: 1.5rem;
   line-height: 1;
+  /*Bottom line has higher margin.*/
   margin: 4vh;
   /*border: 1px solid;*/
 }
@@ -51,6 +52,7 @@
 }
 
 .bottomContainer {
+  /*flexbox for aligning .Bottom & .font to the bottom, may be there is a better way to do this?*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,35 +173,39 @@
 
   .App {
     text-align: left;
+    align-items: flex-start;
   }
 
   /* make sure the side texts are visible all the time */
   .hidden {
     visibility: visible;
+    opacity: 100%;
   }
 
-  .Center {
+  .Center .centerText {
     font-size: 5.2rem;
     text-align: center;
   }
 
-  .centerText {
-    font-size: 5.2rem;
-  }
-
-  .Center::after {
+/*  .Center::after {
    font-size: 1rem;
     text-transform: none;
     line-height: 1.1;
   }
+*/
+  .bottomContainer {
+    align-items: flex-start;
+  }
 
   .Bottom .font {
+    position: relative;
     margin-top: 5vh;
     text-align: left;
   }
 
-  .Top, .Right, .Bottom, .Left, .Arrows {
-  font-size: 1.6rem;
+  .Top, .Right, .Bottom, .Left {
+    font-size: 1.6rem;
+    margin: 2vh;
 }
 
   .Blurb {
@@ -250,7 +256,7 @@
         -ms-writing-mode: tb-rl;
             writing-mode: tb-rl;
   }
-  
+
   .Bottom  {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 6; 
