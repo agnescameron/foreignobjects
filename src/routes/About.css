@@ -1,6 +1,85 @@
-.About {
-  font-size: 10rem;
-  color: #fff;
+.aboutContainer {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+
+/*  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+*//*      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   text-align: center;
-  margin-top: 25vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;	*/
+}
+
+.About {
+	display: flex;
+	flex: 1 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-grow: 1;
+/*    border: 1px solid;
+*/}
+
+.Verso {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+/*    border: 1px solid;
+*/}
+
+.Recto {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 10;
+/*    border: 1px solid;
+*/}
+
+.backArrow {
+	font-size: 10rem;
+	color: #fff;
+	text-align: left;
+	margin-top: -12vh;
+	margin-left: 16vh;
+/*	border: 1px solid;
+*/}
+
+.backArrow:after {
+	content: "\27f5"
+}
+
+.aboutTitle {
+	display: none;
+	font-size: 4rem;
+	color: #fff;
+	text-align: left;
+	margin: 4vh;
+/*	border: 1px solid;
+*/
+}
+
+.aboutText {
+	font-size: 2.2rem;
+	font-family: 'Falster', 'Helvetica', sans-serif;
+	color: #fff;
+	text-align: left;
+	margin-left: 8vh;
+	margin-right: -8vh;
+/*	border: 1px solid;
+*/
+}
+
+.aboutImage {
+	width: 100%;
+	margin-left: 2rem;
+	z-index: 0;
+
 }
