@@ -24,14 +24,14 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-grow: 1;
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 
 .Verso {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 
 .Recto {
@@ -40,7 +40,7 @@
 	flex-direction: column;
 	align-items: flex-end;
 	z-index: 10;
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
 
 .backArrow {
@@ -50,7 +50,7 @@
 	margin-top: -4vh;
 	margin-left: 8vh;
 	margin-bottom: -2vh;
-	border: 1px solid;
+	/*border: 1px solid;*/
 }
 
 .backArrow:after {
@@ -87,4 +87,18 @@
 	top: 35vh;
 	right: 0;
 	z-index: -1;
+}
+
+
+.circleTest {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

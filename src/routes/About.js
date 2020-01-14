@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Circle from '../components/Circle.js';
 import Top from '../components/Top';
 import './About.css';
 import aboutImage from "../assets/aboutImage.png";
@@ -83,7 +84,7 @@ export default class About extends React.Component{
             <div className="Recto">
             </div>
             <img src={aboutImage} className="aboutImage" alt="About Us Image" />
-
+            <Circle />
           </div>
         </div>  
       </div>
