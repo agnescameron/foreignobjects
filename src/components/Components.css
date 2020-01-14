@@ -38,7 +38,7 @@
   visibility: visible;
   font-size: 1.5rem;
   line-height: 1;
-  /*Bottom line has higher margin.*/
+  /*Bottom line has higher margin because of .font text */
   margin: 4vh;
   /*border: 1px solid;*/
 }
@@ -51,8 +51,9 @@
   visibility: hidden;
 }
 
+/*a container for aligning .Bottom & .font to the baseline, 
+  may be there is a better way to do this?*/
 .bottomContainer {
-  /*flexbox for aligning .Bottom & .font to the bottom, may be there is a better way to do this?*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +78,7 @@
   padding-right: 1vh;
 }
 
+/*container for the main centerText & Blurb*/
 .Center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +109,14 @@
   /* border: 1px solid; */
 }
 
+.centerText:hover {
+  -webkit-filter: blur(4px) grayscale(5%);
+          filter: blur(4px) grayscale(5%);
+  /*cursor becomes clicky finger on hover*/
+  cursor:  url('../assets/cursor-click.png'), auto;
+
+}
+
 .Blurb {
    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -126,14 +136,6 @@
           flex-direction: row;
   text-align: left;
   /* border: 1px solid; */
-}
-
-.centerText:hover {
-  -webkit-filter: blur(4px) grayscale(5%);
-          filter: blur(4px) grayscale(5%);
-  /*cursor becomes clicky finger on hover*/
-  cursor:  url('../assets/cursor-click.png'), auto;
-
 }
 
 /*animation settings*/
@@ -159,6 +161,10 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+
+/* MOBILE  */
+
 
 @media all and (max-width: 600px) {
 

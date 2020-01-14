@@ -20,7 +20,7 @@ export default class Center extends React.Component{
     return (
 	      	<div className="Blurb">
 				<p>
-				<div className="blurbArrow" onClick={() => this.setState({Blurb: false})}>&#8598;</div>
+				<div className="blurbArrow" onClick={() => this.setState({Blurb: false})}><a className="App-link">&#8598;</a></div>
 				Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
 				<br/>
 				<br/>
