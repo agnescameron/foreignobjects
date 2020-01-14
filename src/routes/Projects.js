@@ -12,7 +12,9 @@ export default class Projects extends React.Component{
   }
 
   componentDidMount() {
-    fetch(`https://api.airtable.com/v0/appJVRlTLOZYKPWBs/Table%201?maxRecords=${MAX_RECORDS}&view=Grid%20view&api_key=${AIRTABLE_API_KEY}` )
+    fetch(`https://api.airtable.com/v0/appJVRlTLOZYKPWBs/Table%201?maxRecords=${MAX_RECORDS}&view=Grid%20view`, {
+     "headers": {"Authorization": `Bearer ${AIRTABLE_API_KEY}`}
+     })
     .then((resp) => resp.json())
     .then(data => {
        this.setState({ projects: data.records });
