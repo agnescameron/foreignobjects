@@ -1,0 +1,123 @@
+/*container for the main centerText & Blurb*/
+.Center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* border: 1px solid; */
+}
+
+.centerText {
+  font-size: 15rem;
+  line-height: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* border: 1px solid; */
+}
+
+.centerText:hover {
+  -webkit-filter: blur(4px) grayscale(5%);
+          filter: blur(4px) grayscale(5%);
+  /*cursor becomes clicky finger on hover*/
+  cursor:  url('../assets/cursor-click.png'), auto;
+
+}
+
+.Blurb {
+   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: left;
+  /* border: 1px solid; */
+}
+
+/*animation settings*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*mobile options*/
+
+@media all and (max-width: 600px) {
+
+  .Center .centerText {
+    font-size: 4rem;
+    text-align: left;
+    margin: 2vh;
+  }
+
+  .Blurb {
+    font-size: 1.6rem;
+    margin-left: 2vh;
+    margin-right: 2vh; 
+
+  }
+
+  .Blurb .blurbArrow {
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (min-width: 600px) {
+
+  .Center { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
+
+  .centerArrow {
+      /*mobile version arrow from centerText to Blurb disappears for desktop*/
+    display: none;
+  }
+
+  .Center { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+
+  .Blurb { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+    
+  .Blurb { -webkit-box-flex: 4; -ms-flex: 4 0px; flex: 4 0px; }
+
+
+}
