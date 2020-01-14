@@ -23,7 +23,7 @@ componentDidMount(){
   	return (
 		//<div className="hello" content="asdsada" ref={this.myRef.innerHTML} onClick={() => new CircleType(this.myRef).radius(360)}>make Circle</div>	
 		<div 
-		className="circleTest"
+		className="circleText"
 		ref={this.circleRef}
 		onClick={() => new CircleType(this.circleRef.current)}>
 		</div>
