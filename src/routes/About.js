@@ -44,7 +44,7 @@ export default class About extends React.Component{
                 You found our secret page. We want to work with you!
               </div>
               <div className="aboutText">
-                Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
+                FOREIGN OBJECTS LLC is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
                 <br/>
                 Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.                   Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.      
@@ -81,9 +81,9 @@ export default class About extends React.Component{
               </div>
             </div>
             <div className="Recto">
-                <img src={aboutImage} className="aboutImage" alt="About Us Image" />
-
             </div>
+            <img src={aboutImage} className="aboutImage" alt="About Us Image" />
+
           </div>
         </div>  
       </div>

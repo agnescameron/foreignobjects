@@ -24,15 +24,15 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-grow: 1;
-/*    border: 1px solid;
-*/}
+    border: 1px solid;
+}
 
 .Verso {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-/*    border: 1px solid;
-*/}
+    border: 1px solid;
+}
 
 .Recto {
 	display: flex;
@@ -40,23 +40,25 @@
 	flex-direction: column;
 	align-items: flex-end;
 	z-index: 10;
-/*    border: 1px solid;
-*/}
+    border: 1px solid;
+}
 
 .backArrow {
-	font-size: 10rem;
+	font-size: 6rem;
 	color: #fff;
 	text-align: left;
-	margin-top: -12vh;
-	margin-left: 16vh;
-/*	border: 1px solid;
-*/}
+	margin-top: -4vh;
+	margin-left: 8vh;
+	margin-bottom: -2vh;
+	border: 1px solid;
+}
 
 .backArrow:after {
-	content: "\27f5"
+	content: "\2190"
 }
 
 .aboutTitle {
+/*not currently used*/
 	display: none;
 	font-size: 4rem;
 	color: #fff;
@@ -71,15 +73,18 @@
 	font-family: 'Falster', 'Helvetica', sans-serif;
 	color: #fff;
 	text-align: left;
-	margin-left: 8vh;
+	margin-left: 4vh;
 	margin-right: -8vh;
+	margin-bottom: 4vh;
+
 /*	border: 1px solid;
 */
 }
 
 .aboutImage {
-	width: 100%;
-	margin-left: 2rem;
-	z-index: 0;
-
+	width: 60%;
+	position: absolute;
+	top: 35vh;
+	right: 0;
+	z-index: -1;
 }
