@@ -1,7 +1,9 @@
 import React from 'react';
 import './Projects.css';
-import { AIRTABLE_API_KEY } from '../keys.js'
+// import { AIRTABLE_API_KEY } from '../keys.js'
 const MAX_RECORDS = 20;
+
+const process_api_key = process.env.AIRTABLE_API_KEY;
 
 export default class Projects extends React.Component{
   constructor(props) {
@@ -12,10 +14,7 @@ export default class Projects extends React.Component{
   }
 
   componentDidMount() {
-    fetch(`https://api.airtable.com/v0/appJVRlTLOZYKPWBs/Table%201?maxRecords=${MAX_RECORDS}&view=Grid%20view`, {
-     "headers": {"Authorization": `Bearer ${AIRTABLE_API_KEY}`}
-     })
-    .then((resp) => resp.json())
+  fetch("functions/lambda")
     .then(data => {
        this.setState({ projects: data.records });
     }).catch(err => {console.log(err)});
