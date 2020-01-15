@@ -17,9 +17,12 @@ export default class About extends React.Component{
           <Top hovering="true" />
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
-            <div className="mobileNavItem1"><span className="Orange">&#8598;</span>WORKS</div>
+            <div className="mobileNavItem1">
+            <a className="Orange"
+            href="https://www.foreignobjects.net"
+            rel="noopener noreferrer">&#8598;</a>HOME</div>
             <div className="mobileNavItem2">CONVERSATION<span className="Orange">&#8600;</span></div>
-            <div className="mobileNavItem3">ABOUT<span className="Orange">&#8594;</span></div>
+            <div className="mobileNavItem3">WORK<span className="Orange">&#8594;</span></div>
           </div>          
           <div className="About">
             <div className="Verso">
