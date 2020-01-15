@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-import { AIRTABLE_API_KEY } from '../keys.js'
+const AIRTABLE_API_KEY = ""
 const MAX_RECORDS = 20;
 
 export default class Projects extends React.Component{
