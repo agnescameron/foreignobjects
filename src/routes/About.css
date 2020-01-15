@@ -101,7 +101,7 @@
 		justify-content: center;
 	    margin-bottom: 2vh;		
 	    margin-right: 2vh;		
-
+	    font-family: "Falster";
 	}
 
 	/*sorry there must be a neater way to do this??*/
@@ -123,6 +123,10 @@
 		text-align: center;
 	}	
 
+	.Orange {
+		color: #FFA500;
+	}
+
 /*hidden elements in mobile*/
 	.Top, .Recto, .circleText, .backArrow {
 		display: none;
@@ -142,5 +146,7 @@
 }
 
 @media all and (min-width: 800px) {
-
+	.mobileNavContainer, .mobileHeader {
+		display: none;
+}
 }
