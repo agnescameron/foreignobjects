@@ -42,11 +42,13 @@ export default class Home extends React.Component{
         </div>
 
         <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="bottomContainer">
           <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
         </div>
+        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
+
+
       </div>
     );
   }

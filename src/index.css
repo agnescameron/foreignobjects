@@ -1,10 +1,39 @@
 
 @font-face {
-  font-family: 'Migrant';
-  src: url('./assets/migrant_offshore_studio_regular.otf') format('opentype');
+  font-family: 'Falster';
+  src: url('./assets/fonts/FalsterGrotesk-Light.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Adieu-Regular';
+  src: url('./assets/fonts/Adieu-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adieu-Bold';
+  src: url('./assets/fonts/Adieu-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adieu-Black';
+  src: url('./assets/fonts/Adieu-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Migrant';
+  src: url('./assets/fonts/migrant_offshore_studio_regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body {
   margin: 0;

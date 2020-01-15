@@ -1,6 +1,146 @@
+.aboutContainer {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+}
+
 .About {
-  font-size: 10rem;
-  color: #fff;
-  text-align: center;
-  margin-top: 25vh;
+	display: flex;
+	flex: 1 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-grow: 1;
+    /*border: 1px solid;*/
+}
+
+.Verso {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+    /*border: 1px solid;*/
+}
+
+.Recto {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 10;
+    /*border: 1px solid;*/
+}
+
+.backArrow {
+	font-size: 6rem;
+	color: #fff;
+	text-align: left;
+	margin-top: -4vh;
+	margin-left: 8vh;
+	margin-bottom: -2vh;
+	/*border: 1px solid;*/
+}
+
+.backArrow:after {
+	content: "\2190"
+}
+
+.aboutBody {
+	font-size: 2.2rem;
+	font-family: 'Falster', 'Helvetica', sans-serif;
+	color: #fff;
+	text-align: left;
+	margin-left: 4vh;
+	margin-right: -8vh;
+	margin-bottom: 4vh;
+/*	border: 1px solid; */
+}
+
+.aboutImage {
+	width: 60%;
+	position: absolute;
+	top: 35vh;
+	right: 0;
+	z-index: -1;
+}
+
+.circleText {
+	font-size: 1.5rem;
+	position: fixed;
+	right: 40vh;
+	top: 30vh;
+ 	animation: rotation 14s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media all and (max-width: 600px) {
+ 	
+	.mobileHeader {
+  		text-align: center;
+	    font-size: 15vw;
+	    line-height: 1;
+	    margin-left: 2vh;
+	    margin-right: 2vh;
+	    margin-top: 2vh;
+	    font-family: "Adieu-Regular";
+	}
+
+	.mobileNavContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	    margin-bottom: 2vh;		
+	    margin-right: 2vh;		
+
+	}
+
+	/*sorry there must be a neater way to do this??*/
+	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
+	    font-size: 10vw;
+	    line-height: 1.2;
+	    margin-left: 2.2vh;		
+	}
+
+	.mobileNavItem1: {
+		text-align: left;
+	}
+
+	.mobileNavItem2 {
+		text-align: right;
+	}
+
+	.mobileNavItem3 {
+		text-align: center;
+	}	
+
+/*hidden elements in mobile*/
+	.Top, .Recto, .circleText, .backArrow {
+		display: none;
+	}
+
+	.aboutBody {
+		font-size: 6vw;
+		margin-left: 2vh;
+		margin-right: 2vh;
+	}
+
+/*where to display image in mobile?*/
+	.aboutImage {
+		display: none;
+		position: relative;
+	}
+}
+
+@media all and (min-width: 800px) {
+
 }

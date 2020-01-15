@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "circletype": "^2.3.0",
     "airtable": "^0.8.1",
     "dark-sky-api": "^0.6.32",
     "jquery": "^3.4.1",
