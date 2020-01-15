@@ -1,50 +1,30 @@
 import React from 'react';
 
+import './About.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top';
-import './About.css';
 import aboutImage from "../assets/aboutImage.png";
 
 export default class About extends React.Component{
   constructor(props) {
     super(props);
-    this.state={
-          hovering : false
-    }
-  }
-
-  handleEnter = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: true}))
-  }
-
-  handleLeave = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: !prevState.hovering}))
-  }
-
-  handleClick= (event) => {
-    event.preventDefault()
-    window.location = "mailto:hello@foreignobjects.net";
-  }
+}
 
   render() {
     return (
       <div className="App">
         <div className="aboutContainer">
-          <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
+          <Top hovering="true" />
+          <div className="mobileHeader">FOREIGN OBJECTS</div>
+          <div className="mobileNavContainer">
+            <div className="mobileNavItem1">&#8598;WORKS</div>
+            <div className="mobileNavItem2">CONVERSATION&#8600;</div>
+            <div className="mobileNavItem3">ABOUT&#8594;</div>
+          </div>          
           <div className="About">
             <div className="Verso">
               <div className="backArrow" />
-              <div className="aboutTitle"
-                    //for mobile
-                onMouseEnter={this.handleEnter}
-                //for desktop
-                onMouseLeave={this.handleLeave}>
-
-                You found our secret page. We want to work with you!
-              </div>
-              <div className="aboutText">
+              <div className="aboutBody">
                 FOREIGN OBJECTS LLC is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
                 <br/>
@@ -81,8 +61,7 @@ export default class About extends React.Component{
                 >NEW INC.</a>, at the New Museum in NYC. 
               </div>
             </div>
-            <div className="Recto">
-            </div>
+            <div className="Recto" />
             <img src={aboutImage} className="aboutImage" alt="About Us Image" />
           </div>
           <Circle>look wow it turns this took soooo long to make i hope you like it</Circle>
