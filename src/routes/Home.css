@@ -16,7 +16,7 @@
 }
 
 .centerText {
-  font-size: 15vw;
+  font-size: 20vh;
   line-height: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +43,7 @@
         -ms-animation: fadein 1s; /* Internet Explorer */
          -o-animation: fadein 1s; /* Opera < 12.1 */
             animation: fadein 1s;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   line-height: 1.2;
   display: -webkit-box;
   display: -ms-flexbox;

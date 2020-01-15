@@ -20,12 +20,13 @@
   padding: 0;
       -ms-flex: 1 100%;
           flex: 1 100%;
-}
+/*          border: 1px solid;
+*/}
 
 .Top, .Right, .Left {
 
   visibility: visible;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   line-height: 1;
   margin: 2vh;
   /*border: 1px solid;*/
@@ -33,7 +34,7 @@
 
 .Bottom {
   visibility: visible;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   line-height: 1;
   margin: 2vh;
   /*border: 1px solid;*/
@@ -102,19 +103,14 @@
   }
 }
 
+
 @media all and (min-width: 600px) {
-  
+
   .aside {
     -webkit-box-flex:  1;
         -ms-flex:  1 0 0px;
             flex:  1 0 0;
   }
-}
-
-/* DESKTOP  */
-
-
-@media all and (min-width: 800px) {
 
   .Left {
     -webkit-box-ordinal-group: 1;
