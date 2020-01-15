@@ -37,9 +37,7 @@
 	font-size: 6rem;
 	color: #fff;
 	text-align: left;
-	margin-top: -4vh;
-	margin-left: 8vh;
-	margin-bottom: -2vh;
+	margin: -4vh 0 -2vh 8vh;
 	/*border: 1px solid;*/
 }
 
@@ -52,9 +50,7 @@
 	font-family: 'Falster', 'Helvetica', sans-serif;
 	color: #fff;
 	text-align: left;
-	margin-left: 4vh;
-	margin-right: -8vh;
-	margin-bottom: 4vh;
+	margin: 0 -8vh 4vh 4vh;
 /*	border: 1px solid; */
 }
 
@@ -89,9 +85,7 @@
   		text-align: center;
 	    font-size: 15vw;
 	    line-height: 1;
-	    margin-left: 2vh;
-	    margin-right: 2vh;
-	    margin-top: 2vh;
+	    margin: 3vh 2vh 2vh 0;
 	    font-family: "Adieu-Regular";
 	}
 
@@ -99,8 +93,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	    margin-bottom: 2vh;		
-	    margin-right: 2vh;		
+	    margin: 0 2vh 2vh 0;
 	    font-family: "Falster";
 	}
 
@@ -108,7 +101,7 @@
 	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
 	    font-size: 10vw;
 	    line-height: 1.2;
-	    margin-left: 2.2vh;		
+	    margin: 0 0 0 2.2vh;		
 	}
 
 	.mobileNavItem1: {
@@ -139,8 +132,7 @@
 
 	.aboutBody {
 		font-size: 6vw;
-		margin-left: 2vh;
-		margin-right: 2vh;
+		margin: 0 2vh 0 2vh;
 	}
 
 /*where to display image in mobile?*/

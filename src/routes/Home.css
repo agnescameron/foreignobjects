@@ -113,15 +113,14 @@
   }
 
   .Center .centerText {
-    font-size: 17vw;
+    font-size: 18vw;
     text-align: center;
     margin: 2vh;
   }
 
   .Blurb {
     font-size: 1.6rem;
-    margin-left: 2vh;
-    margin-right: 2vh; 
+    margin: 0 2vh 0 2vh; 
   }
 
   .Blurb .blurbArrow {

@@ -35,8 +35,7 @@
   visibility: visible;
   font-size: 1.5rem;
   line-height: 1;
-  /*Bottom line has higher margin because of .font text */
-  margin: 4vh;
+  margin: 2vh;
   /*border: 1px solid;*/
 }
 
@@ -56,23 +55,20 @@
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;  
+          justify-content: flex-end;  
     -ms-flex-line-pack: flex-end;
-      align-items: flex-end;
+      align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
 }
 
 .bottomContainer .font {
   font-size: 0.8rem;
-  margin: 2vh 0 0 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 1vh;
-  padding-right: 1vh;
+  align-self: flex-end;
+  margin: 0 1vh 1vh 0;
 }
 
 
@@ -96,18 +92,15 @@
     align-items: flex-start;
   }
 
-  .Bottom .font {
+  .bottomContainer .font {
     display: none;
   }
 
   .Top, .Right, .Bottom, .Left {
     font-size: 1.6rem;
-    margin-left: 4vh;
-    margin-right: 4vh;
-
+    margin: 4vh 2vh 0 2vh;
   }
 }
-
 
 @media all and (min-width: 600px) {
   .aside {
@@ -143,16 +136,22 @@
             writing-mode: tb-rl;
   }
 
+  .bottomContainer  {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 5; 
+            order: 5;
+}
+
   .Bottom  {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 6; 
             order: 6;
 }
 
-  .bottomContainer  {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 6; 
-            order: 6;
+  .font  {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 7; 
+            order: 7;
 }
 
 }
