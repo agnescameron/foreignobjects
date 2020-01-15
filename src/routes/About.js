@@ -17,15 +17,15 @@ export default class About extends React.Component{
           <Top hovering="true" />
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
-            <div className="mobileNavItem1">&#8598;WORKS</div>
-            <div className="mobileNavItem2">CONVERSATION&#8600;</div>
-            <div className="mobileNavItem3">ABOUT&#8594;</div>
+            <div className="mobileNavItem1"><span className="Orange">&#8598;</span>WORKS</div>
+            <div className="mobileNavItem2">CONVERSATION<span className="Orange">&#8600;</span></div>
+            <div className="mobileNavItem3">ABOUT<span className="Orange">&#8594;</span></div>
           </div>          
           <div className="About">
             <div className="Verso">
               <div className="backArrow" />
               <div className="aboutBody">
-                FOREIGN OBJECTS LLC is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
+                <span className="Orange">FOREIGN OBJECTS LLC</span> is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
                 <br/>
                 Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.                   Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.      
