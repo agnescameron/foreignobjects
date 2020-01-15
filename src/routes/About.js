@@ -85,7 +85,7 @@ export default class About extends React.Component{
             </div>
             <img src={aboutImage} className="aboutImage" alt="About Us Image" />
           </div>
-          <Circle className="circleText" garyname="gary!"/>
+          <Circle>look wow it turns this took soooo long to make i hope you like it</Circle>
         </div>  
       </div>
     );
