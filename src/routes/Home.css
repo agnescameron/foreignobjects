@@ -86,9 +86,35 @@
 
 @media all and (max-width: 600px) {
 
+  .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: left;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+}
+
+  .centerText:hover {
+    -webkit-filter: none;
+            filter: none;
+    /*cursor becomes clicky finger on hover*/
+    cursor:  url('../assets/cursor-click.png'), auto;
+}
+
+  .Center {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .Center .centerText {
-    font-size: 4rem;
-    text-align: left;
+    font-size: 17vw;
+    text-align: center;
     margin: 2vh;
   }
 
@@ -96,12 +122,12 @@
     font-size: 1.6rem;
     margin-left: 2vh;
     margin-right: 2vh; 
-
   }
 
   .Blurb .blurbArrow {
     font-size: 1.6rem;
   }
+  
 }
 
 @media all and (min-width: 600px) {
@@ -118,6 +144,5 @@
   .Blurb { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
     
   .Blurb { -webkit-box-flex: 4; -ms-flex: 4 0px; flex: 4 0px; }
-
 
 }

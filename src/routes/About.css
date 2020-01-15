@@ -122,9 +122,13 @@
 	.mobileNavItem3 {
 		text-align: center;
 	}	
-
+	
 	.Orange {
-		color: #FFA500;
+		color: #FF696B;
+		text-decoration: underline;
+	}
+
+	.Arrow {
 		text-decoration: none;
 	}
 
