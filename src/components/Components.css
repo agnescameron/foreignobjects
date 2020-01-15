@@ -41,9 +41,9 @@
 }
 
 .hidden {
-  -webkit-transition: 10s;
-  -o-transition: 10s;
-  transition: 10s;
+  -webkit-transition: 7s;
+  -o-transition: 7s;
+  transition: 7s;
   opacity: 0;
   visibility: hidden;
 }
