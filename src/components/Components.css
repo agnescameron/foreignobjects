@@ -103,6 +103,7 @@
 }
 
 @media all and (min-width: 600px) {
+  
   .aside {
     -webkit-box-flex:  1;
         -ms-flex:  1 0 0px;
