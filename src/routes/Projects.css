@@ -2,19 +2,11 @@ body {
 	background-color: white;
 }
 
-.projectBox {
+.projectsContainer {
 	color: #0000FF;
-	display: -webkit-box;
-  	display: -ms-flexbox;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: space-between;
-}
-
-.Projects {
 	display: flex;
 	flex: 1 100%;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	flex-grow: 1;
@@ -76,29 +68,25 @@ body {
 
 /*------------------------ projectModule ------------------------ */
 
-.projectBox {
+.projectsContainer {
   /*draggable container for projects and news module*/
   display: flex;
   position: relative;
   z-index: 10;
+  border: red 1px solid;
 }
 
-.projectBox:hover .circleText, .lineTitle {
+.projectsContainer:hover .circleText, .lineTitle {
 	z-index: 10;
 	display: visible;
 }
 
-.Verso .projectBox img {
+.projectsContainer img {
   width: 45vw;
   opacity: 80%;
 }
 
-.Recto .projectBox img {
-  width: 50vw;
-  opacity: 80%;
-}
-
-.Verso .lineTitle {
+.projectsContainer .lineTitle {
   right: -20vh;
   top: -5vh;  
   font-family: 'Falster';
@@ -108,20 +96,11 @@ body {
   transform: rotate(20deg);
 }
 
-.Recto .lineTitle {
-  top: -5vh;  
-  right: 70%;
-  margin-left: -20vh;
-  font-family: 'Falster';
-  font-size: 3rem;
-  position: absolute;
-  transform: rotate(-30deg);
-  visibility: hidden;
-}
-
 .projectLarge {
   text-align: left;
   left: 0;
+  border: blue 1px solid;
+
 }
 
 .projectMedium {
@@ -133,7 +112,7 @@ body {
   right: 0;
 }
 
-.projectBox:hover *{
+.projectsContainer:hover *{
  	visibility: visible;
 }
 
