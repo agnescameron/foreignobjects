@@ -6,9 +6,6 @@ export default class ProjectModule extends React.Component{
 // records delta state of the dragged object
 
   render() {
-  	if(this.props.project.fields.Image){
-  		console.log("image url", this.props.project.fields.Image[0].url)
-  	}
 	return (
 		<DragBox> 
   		<div className="projectModuleFilling">

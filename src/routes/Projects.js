@@ -23,7 +23,6 @@ export default class Projects extends React.Component{
           var publicProjects = data.records.filter(function(project){ 
             if(project.fields["Release Status"]){
               return project.fields["Release Status"].includes("Personal–Private") === false; }
-            else return;
             })
           console.log(publicProjects);
           this.setState({projects: publicProjects});
