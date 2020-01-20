@@ -8,7 +8,7 @@ export default class ProjectModule extends React.Component{
   render() {
 	return (
 		<DragBox> 
-  		<div className="projectModuleFilling">
+  		<div className={"projectModuleFilling"}>
   		{this.props.project.fields.Image ? <img draggable="false" src={this.props.project.fields.Image[0].url} /> : ''}	      		
   			<div className="projectModuleText">
       		{this.props.project.fields["Project Name"]}
