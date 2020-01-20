@@ -20,4 +20,4 @@ app.use(
 
 app.use(bundler.middleware())
 
-app.listen(Number(process.env.PORT || 1234))
+app.listen(Number(process.env.PORT || 3000))
