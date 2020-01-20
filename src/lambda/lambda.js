@@ -10,6 +10,7 @@ exports.handler = async (event) => {
 	const response = await fetch(`https://api.airtable.com/v0/appJVRlTLOZYKPWBs/PROJECTS?maxRecords=${MAX_RECORDS}&view=Grid%20view`, {
  	"headers": {"Authorization": `Bearer ${process_api_key}`} })
  	const data = await response.text();
+ 	console.log(data);
 	return { statusCode: 200, body: data };
   }
   return { statusCode: 404 };
