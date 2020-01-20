@@ -19,8 +19,14 @@ export default class Projects extends React.Component{
           console.log(response)
           return response.json();
         }).then( (data) => {
-          console.log(data.records)
-          this.setState({projects: data.records});
+          //omits projects tagged as private
+          var publicProjects = data.records.filter(function(project){ 
+            if(project.fields["Release Status"]){
+              return project.fields["Release Status"].includes("Personal–Private") === false; }
+            else return;
+            })
+          console.log(publicProjects);
+          this.setState({projects: publicProjects});
         }).catch(err => {console.log(err)});
     }
     
@@ -28,7 +34,7 @@ export default class Projects extends React.Component{
     var projects = this.state.projects;
     return (
       <div className="App">
-                          {projects.map((project, i) => {     
+              {projects.map((project, i) => {     
                 // Return the element. Also pass key     
                 return (<ProjectModule key={i} project={project} />) 
               })}
