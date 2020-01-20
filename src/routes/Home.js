@@ -42,11 +42,22 @@ export default class Home extends React.Component{
         </div>
 
         <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="bottomContainer">
           <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
+          <div className='font'>
+          Website typeset in 'Migrant', by the awesome team at&nbsp;<a
+            className="App-link"
+            href="http://www.offshorestudio.ch/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >OFFSHORE STUDIO
+          </a>.
         </div>
+        </div>
+        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
+
+
       </div>
     );
   }

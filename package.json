@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "airtable": "^0.8.1",
-    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "circletype": "^2.3.0",
     "dark-sky-api": "^0.6.32",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.20.0",
