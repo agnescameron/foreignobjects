@@ -11,7 +11,7 @@ const app = express()
 app.use(
   '/.netlify/functions',
   proxy({
-    target: 'http://localhost:9000',
+    target: 'http://localhost:3000',
     pathRewrite: {
         '^/\.netlify/functions':''
     }
