@@ -5,10 +5,29 @@ const AIRTABLE_API_KEY = ""
 const MAX_RECORDS = 20;
 
 export default class Projects extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      projects: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+        projects: [],
+        }
+    }
+    
+    componentDidMount() {
+        fetch(".netlify/functions/lambda")
+        .then(function(response) {
+          console.log(response)
+          return response.json();
+        }).then(function(data) {
+          console.log(data);
+        }).catch(err => {console.log(err)});
+    }
+    
+    render() {
+        return (
+                <div className="App">
+                p r o j e c t s
+                </div>
+                );
     }
   }
 
