@@ -35,10 +35,6 @@ export default class Projects extends React.Component{
     var projects = this.state.projects;
     return (
       <div className="App">
-            {projects.map((project, i) => {
-                // Return the element. Also pass key
-               return (<ProjectModule key={i} project={project} />)
-        })}
         <div className="projectsContainer">
           <Top hovering="true" />
           <div className="Projects">
@@ -54,27 +50,12 @@ export default class Projects extends React.Component{
             <div className="backgroundLogo" draggable="false">
               <div>FOREIGN OBJECTS</div>
             </div>
-            <div className="Verso">
-              <div className="backArrow" />
-              <div className="projectBox">
-                <div className="projectLarge">
-                  <div className="lineTitle">The Internet as a City</div>
-                  <div className="mobileTitleLeft">THE INTERNET AS A CITY</div>                  
-                </div>
-              </div>
-            </div>
-            <div className="Recto">
-              <div className="projectBox"> 
-                <div className="projectMedium">
-                  <div className="lineTitle">Seeing the City</div>
-                  <div className="mobileTitleLeft">SEEING THE CITY</div>
-                </div>
-              </div>
-               <div className="projectBox"> 
-                <div className="projectSmall">
-                  <div className="lineTitle">Another Project We Did</div>
-                  <div className="mobileTitleLeft">ANOTHER PROJECTS WE DID</div>
-                </div>
+              <div className="Verso">
+                <div className="projectBox">
+                {projects.map((project, i) => {
+                    // Return the element. Also pass key
+                   return (<ProjectModule key={i} project={project} />)
+                })}
               </div>
             </div>
           </div>
