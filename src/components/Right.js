@@ -17,7 +17,7 @@ export default class Right extends React.Component{
             href="https://www.newinc.org/year-6-members/agnes-cameron-gary-zhexi-zhang-kalli-retzepi-sam-ghantous"
             target="_blank"
             rel="noopener noreferrer"
-          >consultancy</a>  based in NYC.
+          >cultural consultancy</a>  based in NYC.
       </div>
     );
   }

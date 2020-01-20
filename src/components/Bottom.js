@@ -32,15 +32,6 @@ export default class Bottom extends React.Component{
           target="_blank"
             rel="noopener noreferrer"
           >critical tools</a> in digital and physical space.
-        <div className='font'>
-          Website typeset in 'Migrant', by the awesome team at&nbsp;<a
-            className="App-link"
-            href="http://www.offshorestudio.ch/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >OFFSHORE STUDIO
-          </a>.
-        </div>
       </div>
     );
   }

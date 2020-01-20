@@ -18,9 +18,9 @@ export default class Center extends React.Component{
   render() {
   	if(this.state.Blurb){
     return (
-      	<div className="Blurb">
-			<p>
-				<div onClick={() => this.setState({Blurb: false})}>&#8598;</div>
+    	      	<div className="Blurb">
+				<p>
+				<div className="blurbArrow" onClick={() => this.setState({Blurb: false})}><a className="App-link">&#8598;</a></div>
 				Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
 				<br/>
 				<br/>
@@ -58,7 +58,8 @@ export default class Center extends React.Component{
  	return (
 
 	      <div className="centerText" onClick={() => this.setState({Blurb: true})}>
-	        FOREIGN OBJECTS
+	        <div>FOREIGN OBJECTS</div>
+	        <div className="centerArrow"><span className="Arrow">&#8599;</span></div>
 	      </div>
     );
   }

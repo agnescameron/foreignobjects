@@ -1,6 +1,4 @@
-
 /* FLEXBOX stuff we want to render right here for App*/
-
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,22 +11,22 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
 }
 
 .App > * {
   box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
   -webkit-box-flex: 1;
+  margin: 0;
+  padding: 0;
       -ms-flex: 1 100%;
           flex: 1 100%;
-}
+/*          border: 1px solid;
+*/}
 
 .Top, .Right, .Left {
 
   visibility: visible;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   line-height: 1;
   margin: 2vh;
   /*border: 1px solid;*/
@@ -36,203 +34,83 @@
 
 .Bottom {
   visibility: visible;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   line-height: 1;
-  /*Bottom line has higher margin.*/
-  margin: 4vh;
+  margin: 2vh;
   /*border: 1px solid;*/
 }
 
 .hidden {
-  -webkit-transition: 10s;
-  -o-transition: 10s;
-  transition: 10s;
-  opacity: 0%;
+  -webkit-transition: 7s;
+  -o-transition: 7s;
+  transition: 7s;
+  opacity: 0;
   visibility: hidden;
 }
 
+/*a container for aligning .Bottom & .font to the baseline, 
+  may be there is a better way to do this?*/
 .bottomContainer {
-  /*flexbox for aligning .Bottom & .font to the bottom, may be there is a better way to do this?*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;  
+          justify-content: flex-end;  
     -ms-flex-line-pack: flex-end;
-      align-items: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.bottomContainer .font {
-  font-size: 0.8rem;
-  margin: 2vh 0 0 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 1vh;
-  padding-right: 1vh;
-}
-
-.Center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+      align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* border: 1px solid; */
-}
-
-.centerText {
-  font-size: 15rem;
-  line-height: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  /* border: 1px solid; */
-}
-
-.Blurb {
-   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1s; /* Firefox < 16 */
-        -ms-animation: fadein 1s; /* Internet Explorer */
-         -o-animation: fadein 1s; /* Opera < 12.1 */
-            animation: fadein 1s;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-grow: 2;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   text-align: left;
-  /* border: 1px solid; */
 }
 
-.centerText:hover {
-  -webkit-filter: blur(4px) grayscale(5%);
-          filter: blur(4px) grayscale(5%);
-  /*changes cursor to clicky finger on centerText - otherwise default on App-link*/
-  cursor:  url('../assets/cursor-click.png'), auto;
+.bottomContainer .font {
+  font-size: 0.8rem;
+  align-self: flex-end;
+  margin: 0 1vh 1vh 0;
 }
 
-.projectModule {
-  /*draggable window for projects and news*/
-  width: 350px;
-  height: 400px;
-  position: absolute;
-  font-size: 1.4rem;
-  border: 0;
-  background-color: #FF0000;
-  vertical-align: center;
-  opacity: 70%;
-  z-index: 10;
-}
 
-.projectModule img {
-  width: 200px;
-}
+/* MOBILE  */
 
-/*animation settings*/
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
 @media all and (max-width: 600px) {
 
-  .App {
-    text-align: left;
-    align-items: flex-start;
-  }
+.App > * {
+      -ms-flex: none;
+          flex: none;
+}
 
   /* make sure the side texts are visible all the time */
   .hidden {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
   }
 
-  .Center .centerText {
-    font-size: 5.2rem;
-    text-align: center;
-  }
-  
   .bottomContainer {
     align-items: flex-start;
   }
 
-  .Bottom .font {
-    position: relative;
-    margin-top: 5vh;
-    text-align: left;
+  .bottomContainer .font {
+    display: none;
   }
 
   .Top, .Right, .Bottom, .Left {
     font-size: 1.6rem;
-    margin: 2vh;
-}
-
-  .Blurb {
-    font-size: 1.6rem;
-    margin-left: 2vh;
-    margin-right: 2vh; 
+    margin: 4vh 2vh 0 2vh;
   }
 }
 
 
 @media all and (min-width: 600px) {
+
   .aside {
     -webkit-box-flex:  1;
         -ms-flex:  1 0 0px;
             flex:  1 0 0;
   }
-}
-
-/* DESKTOP  */
-
-
-@media all and (min-width: 800px) {
-
-  .Center { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
-
-  .Blurb { -webkit-box-flex: 4; -ms-flex: 4 0px; flex: 4 0px; }
 
   .Left {
     -webkit-box-ordinal-group: 1;
@@ -245,9 +123,6 @@
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
   }
-  .Center { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
-
-  .Blurb { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
 
   .Right {
     -webkit-box-ordinal-group: 4;
@@ -258,18 +133,22 @@
             writing-mode: tb-rl;
   }
 
+  .bottomContainer  {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 5; 
+            order: 5;
+}
+
   .Bottom  {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 6; 
             order: 6;
 }
 
-  .bottomContainer  {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 6; 
-            order: 6;
+  .font  {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 7; 
+            order: 7;
 }
-
-
 
 }
