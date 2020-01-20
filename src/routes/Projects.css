@@ -2,7 +2,7 @@ body {
 	background-color: white;
 }
 
-.projectsContainer {
+.projectBox {
 	color: #0000FF;
 	display: -webkit-box;
   	display: -ms-flexbox;
@@ -27,6 +27,7 @@ body {
 
 .backgroundLogo {
   font-family: "Adieu-Regular";
+  color: #00F;
   font-size: 17vh;
   line-height: 0.8;
   top: 35%;
@@ -51,15 +52,15 @@ body {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-/*    border: red 1px solid;
-*/}
+    /*border: red 1px solid;*/
+}
 
 .Recto {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-/*    border: white 1px solid;
-*/}
+    /*border: white 1px solid;*/
+}
 
 .backArrow {
 	font-size: 6rem;
@@ -75,23 +76,24 @@ body {
 
 /*------------------------ projectModule ------------------------ */
 
-.projectModule {
+.projectBox {
   /*draggable container for projects and news module*/
-  position: absolute;
+  display: flex;
+  position: relative;
   z-index: 10;
 }
 
-.projectModule:hover .circleText, .lineTitle {
+.projectBox:hover .circleText, .lineTitle {
 	z-index: 10;
 	display: visible;
 }
 
-.Verso .projectModule img {
+.Verso .projectBox img {
   width: 45vw;
   opacity: 80%;
 }
 
-.Recto .projectModule img {
+.Recto .projectBox img {
   width: 50vw;
   opacity: 80%;
 }
@@ -117,25 +119,21 @@ body {
   visibility: hidden;
 }
 
-.projectOne {
-  position: absolute;
-  left: 0vh;
-  top: 10vh;
+.projectLarge {
+  text-align: left;
+  left: 0;
 }
 
-.projectTwo {
-  position: absolute;
-  top: 90vh;
+.projectMedium {
+  top: 100vh;
   right: 0;
 }
 
-.projectThree {
-  position: absolute;
-  top: 147vh;
+.projectSmall {
   right: 0;
 }
 
-.projectModule:hover *{
+.projectBox:hover *{
  	visibility: visible;
 }
 
@@ -154,46 +152,45 @@ body {
 
 @media all and (max-width: 800px) {
 
-	body {
-		background-color: #00F;
-	}
-
 	.backgroundLogo, .lineTitle {
 		display: none;
 	}
 
-	.projectsContainer {
-	color: white;
+	body {
+		background-color: #00F;
 	}
 
  	.Projects {
  		display: flex;
  		flex-direction: column;
+ 		justify-content: flex-start;
  	}
 
- 	.Recto .projectModule img {
- 		width: 80vw;
+	.projectBox {
+		color: white;
+	}
+
+ 	.Recto .projectBox img {
+		width: 80vw;
  	}
 
- 	.projectOne {
-	  position: absolute;
-	  right: 0vh;
-	  top: 0vh;
+ 	.Verso .projectBox img {
+		width: 80vw;
+}
+
+ 	.projectLarge {
+	  left: 0;
 	}
 
- 	.projectTwo {
-	  position: absolute;
-	  right: 0vh;
-	  top: 40vh;
+ 	.projectMedium {
+	  right: 0;
 	}
 
- 	.projectThree {
-	  position: absolute;
-	  right: 0vh;
-	  top: 70vh;
+ 	.projectSmall {
+	  right: 0;
 	}
 
-	/*Mobile Navbar*/
+/*Mobile Navbar*/
 
 	.mobileHeader {
   		text-align: center;
@@ -211,21 +208,21 @@ body {
 	    font-family: "Falster";
 	}
 
-	.mobileNavLeft, .mobileNavCenter, .mobileNavRight {
+	.mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
 	    font-size: 10vw;
 	    line-height: 1.2;
 	    margin: 0 0 0 2.2vh;		
 	}
 
-	.mobileNavLeft: {
+	.mobileTitleLeft: {
 		text-align: left;
 	}
 
-	.mobileNavCenter {
+	.mobileTitleRight {
 		text-align: right;
 	}
 
-	.mobileNavRight {
+	.mobileTitleCenter {
 		text-align: center;
 	}	
 	
@@ -258,7 +255,7 @@ body {
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-	.mobileNavContainer, .mobileHeader {
+	.mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
 }
 }

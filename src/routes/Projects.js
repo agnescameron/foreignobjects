@@ -3,7 +3,6 @@ import './Projects.css';
 import IAACjpg from '../assets/IAAC.png';
 import STCjpg from '../assets/STC.jpg';
 import STC2jpg from '../assets/STC2.jpg';
-import ProjectModule from '../components/ProjectModule';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top.js';
 
@@ -36,41 +35,41 @@ export default class Projects extends React.Component{
           <div className="Projects">
               <div className="mobileHeader">FOREIGN OBJECTS</div>
               <div className="mobileNavContainer">
-                <div className="mobileNavLeft">
+                <div className="mobileTitleLeft">
                 <a className="Orange Arrow"
                 href="https://www.foreignobjects.net"
                 rel="noopener noreferrer">&#8598;</a>HOME</div>
-                <div className="mobileNavCenter">CONVERSATION<span className="Orange Arrow">&#8600;</span></div>
-                <div className="mobileNavRight">ABOUT<span className="Orange Arrow">&#8594;</span></div>
+                <div className="mobileTitleCenter">CONVERSATION<span className="Orange Arrow">&#8600;</span></div>
+                <div className="mobileTitleRight">ABOUT<span className="Orange Arrow">&#8594;</span></div>
               </div>  
             <div className="backgroundLogo" draggable="false">
               <div>FOREIGN OBJECTS</div>
             </div>
             <div className="Verso">
               <div className="backArrow" />
-              <ProjectModule>
-                <div className="projectOne">
+              <div className="projectBox">
+                <div className="projectLarge">
                   <div className="lineTitle">The Internet as a City</div>
                   <img draggable="false" src={IAACjpg} />
-                  <div className="mobileNavRight">THE INTERNET AS A CITY</div>                  
+                  <div className="mobileTitleLeft">THE INTERNET AS A CITY</div>                  
                 </div>
-              </ProjectModule>
+              </div>
             </div>
             <div className="Recto">
-              <ProjectModule> 
-                <div className="projectTwo">
+              <div className="projectBox"> 
+                <div className="projectMedium">
                   <div className="lineTitle">Seeing the City</div>
                   <img draggable="false" src={STCjpg} />
-                  <div className="mobileNavLeft">SEEING THE CITY</div>
+                  <div className="mobileTitleLeft">SEEING THE CITY</div>
                 </div>
-              </ProjectModule>
-               <ProjectModule> 
-                <div className="projectThree">
+              </div>
+               <div className="projectBox"> 
+                <div className="projectSmall">
                   <div className="lineTitle">Another Project We Did</div>
                   <img draggable="false" src={STC2jpg} />
-                  <div className="mobileNavLeft">ANOTHER PROJECTS WE DID</div>
+                  <div className="mobileTitleLeft">ANOTHER PROJECTS WE DID</div>
                 </div>
-              </ProjectModule>
+              </div>
             </div>
           </div>
         </div>
