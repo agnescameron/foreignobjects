@@ -11,8 +11,8 @@ export default class Projects extends React.Component{
     
     componentDidMount() {
         fetch(".netlify/functions/lambda")
-        .then(data => {
-              console.log("projects", data.body);
+        .then(response => {
+              console.log("projects", response.body);
               }).catch(err => {console.log(err)});
     }
     
