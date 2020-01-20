@@ -1,4 +1,9 @@
+body {
+	background-color: white;
+}
+
 .projectsContainer {
+	color: #0000FF;
 	display: -webkit-box;
   	display: -ms-flexbox;
   	display: flex;
@@ -12,55 +17,9 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
 	flex-grow: 1;
-    /*border: 1px solid;*/
-}
-
-.Verso {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-    /*border: 1px solid;*/
-}
-
-.Recto {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	align-items: flex-end;
-	z-index: 10;
-    /*border: 1px solid;*/
-}
-
-.backArrow {
-	font-size: 6rem;
-	color: #fff;
-	text-align: left;
-	margin: -4vh 0 -2vh 8vh;
-	/*border: 1px solid;*/
-}
-
-.backArrow:after {
-	content: "\2190"
-}
-
-.aboutBody {
-	font-size: 2.2rem;
-	font-family: 'Falster', 'Helvetica', sans-serif;
-	color: #fff;
-	text-align: left;
-	margin: 0 -8vh 4vh 4vh;
-/*	border: 1px solid; */
-}
-
-.aboutImage {
-	width: 60%;
-	position: absolute;
-	top: 35vh;
-	right: 0;
-	z-index: -1;
-}
+/*    border: lightgreen 3px solid;
+*/}
 
 .backgroundLogo {
   font-family: "Adieu-Regular";
@@ -76,8 +35,126 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-   border: 1px solid; 
+-webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Old versions of Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently */
 }
+
+.Verso {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+/*    border: red 1px solid;
+*/}
+
+.Recto {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+/*    border: white 1px solid;
+*/}
+
+.backArrow {
+	font-size: 6rem;
+	color: #fff;
+	text-align: left;
+	margin: -4vh 0 -2vh 8vh;
+	/*border: white 1px solid;*/
+}
+
+.backArrow:after {
+	content: "\2190"
+}
+
+/*------------------------ projectModule ------------------------ */
+
+.projectModule {
+  /*draggable container for projects and news module*/
+  position: absolute;
+  z-index: 10;
+}
+
+.projectModule:hover .circleText, .lineTitle {
+	z-index: 10;
+	display: visible;
+}
+
+.projectOne {
+  display: flex;
+  position: absolute;
+  left: 0vh;
+  top: 20vh;
+}
+
+.projectTwo {
+  display: flex;
+  position: absolute;
+  top: 90vh;
+  right: 0;
+}
+
+.projectThree {
+  display: flex;
+  position: absolute;
+  top: 150vh;
+  right: 0;
+}
+
+.Verso .projectModule img {
+  width: 45vw;
+  opacity: 90%;
+}
+
+.Recto .projectModule img {
+  width: 50vw;
+  opacity: 90%;
+}
+
+.Verso .circleText {
+  right: 0;
+  top: -13vh;  
+  font-family: 'Falster';
+  font-size: 3rem;
+  position: absolute;
+  display: none;
+  animation: rotation 30s infinite linear;
+}
+
+.Verso .lineTitle {
+  right: 0;
+  top: -5vh;  
+  font-family: 'Falster';
+  font-size: 1.5rem;
+  position: absolute;
+  display: none;
+  transform: rotate(-30deg);
+}
+
+.Recto .circleText {
+  right: 100%;
+  top: -5vh;  
+  font-family: 'Falster';
+  font-size: 3rem;
+  position: absolute;
+  display: none;
+  animation: rotation 30s infinite linear;
+}
+
+.Recto .lineTitle {
+  top: -5vh;  
+  right: 70%;
+  margin-left: -20vh;
+  font-family: 'Falster';
+  font-size: 3rem;
+  position: absolute;
+  transform: rotate(-30deg);
+  display: none;
+}
+
+/*animation*/
 
 @keyframes rotation {
   from {
@@ -88,7 +165,12 @@
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
+
+	.backgroundLogo {
+		display: none;
+	}
+
  	
 	.mobileHeader {
   		text-align: center;

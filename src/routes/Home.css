@@ -85,7 +85,7 @@
 
 /*mobile options*/
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
 
   .App {
   display: -webkit-box;
@@ -127,10 +127,19 @@
   .Blurb .blurbArrow {
     font-size: 1.6rem;
   }
+
+  .projectModule .circleText {
+  left: 50vh;
+  top: 25vh;  
+  font-family: 'Falster';
+  font-size: 1.5rem;
+  position: absolute;
+  animation: rotation 14s infinite linear;
+}
   
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 800px) {
 
   .Center { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
 
