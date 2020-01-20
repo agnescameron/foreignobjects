@@ -1,9 +1,5 @@
 import React from 'react';
 import './Projects.css';
-// import { AIRTABLE_API_KEY } from '../keys.js'
-const MAX_RECORDS = 20;
-
-const process_api_key = process.env.AIRTABLE_API_KEY;
 
 export default class Projects extends React.Component{
   constructor(props) {
@@ -14,9 +10,10 @@ export default class Projects extends React.Component{
   }
 
   componentDidMount() {
-  fetch("functions/lambda")
+  fetch(".netlify/functions")
     .then(data => {
-       this.setState({ projects: data.records });
+       this.setState({ projects: data });
+       console.log("projects", data);
     }).catch(err => {console.log(err)});
   }
 
