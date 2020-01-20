@@ -10,6 +10,7 @@
 
 # production
 /build
+/functions
 
 # keys
 *keys.js*

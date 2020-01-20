@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const process_api_key = process.env.AIRTABLE_API_KEY;
-const MAX_RECORDS = 10;
+const MAX_RECORDS = 20;
 
 exports.handler = async (event) => {
   // We can retrive type of http method in event parameter
