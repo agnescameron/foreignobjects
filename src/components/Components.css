@@ -70,6 +70,7 @@
   font-size: 0.8rem;
   align-self: flex-end;
   margin: 0 1vh 1vh 0;
+  display: none;
 }
 
 /* projectModule  */
@@ -111,19 +112,10 @@ img:hover + .projectModuleText {
   visibility: visible;
 }
 
-.projectModule .circleText {
-  left: 50vh;
-  top: 25vh;  
-  font-family: 'Falster';
-  font-size: 1.5rem;
-  position: absolute;
-  animation: rotation 14s infinite linear;
-}
-
 /* MOBILE  */
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
 
 .App > * {
       -ms-flex: none;
@@ -151,7 +143,7 @@ img:hover + .projectModuleText {
 }
 
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 800px) {
 
   .aside {
     -webkit-box-flex:  1;

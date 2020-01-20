@@ -1,4 +1,9 @@
-.projectsContainer {
+body {
+	background-color: white;
+}
+
+.projectBox {
+	color: #0000FF;
 	display: -webkit-box;
   	display: -ms-flexbox;
   	display: flex;
@@ -12,58 +17,17 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
 	flex-grow: 1;
-    /*border: 1px solid;*/
-}
+/*    border: lightgreen 3px solid;
+*/}
 
-.Verso {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-    /*border: 1px solid;*/
-}
-
-.Recto {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	align-items: flex-end;
-	z-index: 10;
-    /*border: 1px solid;*/
-}
-
-.backArrow {
-	font-size: 6rem;
-	color: #fff;
-	text-align: left;
-	margin: -4vh 0 -2vh 8vh;
-	/*border: 1px solid;*/
-}
-
-.backArrow:after {
-	content: "\2190"
-}
-
-.aboutBody {
-	font-size: 2.2rem;
-	font-family: 'Falster', 'Helvetica', sans-serif;
-	color: #fff;
-	text-align: left;
-	margin: 0 -8vh 4vh 4vh;
-/*	border: 1px solid; */
-}
-
-.aboutImage {
-	width: 60%;
-	position: absolute;
-	top: 35vh;
-	right: 0;
-	z-index: -1;
+.Top {
+	visibility: hidden;
 }
 
 .backgroundLogo {
   font-family: "Adieu-Regular";
+  color: #00F;
   font-size: 17vh;
   line-height: 0.8;
   top: 35%;
@@ -76,8 +40,104 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-   border: 1px solid; 
+-webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Old versions of Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently */
 }
+
+.Verso {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+    /*border: red 1px solid;*/
+}
+
+.Recto {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+    /*border: white 1px solid;*/
+}
+
+.backArrow {
+	font-size: 6rem;
+	color: #00f;
+	text-align: left;
+	margin: -4vh 0 -2vh 8vh;
+	/*border: white 1px solid;*/
+}
+
+.backArrow:after {
+	content: "\2190"
+}
+
+/*------------------------ projectModule ------------------------ */
+
+.projectBox {
+  /*draggable container for projects and news module*/
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+
+.projectBox:hover .circleText, .lineTitle {
+	z-index: 10;
+	display: visible;
+}
+
+.Verso .projectBox img {
+  width: 45vw;
+  opacity: 80%;
+}
+
+.Recto .projectBox img {
+  width: 50vw;
+  opacity: 80%;
+}
+
+.Verso .lineTitle {
+  right: -20vh;
+  top: -5vh;  
+  font-family: 'Falster';
+  font-size: 3rem;
+  position: absolute;
+  visibility: hidden;
+  transform: rotate(20deg);
+}
+
+.Recto .lineTitle {
+  top: -5vh;  
+  right: 70%;
+  margin-left: -20vh;
+  font-family: 'Falster';
+  font-size: 3rem;
+  position: absolute;
+  transform: rotate(-30deg);
+  visibility: hidden;
+}
+
+.projectLarge {
+  text-align: left;
+  left: 0;
+}
+
+.projectMedium {
+  top: 100vh;
+  right: 0;
+}
+
+.projectSmall {
+  right: 0;
+}
+
+.projectBox:hover *{
+ 	visibility: visible;
+}
+
+/*animation*/
 
 @keyframes rotation {
   from {
@@ -88,8 +148,50 @@
   }
 }
 
-@media all and (max-width: 600px) {
- 	
+/*---------------------------MOBILE---------------------------*/
+
+@media all and (max-width: 800px) {
+
+	.backgroundLogo, .lineTitle {
+		display: none;
+	}
+
+	body {
+		background-color: #00F;
+	}
+
+ 	.Projects {
+ 		display: flex;
+ 		flex-direction: column;
+ 		justify-content: flex-start;
+ 	}
+
+	.projectBox {
+		color: white;
+	}
+
+ 	.Recto .projectBox img {
+		width: 80vw;
+ 	}
+
+ 	.Verso .projectBox img {
+		width: 80vw;
+}
+
+ 	.projectLarge {
+	  left: 0;
+	}
+
+ 	.projectMedium {
+	  right: 0;
+	}
+
+ 	.projectSmall {
+	  right: 0;
+	}
+
+/*Mobile Navbar*/
+
 	.mobileHeader {
   		text-align: center;
 	    font-size: 15vw;
@@ -106,22 +208,21 @@
 	    font-family: "Falster";
 	}
 
-	/*sorry there must be a neater way to do this??*/
-	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
+	.mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
 	    font-size: 10vw;
 	    line-height: 1.2;
 	    margin: 0 0 0 2.2vh;		
 	}
 
-	.mobileNavItem1: {
+	.mobileTitleLeft: {
 		text-align: left;
 	}
 
-	.mobileNavItem2 {
+	.mobileTitleRight {
 		text-align: right;
 	}
 
-	.mobileNavItem3 {
+	.mobileTitleCenter {
 		text-align: center;
 	}	
 	
@@ -135,7 +236,7 @@
 	}
 
 /*hidden elements in mobile*/
-	.Top, .Recto, .circleText, .backArrow {
+	.Top, .circleText, .backArrow {
 		display: none;
 	}
 
@@ -151,8 +252,10 @@
 	}
 }
 
+/*---------------------------DESKTOP---------------------------*/
+
 @media all and (min-width: 800px) {
-	.mobileNavContainer, .mobileHeader {
+	.mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
 }
 }

@@ -9,7 +9,7 @@ import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Center from '../components/Center';
 import Circle from '../components/Circle.js';
-import Image from '../assets/IAAC.jpg'
+import Image from '../assets/IAAC.png'
 
 
 import './Home.css';
