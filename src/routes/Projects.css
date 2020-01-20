@@ -21,6 +21,10 @@ body {
 /*    border: lightgreen 3px solid;
 */}
 
+.Top {
+	visibility: hidden;
+}
+
 .backgroundLogo {
   font-family: "Adieu-Regular";
   font-size: 17vh;
@@ -59,7 +63,7 @@ body {
 
 .backArrow {
 	font-size: 6rem;
-	color: #fff;
+	color: #00f;
 	text-align: left;
 	margin: -4vh 0 -2vh 8vh;
 	/*border: white 1px solid;*/
@@ -82,65 +86,24 @@ body {
 	display: visible;
 }
 
-.projectOne {
-  display: flex;
-  position: absolute;
-  left: 0vh;
-  top: 20vh;
-}
-
-.projectTwo {
-  display: flex;
-  position: absolute;
-  top: 90vh;
-  right: 0;
-}
-
-.projectThree {
-  display: flex;
-  position: absolute;
-  top: 150vh;
-  right: 0;
-}
-
 .Verso .projectModule img {
   width: 45vw;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .Recto .projectModule img {
   width: 50vw;
-  opacity: 90%;
-}
-
-.Verso .circleText {
-  right: 0;
-  top: -13vh;  
-  font-family: 'Falster';
-  font-size: 3rem;
-  position: absolute;
-  display: none;
-  animation: rotation 30s infinite linear;
+  opacity: 80%;
 }
 
 .Verso .lineTitle {
-  right: 0;
-  top: -5vh;  
-  font-family: 'Falster';
-  font-size: 1.5rem;
-  position: absolute;
-  display: none;
-  transform: rotate(-30deg);
-}
-
-.Recto .circleText {
-  right: 100%;
+  right: -20vh;
   top: -5vh;  
   font-family: 'Falster';
   font-size: 3rem;
   position: absolute;
-  display: none;
-  animation: rotation 30s infinite linear;
+  visibility: hidden;
+  transform: rotate(20deg);
 }
 
 .Recto .lineTitle {
@@ -151,7 +114,29 @@ body {
   font-size: 3rem;
   position: absolute;
   transform: rotate(-30deg);
-  display: none;
+  visibility: hidden;
+}
+
+.projectOne {
+  position: absolute;
+  left: 0vh;
+  top: 10vh;
+}
+
+.projectTwo {
+  position: absolute;
+  top: 90vh;
+  right: 0;
+}
+
+.projectThree {
+  position: absolute;
+  top: 147vh;
+  right: 0;
+}
+
+.projectModule:hover *{
+ 	visibility: visible;
 }
 
 /*animation*/
@@ -165,13 +150,51 @@ body {
   }
 }
 
+/*---------------------------MOBILE---------------------------*/
+
 @media all and (max-width: 800px) {
 
-	.backgroundLogo {
+	body {
+		background-color: #00F;
+	}
+
+	.backgroundLogo, .lineTitle {
 		display: none;
 	}
 
- 	
+	.projectsContainer {
+	color: white;
+	}
+
+ 	.Projects {
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+
+ 	.Recto .projectModule img {
+ 		width: 80vw;
+ 	}
+
+ 	.projectOne {
+	  position: absolute;
+	  right: 0vh;
+	  top: 0vh;
+	}
+
+ 	.projectTwo {
+	  position: absolute;
+	  right: 0vh;
+	  top: 40vh;
+	}
+
+ 	.projectThree {
+	  position: absolute;
+	  right: 0vh;
+	  top: 70vh;
+	}
+
+	/*Mobile Navbar*/
+
 	.mobileHeader {
   		text-align: center;
 	    font-size: 15vw;
@@ -188,22 +211,21 @@ body {
 	    font-family: "Falster";
 	}
 
-	/*sorry there must be a neater way to do this??*/
-	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
+	.mobileNavLeft, .mobileNavCenter, .mobileNavRight {
 	    font-size: 10vw;
 	    line-height: 1.2;
 	    margin: 0 0 0 2.2vh;		
 	}
 
-	.mobileNavItem1: {
+	.mobileNavLeft: {
 		text-align: left;
 	}
 
-	.mobileNavItem2 {
+	.mobileNavCenter {
 		text-align: right;
 	}
 
-	.mobileNavItem3 {
+	.mobileNavRight {
 		text-align: center;
 	}	
 	
@@ -217,7 +239,7 @@ body {
 	}
 
 /*hidden elements in mobile*/
-	.Top, .Recto, .circleText, .backArrow {
+	.Top, .circleText, .backArrow {
 		display: none;
 	}
 
@@ -232,6 +254,8 @@ body {
 		position: relative;
 	}
 }
+
+/*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
 	.mobileNavContainer, .mobileHeader {
