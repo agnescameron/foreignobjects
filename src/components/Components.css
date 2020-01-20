@@ -91,6 +91,7 @@
 
 .projectModuleFilling > img {
   opacity: 90%;
+  max-width: 300px;
 }
 
 .projectModuleText {

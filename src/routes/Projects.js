@@ -28,12 +28,12 @@ export default class Projects extends React.Component{
     var projects = this.state.projects;
     return (
       <div className="App">
-        <div className="Projects"> 
-          <div className="projectsContainer">
-            {projects.map((project, i) => {     
+                          {projects.map((project, i) => {     
                 // Return the element. Also pass key     
                 return (<ProjectModule key={i} project={project} />) 
               })}
+        <div className="Projects"> 
+          <div className="projectsContainer">
               <div className="mobileHeader">FOREIGN OBJECTS</div>
               <div className="mobileNavContainer">
                 <div className="mobileNavItem1">
