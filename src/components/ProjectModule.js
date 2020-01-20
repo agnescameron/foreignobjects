@@ -1,7 +1,7 @@
 import React from 'react';
 import './Components.css';
-import Image from '../assets/Image.png'
 import Draggable from 'react-draggable';
+
 
 export default class ProjectModule extends React.Component{
 // records delta state of the dragged object
@@ -10,8 +10,8 @@ export default class ProjectModule extends React.Component{
 	    deltaPosition: {
 	      x: 0, y: 0
     },
-    controlledPosition: {
-      	x: -100, y: 200
+    	controlledPosition: {
+      		x: -100, y: 200
     }
  };
 
@@ -30,9 +30,9 @@ export default class ProjectModule extends React.Component{
 	const {deltaPosition, controlledPosition} = this.state;
 	return (
 		<Draggable onDrag={this.handleDrag} {...dragHandlers}>
-      		<div className="projectModule">
-          		<div>x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}</div>
-      		</div>  
+	      		<div className="projectModule">
+	          			 {this.props.children}
+	      		</div>  
     	</Draggable>
     );
   }

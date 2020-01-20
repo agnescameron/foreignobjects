@@ -1,0 +1,158 @@
+.projectsContainer {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+}
+
+.Projects {
+	display: flex;
+	flex: 1 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-grow: 1;
+    /*border: 1px solid;*/
+}
+
+.Verso {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+    /*border: 1px solid;*/
+}
+
+.Recto {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 10;
+    /*border: 1px solid;*/
+}
+
+.backArrow {
+	font-size: 6rem;
+	color: #fff;
+	text-align: left;
+	margin: -4vh 0 -2vh 8vh;
+	/*border: 1px solid;*/
+}
+
+.backArrow:after {
+	content: "\2190"
+}
+
+.aboutBody {
+	font-size: 2.2rem;
+	font-family: 'Falster', 'Helvetica', sans-serif;
+	color: #fff;
+	text-align: left;
+	margin: 0 -8vh 4vh 4vh;
+/*	border: 1px solid; */
+}
+
+.aboutImage {
+	width: 60%;
+	position: absolute;
+	top: 35vh;
+	right: 0;
+	z-index: -1;
+}
+
+.backgroundLogo {
+  font-family: "Adieu-Regular";
+  font-size: 17vh;
+  line-height: 0.8;
+  top: 35%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+   border: 1px solid; 
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media all and (max-width: 600px) {
+ 	
+	.mobileHeader {
+  		text-align: center;
+	    font-size: 15vw;
+	    line-height: 1;
+	    margin: 3vh 2vh 2vh 0;
+	    font-family: "Adieu-Regular";
+	}
+
+	.mobileNavContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	    margin: 0 2vh 2vh 0;
+	    font-family: "Falster";
+	}
+
+	/*sorry there must be a neater way to do this??*/
+	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
+	    font-size: 10vw;
+	    line-height: 1.2;
+	    margin: 0 0 0 2.2vh;		
+	}
+
+	.mobileNavItem1: {
+		text-align: left;
+	}
+
+	.mobileNavItem2 {
+		text-align: right;
+	}
+
+	.mobileNavItem3 {
+		text-align: center;
+	}	
+	
+	.Orange {
+		color: #FF696B;
+		text-decoration: underline;
+	}
+
+	.Arrow {
+		text-decoration: none;
+	}
+
+/*hidden elements in mobile*/
+	.Top, .Recto, .circleText, .backArrow {
+		display: none;
+	}
+
+	.aboutBody {
+		font-size: 6vw;
+		margin: 0 2vh 0 2vh;
+	}
+
+/*where to display image in mobile?*/
+	.aboutImage {
+		display: none;
+		position: relative;
+	}
+}
+
+@media all and (min-width: 800px) {
+	.mobileNavContainer, .mobileHeader {
+		display: none;
+}
+}

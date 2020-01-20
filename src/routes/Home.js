@@ -7,6 +7,9 @@ import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Center from '../components/Center';
+import Circle from '../components/Circle.js';
+import Image from '../assets/IAAC.jpg'
+
 
 import './Home.css';
 
@@ -42,24 +45,36 @@ export default class Home extends React.Component{
         >          
           <Center />
         </div>
-
         <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="bottomContainer">
           <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
           <div className='font'>
-          Website typeset in 'Migrant', by the awesome team at&nbsp;<a
-            className="App-link"
-            href="http://www.offshorestudio.ch/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >OFFSHORE STUDIO
-          </a>.
-        </div>
+            Website typeset in 'Migrant', by the awesome team at&nbsp;<a
+              className="App-link"
+              href="http://www.offshorestudio.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >OFFSHORE STUDIO
+            </a>.
+          </div>
         </div>
 
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
-
+        
+        {/* <ProjectModule> 
+          <div className="projectModuleFilling">
+            <img draggable="false" src={Image} />
+            <div className="projectModuleText"> 
+                The Internet as a City
+            </div> 
+          </div>
+        </ProjectModule>
+        <ProjectModule> 
+          <Circle>
+            wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
+          </Circle> 
+        </ProjectModule> */} 
 
       </div>
     );

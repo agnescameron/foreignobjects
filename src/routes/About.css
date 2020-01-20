@@ -62,14 +62,6 @@
 	z-index: -1;
 }
 
-.circleText {
-	font-size: 1.5rem;
-	position: fixed;
-	right: 40vh;
-	top: 30vh;
- 	animation: rotation 14s infinite linear;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);

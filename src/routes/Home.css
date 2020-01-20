@@ -16,7 +16,8 @@
 }
 
 .centerText {
-  font-size: 20vh;
+  font-family: "Adieu-Regular";
+  font-size: 17vh;
   line-height: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
