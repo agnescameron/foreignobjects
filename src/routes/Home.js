@@ -1,5 +1,6 @@
 import React from 'react';
 import Draggable from 'react-draggable';
+import DragBox from '../components/DragBox';
 import ProjectModule from '../components/ProjectModule';
 
 import Left from '../components/Left';
@@ -62,19 +63,19 @@ export default class Home extends React.Component{
 
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
         
-        {/* <ProjectModule> 
+        {/* <DragBox> 
           <div className="projectModuleFilling">
             <img draggable="false" src={Image} />
             <div className="projectModuleText"> 
                 The Internet as a City
             </div> 
           </div>
-        </ProjectModule>
-        <ProjectModule> 
+        </DragBox>
+        <DragBox> 
           <Circle>
             wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
           </Circle> 
-        </ProjectModule> */} 
+        </DragBox> */} 
 
       </div>
     );

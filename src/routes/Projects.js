@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectModule from '../components/ProjectModule'
 import './Projects.css';
 
 const AIRTABLE_API_KEY = ""
@@ -9,7 +10,7 @@ export default class Projects extends React.Component{
         super(props);
         this.state = {
         projects: [],
-        }
+        };
     }
     
     componentDidMount() {
@@ -17,17 +18,22 @@ export default class Projects extends React.Component{
         .then(function(response) {
           console.log(response)
           return response.json();
-        }).then(function(data) {
-          console.log(data);
+        }).then( (data) => {
+          console.log(data.records)
+          this.setState({projects: data.records});
         }).catch(err => {console.log(err)});
     }
     
   render() {
+    var projects = this.state.projects;
     return (
       <div className="App">
-      
         <div className="Projects"> 
           <div className="projectsContainer">
+            {projects.map((project, i) => {     
+                // Return the element. Also pass key     
+                return (<ProjectModule key={i} project={project} />) 
+              })}
               <div className="mobileHeader">FOREIGN OBJECTS</div>
               <div className="mobileNavContainer">
                 <div className="mobileNavItem1">
