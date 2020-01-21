@@ -4,6 +4,9 @@ import './About.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top';
 import aboutImage from "../assets/aboutImage.png";
+import DragBox from '../components/DragBox';
+
+import { Link } from 'react-router-dom';
 
 export default class About extends React.Component{
   constructor(props) {
@@ -17,18 +20,17 @@ export default class About extends React.Component{
           <Top hovering="true" />
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
-            <div className="mobileNavItem1">
-            <a className="Orange Arrow"
-            href="https://www.foreignobjects.net"
-            rel="noopener noreferrer">&#8598;</a>HOME</div>
-            <div className="mobileNavItem2">CONVERSATION<span className="Orange Arrow">&#8600;</span></div>
-            <div className="mobileNavItem3">WORK<span className="Orange Arrow">&#8594;</span></div>
+            <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
+            <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
+            <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
           </div>          
           <div className="About">
             <div className="Verso">
-              <div className="backArrow" />
+                <a className="backArrow App-link" 
+                href="https://www.foreignobjects.net"
+                rel="noopener noreferrer" />
               <div className="aboutBody">
-                <a className="Orange">FOREIGN OBJECTS LLC</a> is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
+                <a className="App-link">FOREIGN OBJECTS LLC</a> is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
                 <br/>
                 Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.                   Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.      
@@ -65,9 +67,9 @@ export default class About extends React.Component{
               </div>
             </div>
             <div className="Recto" />
-            <img src={aboutImage} className="aboutImage" alt="About Us Image" />
-          </div>
-          <Circle>look wow it turns this took soooo long to make i hope you like it</Circle>
+              <DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>
+              <img src={aboutImage} className="aboutImage" alt="About Us Image" />
+            </div>
         </div>  
       </div>
     );

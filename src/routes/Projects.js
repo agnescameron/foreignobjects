@@ -4,6 +4,9 @@ import './Projects.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top.js';
 
+import { Link } from 'react-router-dom';
+
+
 const AIRTABLE_API_KEY = ""
 const MAX_RECORDS = 20;
 
@@ -35,23 +38,23 @@ export default class Projects extends React.Component{
     var projects = this.state.projects;
     return (
       <div className="App">
-          <Top hovering="true" />
+        <div className="projectsContainer">
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
-            <div className="mobileTitleLeft">
-            <a className="Orange Arrow"
-            href="https://www.foreignobjects.net"
-            rel="noopener noreferrer">&#8598;</a>HOME</div>
-            <div className="mobileTitleCenter">CONVERSATION<span className="Orange Arrow">&#8600;</span></div>
-            <div className="mobileTitleRight">ABOUT<span className="Orange Arrow">&#8594;</span></div>
+            <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
+            <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
+            <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
           </div>  
           <div className="backgroundLogo" draggable="false">
             FOREIGN OBJECTS
           </div>
-          <div className="projectsContainer">
+          <Top hovering="true" />
+           <a className="App-link backArrow" 
+              href="https://www.foreignobjects.net"
+              rel="noopener noreferrer" />
               {projects.map((project, i) => {
                   // Return the element. Also pass key
-                 return (<ProjectModule key={i} project={project} />)
+                 return (<ProjectModule key={i} index={i} project={project} />)
               })}
         </div>
       </div>

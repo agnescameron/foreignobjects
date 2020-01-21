@@ -112,6 +112,18 @@ img:hover + .projectModuleText {
   visibility: visible;
 }
 
+.backArrow {
+  font-size: 6rem;
+  text-align: left;
+  margin: 0vh 0 -1vh 8vh;
+  text-decoration: none;
+}
+
+.backArrow:after {
+  content: "\2190"
+}
+
+
 /* MOBILE  */
 
 
@@ -137,11 +149,10 @@ img:hover + .projectModuleText {
   }
 
   .Top, .Right, .Bottom, .Left {
-    font-size: 1.6rem;
-    margin: 4vh 2vh 0 2vh;
-  }
+    font-size: 6vw;
+    margin: 0 2vh 2vh 2vh;
+  }  
 }
-
 
 @media all and (min-width: 800px) {
 

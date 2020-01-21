@@ -1,5 +1,4 @@
 import React from 'react';
-import Draggable from 'react-draggable';
 import DragBox from '../components/DragBox';
 import ProjectModule from '../components/ProjectModule';
 
@@ -9,8 +8,8 @@ import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Center from '../components/Center';
 import Circle from '../components/Circle.js';
-import Image from '../assets/IAAC.png'
 
+import { Link } from 'react-router-dom';
 
 import './Home.css';
 
@@ -38,6 +37,12 @@ export default class Home extends React.Component{
   render() {
     return (
       <div className="App">
+        <div className="mobileHeader">FOREIGN OBJECTS</div>
+        <div className="mobileNavContainer">
+          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
+          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
+          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
+        </div>
         <div className="Center"
         //for mobile
         onMouseEnter={this.handleEnter}

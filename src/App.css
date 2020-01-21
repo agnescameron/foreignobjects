@@ -12,5 +12,9 @@
 }
 
 .App-link:hover {
+  color: #FF696B;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
   cursor:  url('./assets/cursor-click.png'), auto;
 }

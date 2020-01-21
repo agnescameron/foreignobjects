@@ -83,9 +83,13 @@
     to   { opacity: 1; }
 }
 
-/*mobile options*/
+/*---------------------------MOBILE---------------------------*/
 
 @media all and (max-width: 800px) {
+
+  .Center, .Blurb {
+    display: none;
+  }
 
   .App {
   display: -webkit-box;
@@ -101,31 +105,51 @@
           justify-content: flex-start;
 }
 
-  .centerText:hover {
-    -webkit-filter: none;
-            filter: none;
-    /*cursor becomes clicky finger on hover*/
-    cursor:  url('../assets/cursor-click.png'), auto;
-}
+/*---------------------------Mobile Navbar---------------------------*/
 
-  .Center {
-    justify-content: flex-start;
-    align-items: flex-start;
+  .mobileHeader {
+    color: #fff;
+      text-align: center;
+      font-size: 15vw;
+      line-height: 1;
+      margin: 3vh 2vh 2vh 0;
+      font-family: "Adieu-Regular";
   }
 
-  .Center .centerText {
-    font-size: 18vw;
+  .mobileNavContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      margin: 0 2vh 2vh 0;
+      font-family: "Falster";
+  }
+
+  .mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
+      font-size: 10vw;
+      line-height: 1.2;
+      margin: 0 0 0 2.2vh;    
+  }
+
+  .mobileTitleLeft: {
+    text-align: left;
+  }
+
+  .mobileTitleRight {
+    text-align: right;
+  }
+
+  .mobileTitleCenter {
     text-align: center;
-    margin: 2vh;
+  } 
+  
+  .Orange {
+    color: #FF696B;
+    text-decoration: underline;
   }
 
-  .Blurb {
-    font-size: 1.6rem;
-    margin: 0 2vh 0 2vh; 
-  }
-
-  .Blurb .blurbArrow {
-    font-size: 1.6rem;
+  .Arrow {
+    text-decoration: none;
   }
 
   .projectModule .circleText {

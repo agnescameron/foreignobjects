@@ -1,29 +1,31 @@
-body {
-	background-color: white;
-}
 
 .projectsContainer {
-	color: #0000FF;
+	background-color: #fff;
+	color: #00f;
 	display: flex;
 	flex: 1 100%;
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	flex-grow: 1;
 /*    border: lightgreen 3px solid;
 */}
 
-.Top {
-	visibility: hidden;
+.projectsContainer .Top {
+	background-color: #fff;
+	color: #00f;
+}
+
+.projectsContainer .App-link {
+	color: #00f;
 }
 
 .backgroundLogo {
   font-family: "Adieu-Regular";
-  color: #00F;
+  color: #00f;
   font-size: 17vh;
   line-height: 0.8;
   top: 35%;
-  position: absolute;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,30 +42,17 @@ body {
 	            user-select: none; /* Non-prefixed version, currently */
 }
 
-.Verso {
+.Verso, .Recto {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
     /*border: red 1px solid;*/
 }
 
-.Recto {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-    /*border: white 1px solid;*/
-}
-
-.backArrow {
-	font-size: 6rem;
+.projectsContainer .backArrow {
 	color: #00f;
-	text-align: left;
-	margin: -4vh 0 -2vh 8vh;
+	text-decoration: none;
 	/*border: white 1px solid;*/
-}
-
-.backArrow:after {
-	content: "\2190"
 }
 
 /*------------------------ projectModule ------------------------ */
@@ -73,47 +62,65 @@ body {
   display: flex;
   position: relative;
   z-index: 10;
-  border: red 1px solid;
-}
+/*  border: red 1px solid;
+*/}
 
-.projectsContainer:hover .circleText, .lineTitle {
+.projectsContainer:hover .circleText, .upperLineTitle {
 	z-index: 10;
 	display: visible;
 }
 
-.projectsContainer img {
-  width: 45vw;
-  opacity: 80%;
+.imgWrapper {
+	display: inline-block;
+	padding: 0vh 0 0vh 0;
 }
 
-.projectsContainer .lineTitle {
-  right: -20vh;
-  top: -5vh;  
+.projectLeft {
+  text-align: left;
+}
+
+.projectRight {
+  text-align: right;
+}
+
+.projectLeft img {
+  width: 70vw;
+  opacity: 90%;
+/* filter: sepia(1);
+*/}
+
+.projectRight img {
+  width: 60vw;
+  opacity: 90%;
+/* filter: sepia(1);
+*/}
+
+.upperLineTitle { 
+  position: relative;
   font-family: 'Falster';
   font-size: 3rem;
-  position: absolute;
   visibility: hidden;
-  transform: rotate(20deg);
+  /*border: blue 1px solid;*/
+}
+.projectLeft .upperLineTitle { 
+  text-align: right;
+  transform: rotate(0deg);
+  /*border: blue 1px solid;*/
 }
 
-.projectLarge {
+.projectRight .upperLineTitle { 
+  position: relative;
   text-align: left;
-  left: 0;
-  border: blue 1px solid;
-
+  transform: rotate(0deg);
+/*  border: blue 1px solid;*/
 }
 
-.projectMedium {
-  top: 100vh;
-  right: 0;
-}
-
-.projectSmall {
-  right: 0;
-}
-
-.projectsContainer:hover *{
+.imgWrapper:hover > * {
  	visibility: visible;
+ 	opacity: 100%;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
 
 /*animation*/
@@ -131,47 +138,60 @@ body {
 
 @media all and (max-width: 800px) {
 
-	.backgroundLogo, .lineTitle {
+	.backgroundLogo, .upperLineTitle {
 		display: none;
 	}
 
-	body {
-		background-color: #00F;
+	.projectContainer {
+		background-color: #fff;
 	}
 
  	.Projects {
- 		display: flex;
- 		flex-direction: column;
- 		justify-content: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
  	}
 
-	.projectBox {
-		color: white;
-	}
-
- 	.Recto .projectBox img {
-		width: 80vw;
+ 	.projectLeft, .projectRight {
+ 		text-align: center;
  	}
 
- 	.Verso .projectBox img {
-		width: 80vw;
-}
-
- 	.projectLarge {
-	  left: 0;
+	.projectLeft img {
+		width: 90vw;
+		opacity: 90%;
+		margin: 0 2vh 0 2vh ;
 	}
 
- 	.projectMedium {
-	  right: 0;
+	.projectRight img {
+		width: 90vw;
+		opacity: 90%;
+		margin: 0 2vh 0 2vh ;
 	}
 
- 	.projectSmall {
-	  right: 0;
+	.lowerLineTitle { 
+		font-family: 'Falster';
+		font-size: 3rem;
+		visibility: visible;
+		margin: 2vh 0 3vh 0;
+	  /*border: blue 1px solid;*/
 	}
 
-/*Mobile Navbar*/
+	.projectLeft .lowerLineTitle {
+		display: block;
+		position: relative;
+		text-align: center;
+	  }
 
-	.mobileHeader {
+	.projectRight .lowerLineTitle { 
+		display: block; 
+		position: relative;
+		text-align: center;
+	}
+
+/*---------------------------Mobile Navbar---------------------------*/
+
+	.projectsContainer .mobileHeader {
+		color: #00f;
   		text-align: center;
 	    font-size: 15vw;
 	    line-height: 1;
@@ -179,7 +199,8 @@ body {
 	    font-family: "Adieu-Regular";
 	}
 
-	.mobileNavContainer {
+	.projectsContainer .mobileNavContainer {
+		color: #00f;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -234,7 +255,7 @@ body {
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-	.mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+	.backgroundLogo, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
-}
+	}
 }

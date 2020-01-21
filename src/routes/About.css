@@ -33,18 +33,6 @@
     /*border: 1px solid;*/
 }
 
-.backArrow {
-	font-size: 6rem;
-	color: #fff;
-	text-align: left;
-	margin: -4vh 0 -2vh 8vh;
-	/*border: 1px solid;*/
-}
-
-.backArrow:after {
-	content: "\2190"
-}
-
 .aboutBody {
 	font-size: 2.2rem;
 	font-family: 'Falster', 'Helvetica', sans-serif;
@@ -62,6 +50,19 @@
 	z-index: -1;
 }
 
+.backArrow {
+	color: #fff;
+}
+
+  .circleText {
+  left: 70vw;
+  top: 25vh;  
+  font-family: 'Falster';
+  font-size: 1.5rem;
+  position: absolute;
+  animation: rotation 14s infinite linear;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -71,7 +72,16 @@
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
+
+	/*hidden elements in mobile*/
+	.Top, .circleText, .backArrow {
+		display: none;
+	}
+
+	.aboutContainer .Recto {
+		display: none;
+	}
  	
 	.mobileHeader {
   		text-align: center;
@@ -90,21 +100,21 @@
 	}
 
 	/*sorry there must be a neater way to do this??*/
-	.mobileNavItem1, .mobileNavItem2, .mobileNavItem3 {
+	.mobileNavLeft, .mobileNavRight, .mobileNavCenter {
 	    font-size: 10vw;
 	    line-height: 1.2;
 	    margin: 0 0 0 2.2vh;		
 	}
 
-	.mobileNavItem1: {
+	.mobileNavLeft: {
 		text-align: left;
 	}
 
-	.mobileNavItem2 {
+	.mobileNavRight {
 		text-align: right;
 	}
 
-	.mobileNavItem3 {
+	.mobileNavCenter {
 		text-align: center;
 	}	
 	
@@ -115,11 +125,6 @@
 
 	.Arrow {
 		text-decoration: none;
-	}
-
-/*hidden elements in mobile*/
-	.Top, .Recto, .circleText, .backArrow {
-		display: none;
 	}
 
 	.aboutBody {
