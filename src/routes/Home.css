@@ -109,11 +109,11 @@
 
   .mobileHeader {
     color: #fff;
-      text-align: center;
-      font-size: 15vw;
-      line-height: 1;
-      margin: 3vh 2vh 2vh 0;
-      font-family: "Adieu-Regular";
+    text-align: center;
+    font-size: 15vw;
+    line-height: 1;
+    margin: 3vh 2vh 2vh 0;
+    font-family: "Adieu-Regular";
   }
 
   .mobileNavContainer {
@@ -121,8 +121,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-      margin: 0 2vh 2vh 0;
-      font-family: "Falster";
+    margin: 0 2vh 2vh 0;
+    font-family: "Falster";
   }
 
   .mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {

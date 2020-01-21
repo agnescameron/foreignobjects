@@ -49,9 +49,7 @@ export default class Projects extends React.Component{
             FOREIGN OBJECTS
           </div>
           <Top hovering="true" />
-           <a className="App-link backArrow" 
-              href="https://www.foreignobjects.net"
-              rel="noopener noreferrer" />
+          <Link to='/' className="App-link backArrow" />
               {projects.map((project, i) => {
                   // Return the element. Also pass key
                  return (<ProjectModule key={i} index={i} project={project} />)

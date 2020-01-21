@@ -1,14 +1,20 @@
 
 .projectsContainer {
 	background-color: #fff;
+	overflow: scroll;
 	color: #00f;
+	display: -webkit-box;
+	display: -ms-flexbox;	
 	display: flex;
 	flex: 1 100%;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-/*    border: lightgreen 3px solid;
-*/}
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: flex-end;
+      -ms-flex-pack: flex-end;
+  justify-content: space-between;
+  }
 
 .projectsContainer .Top {
 	background-color: #fff;
@@ -42,13 +48,6 @@
 	            user-select: none; /* Non-prefixed version, currently */
 }
 
-.Verso, .Recto {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-    /*border: red 1px solid;*/
-}
-
 .projectsContainer .backArrow {
 	color: #00f;
 	text-decoration: none;
@@ -57,17 +56,24 @@
 
 /*------------------------ projectModule ------------------------ */
 
-.projectsContainer {
-  /*draggable container for projects and news module*/
-  display: flex;
-  position: relative;
-  z-index: 10;
-/*  border: red 1px solid;
-*/}
 
 .projectsContainer:hover .circleText, .upperLineTitle {
 	z-index: 10;
 	display: visible;
+}
+
+.projectsSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: left;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: flex-start;
 }
 
 .imgWrapper {
@@ -146,10 +152,30 @@
 		background-color: #fff;
 	}
 
+	.projectsSection {
+	  display: -webkit-flexbox;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	      -ms-flex-flow: column;
+	          flex-flow: column;	  
+		-webkit-box-pack: flex-start;
+	      -ms-flex-pack: flex-start;
+	          justify-content: flex-start;
+	}
+
+
  	.Projects {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: flex;		
+		-ms-flex-flow: column;
+			flex-flow: column;
+		text-align: left;
+		-webkit-box-pack: flex-start;
+		  -ms-flex-pack: flex-start;
+			justify-content: flex-start;
  	}
 
  	.projectLeft, .projectRight {
@@ -201,10 +227,18 @@
 
 	.projectsContainer .mobileNavContainer {
 		color: #00f;
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	    margin: 0 2vh 2vh 0;
+		flex-shrink: 0;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		  -ms-flex-flow: column;
+		      flex-flow: column;
+		-webkit-box-pack: flex-start;
+		  -ms-flex-pack: flex-start;
+		      justify-content: flex-start;
+  	    margin: 0 2vh 2vh 0;
 	    font-family: "Falster";
 	}
 
@@ -255,7 +289,7 @@
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-	.backgroundLogo, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+	.lowerLineTitle, .backgroundLogo, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
 	}
 }
