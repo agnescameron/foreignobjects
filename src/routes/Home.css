@@ -152,7 +152,7 @@
     text-decoration: none;
   }
 
-  .projectModule .circleText {
+.circleText {
   left: 50vh;
   top: 25vh;  
   font-family: 'Falster';

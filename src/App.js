@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import Home from './routes/Home';
 import About from './routes/About';
 import Projects from './routes/Projects';
+import AltHome from './routes/AltHome';
+
 
 import './App.css';
 
@@ -25,6 +27,7 @@ class App extends React.Component {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
+        <Route path="/altHome" component={AltHome} />
         
     </Router>
     );

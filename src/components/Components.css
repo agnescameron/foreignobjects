@@ -104,6 +104,45 @@
 /* border: 1px white solid;*/
 }
 
+
+/*---vvvvvv------- test to remove later ------vvvvvvv-------*/
+
+.homeProjectModuleText {
+/* test to remove late */
+ font-family: 'Falster';
+ font-size: 10vh;
+ color: white;
+ bottom: 11%;
+ position: absolute;
+ visibility: hidden;
+/* border: 1px white solid;*/
+}
+
+.testModule .circleText {
+  /* test to remove late */
+
+  left: 30vw;
+  top: 15vh;  
+  font-family: 'Falster';
+  font-size: 1.5rem;
+  position: absolute;
+  animation: rotation 14s infinite linear;
+}
+.projectHome {
+  position: absolute;
+  left: -70vh;
+  top: 50vh;
+}
+
+.projectHome img {
+  width: 30vw;
+  opacity: 90%;
+/* filter: sepia(1);
+*/}
+
+/*^^^------------------ test to remove later ---------^^^^-------*/
+
+
 img:hover + .projectModuleText {
   visibility: visible;
 }

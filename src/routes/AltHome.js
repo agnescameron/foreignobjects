@@ -1,6 +1,6 @@
 import React from 'react';
 import DragBox from '../components/DragBox';
-import ProjectModule from '../components/ProjectModule';
+import HomeProjectModule from '../components/HomeProjectModule';
 
 import Left from '../components/Left';
 import Top from '../components/Top';
@@ -13,13 +13,19 @@ import { Link } from 'react-router-dom';
 
 import './Home.css';
 
-export default class Home extends React.Component{
+
+const AIRTABLE_API_KEY = ""
+const MAX_RECORDS = 20;
+
+export default class AltHome extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      hovering : false
-    }
+      projects: [],
+      hovering : false,
+}
   }
+
 
   handleEnter = (event) => {
     event.preventDefault()
@@ -34,7 +40,26 @@ export default class Home extends React.Component{
     window.location = "mailto:hello@foreignobjects.net";
   }
 
+  componentDidMount() {
+    fetch(".netlify/functions/lambda")
+    .then(function(response) {
+      console.log(response)
+      return response.json();
+    }).then( (data) => {
+      console.log(data)
+      //omits projects tagged as private
+      var publicProjects = data.records.filter(function(project){ 
+        if(project.fields["Release Status"]){
+          return project.fields["Release Status"].includes("Personal–Private") === false; }
+        })
+      console.log(publicProjects);
+      this.setState({projects: publicProjects});
+    }).catch(err => {console.log(err)});
+}
+
   render() {
+    var projects = this.state.projects;
+    console.log(projects + "!!!");
     return (
       <div className="App">
         <div className="mobileHeader">FOREIGN OBJECTS</div>
@@ -66,8 +91,24 @@ export default class Home extends React.Component{
           </div>
         </div>
 
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <DragBox>
+          <div> 
+            {projects.map((project, i) => {
+                      // Return the element. Also pass key
+                     return (<HomeProjectModule key={i} index={i} project={project} />)
+                  })}
+           </div>
+        </DragBox>
 
+        <DragBox>
+          <div className="ProjectModule testModule">
+            <Circle>
+              wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
+            </Circle>
+          </div> 
+        </DragBox>
+
+        <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
       </div>
     );
   }
