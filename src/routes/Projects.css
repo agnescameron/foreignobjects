@@ -55,13 +55,13 @@
 
 .projectLeft img {
   width: 70vw;
-  opacity: 90%;
-/* filter: sepia(1);
+/*  opacity: 0.9;
+*//* filter: sepia(1);
 */}
 
 .projectRight img {
   width: 60vw;
-  opacity: 90%;
+/*  opacity: 0.9;*/
 /* filter: sepia(1);
 */}
 
@@ -87,7 +87,7 @@
 
 .imgWrapper:hover > * {
  	visibility: visible;
- 	opacity: 1;
+/* 	opacity: 1;*/
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
@@ -148,13 +148,13 @@
 
 	.projectLeft img {
 		width: 90vw;
-		opacity: 0.9;
+/*		opacity: 0.9;*/
 		margin: 0 2vh 0 2vh ;
 	}
 
 	.projectRight img {
 		width: 90vw;
-		opacity: 0.9;
+/*		opacity: 0.9;*/
 		margin: 0 2vh 0 2vh ;
 	}
 
