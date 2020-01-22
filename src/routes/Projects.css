@@ -1,12 +1,11 @@
-
 .projectsContainer {
 	background-color: #fff;
-	overflow: scroll;
 	color: #00f;
+	width: 100vw;
+	padding-bottom: 5vh;
 	display: -webkit-box;
 	display: -ms-flexbox;	
 	display: flex;
-	flex: 1 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -16,42 +15,8 @@
   justify-content: space-between;
   }
 
-.projectsContainer .Top {
-	background-color: #fff;
-	color: #00f;
-}
-
 .projectsContainer .App-link {
 	color: #00f;
-}
-
-.backgroundLogo {
-  font-family: "Adieu-Regular";
-  color: #00f;
-  font-size: 17vh;
-  line-height: 0.8;
-  top: 35%;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
--webkit-touch-callout: none; /* iOS Safari */
-	    -webkit-user-select: none; /* Safari */
-	     -khtml-user-select: none; /* Konqueror HTML */
-	       -moz-user-select: none; /* Old versions of Firefox */
-	        -ms-user-select: none; /* Internet Explorer/Edge */
-	            user-select: none; /* Non-prefixed version, currently */
-}
-
-.projectsContainer .backArrow {
-	color: #00f;
-	text-decoration: none;
-	/*border: white 1px solid;*/
 }
 
 /*------------------------ projectModule ------------------------ */
@@ -144,7 +109,7 @@
 
 @media all and (max-width: 800px) {
 
-	.backgroundLogo, .upperLineTitle {
+	.upperLineTitle {
 		display: none;
 	}
 
@@ -289,7 +254,7 @@
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-	.lowerLineTitle, .backgroundLogo, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+	.lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
 	}
 }

@@ -8,7 +8,7 @@ export default class ProjectModule extends React.Component{
   	//renders if image present
 	return (
 	<div>
-		{ this.props.project.fields.Image &&
+		{ this.props.project.fields["Display on FO Website"] && this.props.project.fields.Image &&
 	  		<div>
 		      	<div className={this.props.index%2 === 0 ? "projectRight" : "projectLeft"}>
 			  		<div className="imgWrapper">

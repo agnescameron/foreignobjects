@@ -57,7 +57,7 @@ export default class Center extends React.Component{
   	);} else {
  	return (
 
-	      <div className="centerText" onClick={() => this.setState({Blurb: true})}>
+	      <div className="centerText" onClick={() => this.setState({Blurb: false})}>
 	        <div>FOREIGN OBJECTS</div>
 	        <div className="centerArrow"><span className="Arrow">&#8599;</span></div>
 	      </div>

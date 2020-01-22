@@ -6,7 +6,6 @@ import Top from '../components/Top.js';
 
 import { Link } from 'react-router-dom';
 
-
 const AIRTABLE_API_KEY = ""
 const MAX_RECORDS = 20;
 
@@ -45,9 +44,6 @@ export default class Projects extends React.Component{
             <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
             <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
           </div>  
-          <div className="backgroundLogo" draggable="false">
-            FOREIGN OBJECTS
-          </div>
           <Top hovering="true" />
           <Link to='/' className="App-link backArrow" />
               {projects.map((project, i) => {

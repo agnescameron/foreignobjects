@@ -37,8 +37,10 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Falster', 'Helvetica', sans-serif;
-  background-color: #0000ff;
 }
+
+
