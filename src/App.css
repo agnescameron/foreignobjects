@@ -1,12 +1,20 @@
 .App {
-  background-color: #00f;
-  color: #fff;
   height: 100vh;
   width: 100vw;
   overflow: auto;
   margin: 0;
   padding: 0;
   cursor:  url('./assets/cursor-default.png'), auto;
+}
+
+.Bg-white {
+  background-color: #fff;
+  color: #00f;
+}
+
+.Bg-blue {
+  background-color: #00f;
+  color: #fff;
 }
 
 .App-link {

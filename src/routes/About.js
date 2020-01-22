@@ -15,7 +15,7 @@ export default class About extends React.Component{
 
   render() {
     return (
-      <div className="App">
+      <div className="App Bg-blue">
         <div className="aboutContainer">
           <Top hovering="true" />
           <div className="mobileHeader">FOREIGN OBJECTS</div>
@@ -31,9 +31,6 @@ export default class About extends React.Component{
                 rel="noopener noreferrer" />
               <div className="aboutBody">
                 <Link to='/' className="App-link Orange">FOREIGN OBJECTS LLC</Link> is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
-                <br/>
-                <br/>
-                Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
                 <br/>
                 Formed by four foreigners at MIT, we are a collective of interdisciplinary practitioners with expertise in architecture, web development, engineering and conceptual art. We work with artists, institutions and companies to research and build projects that explore boundaries of technology and society.      

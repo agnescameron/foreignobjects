@@ -111,8 +111,7 @@ img:hover + .projectModuleText {
   content: "\2190"
 }
 
-
-/* MOBILE  */
+/* ------------------------------------  MOBILE ------------------------------------   */
 
 
 @media all and (max-width: 800px) {

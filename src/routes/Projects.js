@@ -36,7 +36,8 @@ export default class Projects extends React.Component{
   render() {
     var projects = this.state.projects;
     return (
-      <div className="App">
+      <div className="App Bg-white">
+
         <div className="projectsContainer">
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">

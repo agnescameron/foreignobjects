@@ -1,7 +1,5 @@
 .projectsContainer {
-	background-color: #fff;
-	color: #00f;
-	width: 100vw;
+	width: 100%;
 	padding-bottom: 5vh;
 	display: -webkit-box;
 	display: -ms-flexbox;	
@@ -13,9 +11,10 @@
   -webkit-box-pack: flex-end;
       -ms-flex-pack: flex-end;
   justify-content: space-between;
+  z-index: 100;
   }
 
-.projectsContainer .App-link {
+.Bg-white .App-link {
 	color: #00f;
 }
 

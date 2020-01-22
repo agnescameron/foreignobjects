@@ -36,7 +36,7 @@ export default class Home extends React.Component{
 
   render() {
     return (
-      <div className="App">
+      <div className="App Bg-blue">
         <div className="mobileHeader">FOREIGN OBJECTS</div>
         <div className="mobileNavContainer">
           <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
