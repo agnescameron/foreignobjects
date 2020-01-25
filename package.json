@@ -8,6 +8,7 @@
     "circletype": "^2.3.0",
     "dark-sky-api": "^0.6.32",
     "express": "^4.17.1",
+    "http-proxy": "^1.18.0",
     "http-proxy-middleware": "^0.20.0",
     "jquery": "^3.4.1",
     "netlify-lambda": "^1.6.3",

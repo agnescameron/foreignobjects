@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectModule from '../components/ProjectModule'
+import ProjectPage from './ProjectPage';
 import './Projects.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top.js';
@@ -28,16 +29,16 @@ export default class Projects extends React.Component{
             if(project.fields["Release Status"]){
               return project.fields["Release Status"].includes("Personal–Private") === false; }
             })
-          console.log(publicProjects);
+          // console.log(publicProjects);
           this.setState({projects: publicProjects});
         }).catch(err => {console.log(err)});
     }
     
   render() {
+    console.log(this.state.projects);
     var projects = this.state.projects;
     return (
       <div className="App Bg-white">
-
         <div className="projectsContainer">
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
