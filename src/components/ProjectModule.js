@@ -13,7 +13,14 @@ export default class ProjectModule extends React.Component{
 			{this.props.project.fields["Display on FO Website"] && this.props.project.fields.Image &&
 				<div>
 			      	<div className={this.props.index%2 === 0 ? "projectRight" : "projectLeft"}>
-	  					<Link to={"/projects/" + [projectURL]}>
+	  					<Link to={
+	  						{
+	  							pathname: "/projects/" + [projectURL],
+	  							state: {
+	  								project: this.props.project
+	  							}
+	  						}}
+	  						>
 				  		<div className="imgWrapper">
 				  			<div className="upperLineTitle">
 				      			{this.props.project.fields["Project Name"]}

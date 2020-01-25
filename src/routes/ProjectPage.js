@@ -9,6 +9,8 @@ export default class ProjectPage extends React.Component{
     }
 
   render () {
+  	let project = this.props.location.state !== undefined ?  this.props.location.state.project : '';
+  	console.log("project is ", project);
   	return (
 		<div>
 			<ProjectID />
