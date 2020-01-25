@@ -7,36 +7,8 @@ import Top from '../components/Top.js';
 
 import { Link } from 'react-router-dom';
 
-const AIRTABLE_API_KEY = ""
-const MAX_RECORDS = 20;
-
 export default class Projects extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-        projects: [],
-        };
-    }
-    
-    componentDidMount() {
-        fetch(".netlify/functions/lambda")
-        .then(function(response) {
-          console.log(response)
-          return response.json();
-        }).then( (data) => {
-          //omits projects tagged as private
-          var publicProjects = data.records.filter(function(project){ 
-            if(project.fields["Release Status"]){
-              return project.fields["Release Status"].includes("Personal–Private") === false; }
-            })
-          // console.log(publicProjects);
-          this.setState({projects: publicProjects});
-        }).catch(err => {console.log(err)});
-    }
-    
   render() {
-    console.log(this.state.projects);
-    var projects = this.state.projects;
     return (
       <div className="App Bg-white">
         <div className="projectsContainer">
@@ -48,11 +20,7 @@ export default class Projects extends React.Component{
           </div>  
           <Top hovering="true" />
           <Link to='/' className="App-link backArrow" />
-              {projects.map((project, i) => {
-                  // Return the element. Also pass key
-                 return (<ProjectModule key={i} index={i} project={project} />)
-              })}
-        </div>
+                     </div>
       </div>
     );
   }

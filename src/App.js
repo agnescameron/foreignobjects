@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as BrowserRouter, Route, Link, Switch, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import ProjectContext from './ProjectContext';
+import ProjectProvider from './ProjectProvider';
 import Home from './routes/Home';
 import About from './routes/About';
 import Projects from './routes/Projects';
@@ -9,10 +11,13 @@ import ProjectPage from './routes/ProjectPage';
 
 import './App.css';
 
+
+
 class App extends React.Component {
   render() {
     console.log(window.innerWidth, window.innerHeight)
     return (
+      <ProjectProvider>
       <BrowserRouter>
 
         <Helmet>
@@ -27,10 +32,12 @@ class App extends React.Component {
           {/*<Link to="/about" className="App-link-about">About</Link>*/}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route exact path="/projects/" component={Projects} />
-          <Route path="/projects/:id" component={ProjectPage} />
-        </Switch>     
+          <Route exact path="/projects" component={Projects} />
+          <Route path="/:id" component={ProjectPage} />
+        </Switch>
+
     </BrowserRouter>
+    </ProjectProvider>
     );
   }
 }
