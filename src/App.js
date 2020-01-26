@@ -18,6 +18,7 @@ class App extends React.Component {
     console.log(window.innerWidth, window.innerHeight)
     return (
       <ProjectProvider>
+
       <BrowserRouter>
 
         <Helmet>
@@ -36,7 +37,7 @@ class App extends React.Component {
           <Route path="/:id" component={ProjectPage} />
         </Switch>
 
-    </BrowserRouter>
+      </BrowserRouter>
     </ProjectProvider>
     );
   }

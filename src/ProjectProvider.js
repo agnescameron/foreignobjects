@@ -26,14 +26,10 @@ class ProjectProvider extends React.Component {
     }
 
     render() {
-    console.log(this.state.projects);
-    var projects = this.state.projects;
+	    var projects = this.state.projects;
         return (
-            <ProjectContext.Provider
-                value={{
-                   
-                }}
-            >
+
+            <ProjectContext.Provider value={projects}>
                 {this.props.children}
             </ProjectContext.Provider>
         );

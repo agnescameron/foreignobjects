@@ -6,21 +6,14 @@ export default class ProjectModule extends React.Component{
 // records delta state of the dragged object
 
   render() {
-  	const projectURL = this.props.project.fields["Unique URL"]
+   	const projectURL = this.props.project.fields["Unique URL"]
   	//renders if image present
 	return (
 		<div>
 			{this.props.project.fields["Display on FO Website"] && this.props.project.fields.Image &&
 				<div>
 			      	<div className={this.props.index%2 === 0 ? "projectRight" : "projectLeft"}>
-	  					<Link to={
-	  						{
-	  							pathname: "/projects/" + [projectURL],
-	  							state: {
-	  								project: this.props.project
-	  							}
-	  						}}
-	  						>
+	  					<Link to={{	pathname: "/" + [projectURL] }}>
 				  		<div className="imgWrapper">
 				  			<div className="upperLineTitle">
 				      			{this.props.project.fields["Project Name"]}
