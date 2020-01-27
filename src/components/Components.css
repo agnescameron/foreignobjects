@@ -139,6 +139,7 @@ img:hover + .projectModuleText {
 .backArrowFixed {
   font-size: 3rem;
   text-align: left;
+  top: 6.4vh;
   margin: 0 0 0 8vh;
   text-decoration: none;
   color: #fff;

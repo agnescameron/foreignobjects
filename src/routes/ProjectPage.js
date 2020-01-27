@@ -27,13 +27,7 @@ export default class ProjectPage extends React.Component{
   	return (
       <div className="App Bg-white">
 	      <div className="projectPageContainer">
-	      <div className="mobileHeader">FOREIGN OBJECTS</div>
-	        <div className="mobileNavContainer">
-	          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
-	          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
-	          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
-	        </div>
-			<Top hovering="true" />
+		  <Top hovering="true" />
 				<div className="projectPage">
 				<div className="Verso">
 			        <Link to='/projects' className="App-link backArrow" />
@@ -44,7 +38,8 @@ export default class ProjectPage extends React.Component{
 								<div>	
 									<div className="headerMargin">		
 							{/*} 	<img src={project.fields.Image[0].url} /> */}
-							  			<div className="projectTitle">{project.fields["Project Name"]}</div>
+							  		    <div className="projectTitle">
+							  		    <Link to='/Projects' className="mobileBackArrow App-link Orange arrowNW" />{project.fields["Project Name"]}</div>
 										<div className="projectTag">"{project.fields["Tag Line"]}"</div>
 										
 										<div className="headerDetails">
@@ -84,6 +79,7 @@ export default class ProjectPage extends React.Component{
 						</ProjectContext.Consumer>	
 					}
 				</div>
+
 				<div className="Recto">
 					{project &&	
 					<ProjectContext.Consumer>
@@ -127,11 +123,15 @@ export default class ProjectPage extends React.Component{
 					<div className="Recto">
 					{project &&	
 					<ProjectContext.Consumer>
-						{value => { return (	
-							<div>
-								<div className="projectBody">	
-										<div>{project.fields.Description}</div>
-								</div>
+						{value => { return (
+							<div>	
+								{project.fields.Description &&
+									<div>
+										<div className="projectBody">	
+												<div>{project.fields.Description}</div>
+										</div>
+									</div>
+								}
 							</div>
 							)}
 						}

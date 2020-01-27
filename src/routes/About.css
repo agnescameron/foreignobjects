@@ -7,6 +7,11 @@
   	background-color: #00f;
   	padding-bottom: 5vh;
   	z-index: 100;
+   -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -ms-animation: fadein 0.5s; /* Internet Explorer */
+     -o-animation: fadein 0.5s; /* Opera < 12.1 */
+        animation: fadein 0.5s;
 }
 
 .aboutContainer .Top {
@@ -55,7 +60,7 @@
 
 .circleText {
   left: 70vw;
-  top: 25vh;  
+  top: 25vh;
   font-family: 'Falster';
   font-size: 1.5rem;
   position: absolute;
@@ -98,7 +103,6 @@
 	    font-family: "Falster";
 	}
 
-	/*sorry there must be a neater way to do this??*/
 	.mobileNavLeft, .mobileNavRight, .mobileNavCenter {
 	    font-size: 10vw;
 	    line-height: 1.2;
@@ -126,6 +130,10 @@
 		font-size: 6vw;
 		margin: 0 2vh 0 2vh;
 	}
+
+	.aboutContainer .App-link {
+	  color: #FF696B;
+  }
 
 /*where to display image in mobile?*/
 	.aboutImage {

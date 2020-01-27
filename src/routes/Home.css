@@ -88,7 +88,7 @@
 }
 
 
-/*animation settings*/
+/*---------------------------animation---------------------------*/
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -148,6 +148,16 @@
 
   .Bottom {
     display: block;
+  }
+
+  .Bottom .App-link {
+    color: #FF696B;
+    text-decoration: underline;
+  }
+
+  .App-link {
+  color: #FF696B;
+  text-decoration: underline;
   }
 
 

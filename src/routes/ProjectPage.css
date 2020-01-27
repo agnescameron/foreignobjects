@@ -4,6 +4,11 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
+   -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -ms-animation: fadein 0.5s; /* Internet Explorer */
+     -o-animation: fadein 0.5s; /* Opera < 12.1 */
+        animation: fadein 0.5s;
   }
 
 .projectPage {
@@ -35,7 +40,6 @@
 .headerDetails {
   margin: 4vh 0 0 0;
 }
-
 
 .projectPageContainer .Top {
   flex: none;
@@ -69,7 +73,6 @@
 }
 
 .projectImageCaption {
-
 }
 
 
@@ -77,122 +80,87 @@
 
 @media all and (max-width: 800px) {
 
-  .upperLineTitle {
-    display: none;
-  }
+.projectPage {
+  display: flex;
+  width: 100vw;
+  flex: 1 100%;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+}
 
-  .projectContainer {
-    background-color: #fff;
-  }
-
-  .projectsSection {
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;    
-    -webkit-box-pack: flex-start;
-        -ms-flex-pack: flex-start;
-            justify-content: flex-start;
-  }
+.mobileProjectBody {
+  display: flex;
+  width: 100vw;
+  flex: 1 100%;
+  flex-flow: column-reverse wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+}
 
 
-  .Projects {
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: flex;    
-    -ms-flex-flow: column;
-      flex-flow: column;
-    text-align: left;
-    -webkit-box-pack: flex-start;
-      -ms-flex-pack: flex-start;
-      justify-content: flex-start;
-  }
+.Verso {
+  width: 100vw;
+}
 
-  .projectLeft, .projectRight {
-    text-align: center;
-  }
+.Recto {
+  width: 100vw;
+}
 
-  .projectLeft img {
-    width: 90vw;
-/*    opacity: 0.9;*/
-    margin: 0 2vh 0 2vh ;
-  }
+.projectBody {
+  text-align: left;
+  font-family: 'Falster', 'Helvetica', sans-serif;
+  font-size: 2.5vh;
+}
 
-  .projectRight img {
-    width: 90vw;
-/*    opacity: 0.9;*/
-    margin: 0 2vh 0 2vh ;
-  }
+.Recto .projectBody {
+  margin: 2vh 4vh 0 4vh;
+}
 
-  .lowerLineTitle { 
-    font-family: 'Falster';
-    font-size: 3rem;
-    visibility: visible;
-    margin: 2vh 0 3vh 0;
-    /*border: blue 1px solid;*/
-  }
+.headerMargin {
+  margin: 0 4vh 2vh 2vh;
+}
 
-  .projectLeft .lowerLineTitle {
-    display: block;
-    position: relative;
-    text-align: center;
-    }
+.headerDetails {
+  margin: 2vh 0 0 0;
+}
 
-  .projectRight .lowerLineTitle { 
-    display: block; 
-    position: relative;
-    text-align: center;
-  }
+.projectTitle {
+  font-family: 'Adieu', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-size: 6vh;
+  margin: 2vh 0 2vh 2vh;
+}
+
+.projectTag {
+  font-family: 'Falster', 'Helvetica', sans-serif;
+  font-size: 5vh;
+}
+
+.projectLocation, .projectEvent, .projectLink {
+  font-family: 'Falster', 'Helvetica', sans-serif;
+  font-size: 2.5vh;
+  margin: 0 0 0 2vh;
+}
+
+.Verso .imgWrapper {
+  display: none;
+}
+
+.Recto .projectImage {
+  width: 90vw;
+  margin: 0 0 0 0;
+  text-align: right;
+}
+
+.projectImageCaption {
+}
+
 
   /*---------------------------Mobile Navbar---------------------------*/
 
-  .projectsContainer .mobileHeader {
-    color: #00f;
-      text-align: center;
-      font-size: 15vw;
-      line-height: 1;
-      margin: 3vh 2vh 2vh 0;
-      font-family: "Adieu-Regular";
-  }
-
-  .projectsContainer .mobileNavContainer {
-    color: #00f;
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: flex;
-    flex-shrink: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-    -webkit-box-pack: flex-start;
-      -ms-flex-pack: flex-start;
-          justify-content: flex-start;
-        margin: 0 2vh 2vh 0;
-      font-family: "Falster";
-  }
-
-  .mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
-      font-size: 10vw;
-      line-height: 1.2;
-      margin: 0 0 0 2.2vh;    
-  }
-
-  .mobileTitleLeft: {
-    text-align: left;
-  }
-
-  .mobileTitleRight {
-    text-align: right;
-  }
-
-  .mobileTitleCenter {
-    text-align: center;
-  } 
-  
   .Orange {
     color: #FF696B;
     text-decoration: underline;
@@ -206,23 +174,12 @@
   .Top, .circleText, .backArrow {
     display: none;
   }
-
-  .aboutBody {
-    font-size: 6vw;
-    margin: 0 2vh 0 2vh;
-  }
-
-/*where to display image in mobile?*/
-  .aboutImage {
-    display: none;
-    position: relative;
-  }
 }
 
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-  .lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+  .mobileBackArrow, .lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
     display: none;
   }
 }

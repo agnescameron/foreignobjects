@@ -58,7 +58,7 @@ export default class About extends React.Component{
               </div>
             </div>
             <div className="Recto" />
-              <DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>
+              {/*<DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>*/}
               <img src={aboutImage} className="aboutImage" alt="About Us" />
             </div>
         </div>  

@@ -12,7 +12,7 @@ export default class Left extends React.Component{
           href="mailto:hello@foreignobjects.net?subject='hello objects!'"
           rel="noopener noreferrer"
         >
-          get in touch!
+          Get in touch!
         </a>
       </div>
     );

@@ -11,7 +11,12 @@
   -webkit-box-pack: flex-end;
       -ms-flex-pack: flex-end;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 100;	
+ -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+     -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
   }
 
 .Bg-white .App-link {
@@ -21,7 +26,7 @@
 /*------------------------ projectModule ------------------------ */
 
 
-.projectsContainer:hover .circleText, .upperLineTitle {
+.projectsContainer:hover .circleText  {
 	z-index: 10;
 	display: visible;
 }
@@ -31,7 +36,7 @@
 }
 
 .projectRight {
-  text-align: right;
+  text-align: left;
 }
 
 .projectModuleContainer {
@@ -42,7 +47,19 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  text-align: left;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: space-between;
+  }
+
+.projectModuleContainerReverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
   -webkit-box-pack: flex-start;
       -ms-flex-pack: flex-start;
           justify-content: space-between;
@@ -50,6 +67,19 @@
 
 .projectModuleInfo {
   margin: 0 4vh 4vh 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+.asideInfo { 
+  position: relative;
+  font-family: 'Falster';
+  font-size: 1.5rem;
+  visibility: hidden;
+  /*border: blue 1px solid;*/
 }
 
 .asideTitle { 
@@ -57,17 +87,22 @@
   font-family: 'Falster';
   font-size: 3rem;
   visibility: hidden;
+  text-transform: uppercase;  
   /*border: blue 1px solid;*/
+}
+
+.asideTitle a {
+  text-decoration: none;
 }
 
 .projectLeft img {
   width: 50vw;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .projectRight img {
   width: 50vw;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 
@@ -81,13 +116,22 @@
   text-align: left;
 /*  border: blue 1px solid;}*/
 
-.projectModuleContainer:hover * {
+ .projectModuleContainer:hover * {
 	visibility: visible;
  	opacity: 1;
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
 }
+
+.projectModuleContainerReverse:hover * {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
 
 
 
@@ -106,131 +150,39 @@
 
 @media all and (max-width: 800px) {
 
-	.upperLineTitle {
-		display: none;
-	}
-
-	.projectContainer {
-		background-color: #fff;
-	}
-
-	.projectsSection {
-	  display: -webkit-flexbox;
-	  display: -ms-flexbox;
-	  display: flex;
-	  -webkit-box-orient: horizontal;
-	  -webkit-box-direction: normal;
-	      -ms-flex-flow: column;
-	          flex-flow: column;	  
-		-webkit-box-pack: flex-start;
-	      -ms-flex-pack: flex-start;
-	          justify-content: flex-start;
-	}
-
-
- 	.Projects {
-		display: -webkit-flexbox;
-		display: -ms-flexbox;
-		display: flex;		
-		-ms-flex-flow: column;
-			flex-flow: column;
-		text-align: left;
-		-webkit-box-pack: flex-start;
-		  -ms-flex-pack: flex-start;
-			justify-content: flex-start;
- 	}
-
  	.projectLeft, .projectRight {
  		text-align: center;
  	}
 
 	.projectLeft img {
+		opacity: 1;
 		width: 90vw;
 		margin: 0 2vh 0 2vh ;
 	}
 
 	.projectRight img {
+		opacity: 1;
 		width: 90vw;
 		margin: 0 2vh 0 2vh ;
 	}
 
 	.lowerLineTitle { 
 		font-family: 'Falster';
-		font-size: 3rem;
+		font-size: 2rem;
+		text-transform: uppercase;
 		visibility: visible;
-		margin: 2vh 0 3vh 0;
+		margin: 2vh 0 2vh 0;
 	  /*border: blue 1px solid;*/
 	}
 
-	.projectLeft .lowerLineTitle {
-		display: block;
-		position: relative;
-		text-align: center;
-	  }
-
-	.projectRight .lowerLineTitle { 
-		display: block; 
-		position: relative;
-		text-align: center;
-	}
-
-/*---------------------------Mobile Navbar---------------------------*/
-
 	.projectsContainer .mobileHeader {
 		color: #00f;
-  		text-align: center;
-	    font-size: 15vw;
-	    line-height: 1;
-	    margin: 3vh 2vh 2vh 0;
-	    font-family: "Adieu-Regular";
 	}
 
-	.projectsContainer .mobileNavContainer {
-		color: #00f;
-		display: -webkit-flexbox;
-		display: -ms-flexbox;
-		display: flex;
-		flex-shrink: 0;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		  -ms-flex-flow: column;
-		      flex-flow: column;
-		-webkit-box-pack: flex-start;
-		  -ms-flex-pack: flex-start;
-		      justify-content: flex-start;
-  	    margin: 0 2vh 2vh 0;
-	    font-family: "Falster";
-	}
 
-	.mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
-	    font-size: 10vw;
-	    line-height: 1.2;
-	    margin: 0 0 0 2.2vh;		
-	}
+/*---------------------------hidden elements in mobile---------------------------*/
 
-	.mobileTitleLeft: {
-		text-align: left;
-	}
-
-	.mobileTitleRight {
-		text-align: right;
-	}
-
-	.mobileTitleCenter {
-		text-align: center;
-	}	
-	
-	.Orange {
-		color: #FF696B;
-		text-decoration: underline;
-	}
-
-	.Arrow {
-		text-decoration: none;
-	}
-
-/*hidden elements in mobile*/
-	.Top, .circleText, .backArrow {
+	.backArrowFixed, .projectModuleInfo, .Top, .circleText {
 		display: none;
 	}
 
@@ -256,16 +208,42 @@
 
 /*---------------------------VERY LARGE---------------------------*/
 
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1600px) {
+
+.projectModuleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: space-around;
+}
+
+.projectModuleContainerReverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  -webkit-box-pack: flex-start;
+      -ms-flex-pack: flex-start;
+          justify-content: space-around;
+}
 
 	.projectLeft img {
-	  width: 650px;
+	  width: 1000px;
 	/*  opacity: 0.9;
 	*//* filter: sepia(1);
 	*/}
 
 	.projectRight img {
-	  width: 650px;
+	  width: 1000px;
 	/*  opacity: 0.9;*/
 	/* filter: sepia(1);
 	*/}
