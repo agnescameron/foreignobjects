@@ -26,7 +26,6 @@ export default class AltHome extends React.Component{
 }
   }
 
-
   handleEnter = (event) => {
     event.preventDefault()
     this.setState(prevState => ({hovering: true}))
