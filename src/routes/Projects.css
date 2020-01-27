@@ -107,14 +107,6 @@
 
 
 
-/*.projectLeft .upperLineTitle { 
-  right: 0;
-  /*border: blue 1px solid;}*/
-
-/*.projectRight .upperLineTitle { 
-  position: relative;
-  text-align: left;
-/*  border: blue 1px solid;}*/
 
  .projectModuleContainer:hover * {
 	visibility: visible;
@@ -177,6 +169,14 @@
 
 	.projectsContainer .mobileHeader {
 		color: #00f;
+	}
+
+	.projectsContainer .mobileNavContainer {
+		color: #00f;
+	}
+
+	.projectsContainer .App-link {
+	text-decoration: none;
 	}
 
 

@@ -46,7 +46,7 @@
 }
 
 .projectTitle {
-  font-family: 'Adieu', 'Helvetica', sans-serif;
+  font-family: 'Adieu-Regular', 'Helvetica', sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
 }
@@ -90,17 +90,6 @@
   flex-grow: 1;
 }
 
-.mobileProjectBody {
-  display: flex;
-  width: 100vw;
-  flex: 1 100%;
-  flex-flow: column-reverse wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-grow: 1;
-}
-
-
 .Verso {
   width: 100vw;
 }
@@ -112,11 +101,11 @@
 .projectBody {
   text-align: left;
   font-family: 'Falster', 'Helvetica', sans-serif;
-  font-size: 2.5vh;
+  font-size: 1.5rem
 }
 
 .Recto .projectBody {
-  margin: 2vh 4vh 0 4vh;
+  margin: 4vh 6vw 0 6vw;
 }
 
 .headerMargin {
@@ -128,20 +117,20 @@
 }
 
 .projectTitle {
-  font-family: 'Adieu', 'Helvetica', sans-serif;
+  font-family: 'Adieu-Regular', 'Helvetica', sans-serif;
   text-transform: uppercase;
-  font-size: 6vh;
-  margin: 2vh 0 2vh 2vh;
+  font-size: 2.5rem;
+  margin: 2vh 0 0 2vh;
 }
 
 .projectTag {
   font-family: 'Falster', 'Helvetica', sans-serif;
-  font-size: 5vh;
+  font-size: 2.5rem;
 }
 
 .projectLocation, .projectEvent, .projectLink {
   font-family: 'Falster', 'Helvetica', sans-serif;
-  font-size: 2.5vh;
+  font-size: 1.5rem;
   margin: 0 0 0 2vh;
 }
 
@@ -158,6 +147,9 @@
 .projectImageCaption {
 }
 
+.projectPageContainer .App-link {
+  text-decoration: none;
+}
 
   /*---------------------------Mobile Navbar---------------------------*/
 
