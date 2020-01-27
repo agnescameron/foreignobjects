@@ -29,6 +29,7 @@ export default class Projects extends React.Component{
               {value => { 
 
                 const projects = this.context
+                console.log(projects)
                 return (
                   projects.map((project, i) => {
                   // Return the element. Also pass key

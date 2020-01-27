@@ -100,13 +100,7 @@ export default class AltHome extends React.Component{
            </div>
         </DragBox>
 
-        <DragBox>
-          <div className="ProjectModule testModule">
-            <Circle>
-              wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
-            </Circle>
-          </div> 
-        </DragBox>
+
 
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
       </div>

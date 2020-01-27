@@ -84,7 +84,6 @@ export default class ProjectPage extends React.Component{
 					{project &&	
 					<ProjectContext.Consumer>
 						{value => { return (	
-							<div>
 									<div className="imgWrapper">		
 						  		 		<img src={project.fields.Image[0].url} className="projectImage"/> 
 										<div className="projectImageCaption">
@@ -92,7 +91,6 @@ export default class ProjectPage extends React.Component{
 											{project.fields.Image[0].url} */}
 										</div>
 									</div>
-							</div>
 							)}
 						}
 					</ProjectContext.Consumer>	

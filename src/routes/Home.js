@@ -8,7 +8,11 @@ import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Center from '../components/Center';
-
+import DragBox from '../components/DragBox';
+import Circle from '../components/Circle.js';
+import HomeProjectModule from '../components/HomeProjectModule';
+import ProjectModule from '../components/ProjectModule';
+import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 
 import './Home.css';
@@ -20,6 +24,9 @@ export default class Home extends React.Component{
       hovering : false
     }
   }
+
+  static contextType = ProjectContext;
+
 
   handleEnter = (event) => {
     event.preventDefault()
@@ -34,7 +41,14 @@ export default class Home extends React.Component{
     window.location = "mailto:hello@foreignobjects.net";
   }
 
+
   render() {
+
+      const HomeProject = this.context.filter(function(project){
+        if(project.fields["Show on Home Screen"] === true){
+          return project}
+        })
+
     return (
       <div className="App Bg-blue">
         <div className="mobileHeader">FOREIGN OBJECTS</div>
@@ -56,6 +70,31 @@ export default class Home extends React.Component{
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
+
+
+          <ProjectContext.Consumer>
+            {value => { 
+              {HomeProject &&
+              console.log(HomeProject);
+              return (
+                  HomeProject.map((project, i) => {
+                  // Return the element. Also pass key
+                    return (<HomeProjectModule key={i} index={i} project={HomeProject} />)
+                  })
+                )
+            }
+            }
+          }
+        </ProjectContext.Consumer>
+      
+         
+          <DragBox>
+            <div className="ProjectModule testModule">
+              <Circle>
+                wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
+              </Circle>
+            </div> 
+          </DragBox>
 
       </div>
     );

@@ -1,23 +1,19 @@
 import React from 'react';
 import './Components.css';
 import '../routes/Projects.css';
+import ProjectContext from '../ProjectContext';
 
 export default class HomeProjectModule extends React.Component{
 // records delta state of the dragged object
 
+static contextType = ProjectContext;
+
   render() {
-  	//renders if image present
+  const index = this.props.index
+  console.log(this.props.project[index].fields["Project Name"])
+  const project = this.props.project[index]
 	return (
-	<div>
-	{ this.props.project.fields["Project Name"] === "Internet as a City" &&
-  		<div className="projectHome imgWrapper">
-  		 <img draggable="false" src={this.props.project.fields.Image[0].url} /> 	      		
-  			<div className="homeProjectModuleText">
-      		{this.props.project.fields["Project Name"]}
-      		</div>
-      	</div>  
-      }
-    </div>
+    <div>{project.fields["Project Name"]}</div>
     );
   }
 }
