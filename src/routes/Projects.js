@@ -1,23 +1,19 @@
 import React from 'react';
 import ProjectModule from '../components/ProjectModule'
-import ProjectPage from './ProjectPage';
 import './Projects.css';
-import Circle from '../components/Circle.js';
 import Top from '../components/Top.js';
 import ProjectContext from '../ProjectContext';
 
 import { Link } from 'react-router-dom';
 
-const AIRTABLE_API_KEY = ""
-const MAX_RECORDS = 20;
+// const AIRTABLE_API_KEY = ""
+// const MAX_RECORDS = 20;
 
 export default class Projects extends React.Component{
     
   static contextType = ProjectContext
 
   render() {
-
-
     return (
       <div className="App Bg-white">
         <div className="projectsContainer">
@@ -28,8 +24,7 @@ export default class Projects extends React.Component{
             <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
           </div>  
           <Top hovering="true" />
-          <Link to='/' className="App-link backArrow" />
-            
+          <Link to='/' className="App-link backArrowFixed" />     
             <ProjectContext.Consumer>
               {value => { 
 
@@ -41,13 +36,9 @@ export default class Projects extends React.Component{
                   })
                   )
               }}
-              
-
             </ProjectContext.Consumer>
-
         </div>
       </div>
-
     );
   }
 }

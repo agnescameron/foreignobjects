@@ -19,7 +19,15 @@
   font-family: "Adieu-Regular";
   font-size: 17vh;
   line-height: 0.8;
+  text-align: center;
   /* border: 1px solid; */
+}
+
+.centerText a {
+  text-decoration: none;
+  color: #fff;
+  cursor:  url('../assets/cursor-click.png'), auto;
+
 }
 
 .centerText:hover {
@@ -58,6 +66,8 @@
   line-height: 1;
   margin: 2vh;
   flex: 1 100%;
+  text-align: center;
+
   /*border: 1px solid;*/
 }
 

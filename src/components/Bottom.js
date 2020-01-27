@@ -8,27 +8,27 @@ export default class Bottom extends React.Component{
       <div className={className}>
         We make&nbsp;<a
             className="App-link"
-            href="http://propspaper.com"
+            href="/props-paper"
             target="_blank"
             rel="noopener noreferrer"
           >websites</a>,&nbsp; <a
             className="App-link"
-            href="http://yveyang.com/exhibitions/arch-mixes"
+            href="/internet-as-an-object"
             target="_blank"
             rel="noopener noreferrer"
           >installations</a>,&nbsp; <a
             className="App-link"
-            href="https://internetas.city"
+            href="/internet-as-a-city"
             target="_blank"
             rel="noopener noreferrer"
           >workshops</a>,&nbsp; <a
             className="App-link"
-            href="http://root.schloss-post.com"
+            href="permaculture-network"
             target="_blank"
             rel="noopener noreferrer"
           >simulations</a>,&nbsp; and other&nbsp; <a
           className="App-link"
-          href="https://kalli-retzepi.com/clickhere/"
+          href="click-here"
           target="_blank"
             rel="noopener noreferrer"
           >critical tools</a>&nbsp; in digital and physical space.

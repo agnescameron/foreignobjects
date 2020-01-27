@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter as BrowserRouter, Route, Link, Switch, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import ProjectContext from './ProjectContext';
 import ProjectProvider from './ProjectProvider';
 import Home from './routes/Home';
 import About from './routes/About';

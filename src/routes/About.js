@@ -9,9 +9,6 @@ import DragBox from '../components/DragBox';
 import { Link } from 'react-router-dom';
 
 export default class About extends React.Component{
-  constructor(props) {
-    super(props);
-}
 
   render() {
     return (
@@ -26,9 +23,7 @@ export default class About extends React.Component{
           </div>          
           <div className="About">
             <div className="Verso">
-                <a className="backArrow App-link" 
-                href="https://www.foreignobjects.net"
-                rel="noopener noreferrer" />
+                <Link to='/' className="backArrow App-link" />
               <div className="aboutBody">
                 <Link to='/' className="App-link Orange">FOREIGN OBJECTS LLC</Link> is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
                 <br/>
@@ -64,7 +59,7 @@ export default class About extends React.Component{
             </div>
             <div className="Recto" />
               <DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>
-              <img src={aboutImage} className="aboutImage" alt="About Us Image" />
+              <img src={aboutImage} className="aboutImage" alt="About Us" />
             </div>
         </div>  
       </div>

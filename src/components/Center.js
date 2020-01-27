@@ -1,5 +1,6 @@
 import React from 'react';
 import './Components.css';
+import { Link } from 'react-router-dom';
 
 export default class Center extends React.Component{
 	constructor (props) {
@@ -20,7 +21,7 @@ export default class Center extends React.Component{
     return (
     	      	<div className="Blurb">
 				<p>
-				<div className="blurbArrow" onClick={() => this.setState({Blurb: false})}><a className="App-link">&#8598;</a></div>
+				<div className="blurbArrow App-link" onClick={() => this.setState({Blurb: false})}>&#8598;</div>
 				Foreign Objects is a design studio and consultancy working in physical and digital space. We create cultural artifacts and new imaginaries for life on the internet.
 				<br/>
 				<br/>
@@ -57,9 +58,11 @@ export default class Center extends React.Component{
   	);} else {
  	return (
 
-	      <div className="centerText" onClick={() => this.setState({Blurb: true})}>
-	        <div>FOREIGN OBJECTS</div>
-	      </div>
+	      <div  className="centerText">
+	      	<Link to="/about">
+	        	<div>FOREIGN OBJECTS</div>
+	      	</Link>
+      	</div>
     );
   }
 }

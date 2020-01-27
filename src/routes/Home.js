@@ -1,13 +1,13 @@
 import React from 'react';
-import DragBox from '../components/DragBox';
-import ProjectModule from '../components/ProjectModule';
+// import DragBox from '../components/DragBox';
+// import ProjectModule from '../components/ProjectModule';
+// import Circle from '../components/Circle.js';
 
 import Left from '../components/Left';
 import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Center from '../components/Center';
-import Circle from '../components/Circle.js';
 
 import { Link } from 'react-router-dom';
 

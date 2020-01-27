@@ -1,9 +1,8 @@
 import React from 'react';
-import Projects from './Projects';
-import ProjectModule from '../components/ProjectModule';
-import { Link, Switch, useParams, Route } from 'react-router-dom';
-import ProjectProvider from '../ProjectProvider';
+import { Link } from 'react-router-dom';
+import './ProjectPage.css';
 import ProjectContext from '../ProjectContext';
+import Top from '../components/Top';
 
 export default class ProjectPage extends React.Component{
     constructor(props) {
@@ -24,37 +23,127 @@ export default class ProjectPage extends React.Component{
   render () {
   		// return current proejct by matching id with the "Unique URL" field in the object 
   		const project = this.context.find(o => o.fields["Unique URL"] === this.state.id);
-  		console.log("project is ", project);
-
+  		console.log(project);
   	return (
-      <div className="App Bg-blue">
-		{project &&
-		
-		<div>
-		<ProjectContext.Consumer>
-			{value => { return (				
-			<div>
-	  		<div className=" projectLeft imgWrapper">
-	  		 	<img src={project.fields.Image[0].url} />
-	  			<div className="upperLineTitle">
-					{project.fields["Project Name"]}
-	      		</div>
-				<div>
-					{project.fields.Description}
-				</div>
-	  		</div>
-			</div>
-				)
-				}
-			}
+      <div className="App Bg-white">
+	      <div className="projectPageContainer">
+	      <div className="mobileHeader">FOREIGN OBJECTS</div>
+	        <div className="mobileNavContainer">
+	          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
+	          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
+	          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
+	        </div>
+			<Top hovering="true" />
+				<div className="projectPage">
+				<div className="Verso">
+			        <Link to='/projects' className="App-link backArrow" />
 
-		</ProjectContext.Consumer>	
-		</div>
-	}
-		</div>
-	  );	
-	 }
-	}  
+					{project &&	
+						<ProjectContext.Consumer>
+							{value => { return (
+								<div>	
+									<div className="headerMargin">		
+							{/*} 	<img src={project.fields.Image[0].url} /> */}
+							  			<div className="projectTitle">{project.fields["Project Name"]}</div>
+										<div className="projectTag">"{project.fields["Tag Line"]}"</div>
+										
+										<div className="headerDetails">
+
+											{project.fields.Event &&
+												<div className="projectEvent">
+													<a className="App-link Orange arrowW" href={project.fields["Event Link"]} />
+													{project.fields.Event}
+												</div>
+											}
+
+											{project.fields.Location &&											
+												<div className="projectLocation">
+													<a href={project.fields["Location Link"]} className="App-link Orange arrowE" />
+													{project.fields.Location}
+												</div>
+											}
+
+											{project.fields.Year &&
+												<div className="projectLink">
+														{project.fields.Year}
+												</div>
+											}
+
+											{project.fields.links &&
+												<div className="projectLink">
+													<a href={project.fields.links} className="App-link Orange arrowSE">
+														{project.fields.links}
+													</a>
+												</div>
+											}
+										</div>
+									</div>
+								</div>
+								)}
+							}
+						</ProjectContext.Consumer>	
+					}
+				</div>
+				<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+									<div className="imgWrapper">		
+						  		 		<img src={project.fields.Image[0].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+					<div className="Verso">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[1] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[1].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+					<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+								<div className="projectBody">	
+										<div>{project.fields.Description}</div>
+								</div>
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+			</div>
+		  </div>
+	  </div>
+  );	
+ }
+}  
 
 
   

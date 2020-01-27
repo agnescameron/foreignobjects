@@ -25,23 +25,19 @@
 }
 
 .Verso {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-    /*border: 1px solid;*/
-}
+	display: block;
+	width: 50vw;
+	/*    border: 1px solid;
+*/}
 
 .Recto {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	align-items: flex-end;
-	z-index: 10;
-    /*border: 1px solid;*/
-}
+	display: block;
+	width: 50vw;
+/*    border: 1px solid;
+*/}
 
 .aboutBody {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	font-family: 'Falster', 'Helvetica', sans-serif;
 	color: #fff;
 	text-align: left;
@@ -55,10 +51,6 @@
 	top: 35vh;
 	right: 0;
 	z-index: -1;
-}
-
-.backArrow {
-	color: #fff;
 }
 
 .circleText {
@@ -128,10 +120,6 @@
 	.Orange {
 		color: #FF696B;
 		text-decoration: underline;
-	}
-
-	.Arrow {
-		text-decoration: none;
 	}
 
 	.aboutBody {
