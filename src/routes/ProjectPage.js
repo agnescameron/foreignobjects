@@ -138,6 +138,46 @@ export default class ProjectPage extends React.Component{
 					</ProjectContext.Consumer>	
 					}
 				</div>
+
+					<div className="Verso">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>	
+								{project.fields["Description Paragraph 2"] &&
+									<div>
+										<div className="projectBody">	
+												<div>{project.fields["Description Paragraph 2"]}</div>
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+					<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (
+							<div>
+				  		 		{project.fields.Image[2] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[2].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
 			</div>
 		  </div>
 	  </div>

@@ -76,7 +76,7 @@
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
 
 	/*hidden elements in mobile*/
 	.Top, .circleText, .backArrow {
@@ -142,7 +142,7 @@
 	}
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 700px) {
 	.mobileNavContainer, .mobileHeader {
 		display: none;
 }
