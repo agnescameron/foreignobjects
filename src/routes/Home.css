@@ -67,7 +67,6 @@
   margin: 2vh;
   flex: 1 100%;
   text-align: center;
-
   /*border: 1px solid;*/
 }
 
@@ -160,7 +159,6 @@
   text-decoration: underline;
   }
 
-
 /*---------------------------Mobile Navbar---------------------------*/
 
   .mobileHeader {
@@ -220,7 +218,11 @@
   }
 }
 
-@media all and (min-width: 800px) {
+
+/*---------------------------Desktop---------------------------*/
+
+
+@media all and (min-width: 1000px) {
 
   .Hello {
     display: none;

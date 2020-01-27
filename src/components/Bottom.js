@@ -28,7 +28,7 @@ export default class Bottom extends React.Component{
             rel="noopener noreferrer"
           >simulations</a>,&nbsp; and other&nbsp; <a
           className="App-link"
-          href="click-here"
+          href="/projects"
           target="_blank"
             rel="noopener noreferrer"
           >critical tools</a>&nbsp; in digital and physical space.
