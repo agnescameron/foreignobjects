@@ -158,6 +158,8 @@
 
 .mobileBackArrow {
   margin: 0 0 0 -2vh;
+  text-decoration: none;
+  color: #FF696B;
 }
 
   /*---------------------------Mobile Navbar---------------------------*/

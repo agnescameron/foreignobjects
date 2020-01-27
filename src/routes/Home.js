@@ -71,7 +71,6 @@ export default class Home extends React.Component{
         <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/>
 
-
           <ProjectContext.Consumer>
             {value => { 
               {HomeProject &&
@@ -85,8 +84,7 @@ export default class Home extends React.Component{
             }
             }
           }
-        </ProjectContext.Consumer>
-      
+          </ProjectContext.Consumer>
          
           <DragBox>
             <div className="ProjectModule testModule">

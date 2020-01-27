@@ -39,7 +39,7 @@ export default class ProjectPage extends React.Component{
 									<div className="headerMargin">		
 							{/*} 	<img src={project.fields.Image[0].url} /> */}
 							  		    <div className="projectTitle">
-							  		    <Link to='/Projects' className="mobileBackArrow App-link Orange arrowNW" />{project.fields["Project Name"]}</div>
+							  		    <Link to='/Projects' className=" mobileBackArrow arrowNW" />{project.fields["Project Name"]}</div>
 										<div className="projectTag">"{project.fields["Tag Line"]}"</div>
 										
 										<div className="headerDetails">

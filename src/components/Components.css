@@ -56,19 +56,31 @@
 /*---vvvvvv------- test to remove later ------vvvvvvv-------*/
 
 .homeProjectModuleText {
-/* test to remove late */
  font-family: 'Falster';
- font-size: 10vh;
+ font-size: 7vh;
  color: white;
- bottom: 11%;
+ bottom: 35%;
  position: absolute;
  visibility: hidden;
+ text-align: center;
+  text-shadow: 1px 2px #00f;
 /* border: 1px white solid;*/
 }
 
+.projectHome:hover .homeProjectModuleText {
+  visibility: visible;
+}
+
+.projectHome:hover img {
+  visibility: visible;
+  opacity: 0.7;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  }
+
 .testModule .circleText {
   /* test to remove late */
-
   left: 30vw;
   top: 15vh;  
   font-family: 'Falster';
@@ -78,13 +90,14 @@
 }
 .projectHome {
   position: absolute;
-  left: -70vh;
-  top: 50vh;
+  right: 10vh;
+  top: 47vh;
 }
 
 .projectHome img {
   width: 30vw;
-  opacity: 90%;
+  opacity: 1;
+  z-index: 10;
 /* filter: sepia(1);
 */}
 
