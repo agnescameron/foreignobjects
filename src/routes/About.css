@@ -18,11 +18,14 @@
 	flex: none;
 }
 
+.aboutContainer * {
+	border: 0px white solid;
+}
+
 .About {
 	display: flex;
 	flex: 1 100%;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-grow: 1;
@@ -30,24 +33,89 @@
 }
 
 .Verso {
-	display: block;
 	width: 50vw;
 	/*    border: 1px solid;
 */}
 
 .Recto {
-	display: block;
 	width: 50vw;
 /*    border: 1px solid;
 */}
 
 .aboutBody {
+	display: flex;
+	flex: 1 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
 	font-size: 2rem;
 	font-family: 'Falster', 'Helvetica', sans-serif;
 	color: #fff;
 	text-align: left;
-	margin: 0 -8vh 4vh 4vh;
+	margin: 0 -8vh 0 4vh;
 /*	border: 1px solid; */
+}
+
+.aboutCapabilitiesContainer {
+	display: flex;
+	flex-flow: column wrap;
+	font-size: 2rem;
+	margin: 4vh -8vh 0 4vh;
+}
+
+.aboutHeading {
+	flex: none;
+	font-size: 2rem;
+	flex-basis: 100%;
+	text-decoration: underline;
+	padding: 0 0 1vh 0; 
+}
+
+.aboutCapabilities {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	font-size: 2rem;
+	margin: 0 0 0 0;
+}
+
+/*.aboutBioContainer * {
+	border: 1px white solid;
+}*/
+
+.aboutBioContainer {
+	display: flex;
+	flex-flow: column wrap;
+	flex: 1 1 100%;
+	margin: 4vh -8vh 5vh 4vh;
+}
+
+.aboutBio {
+	display: flex;
+	flex-flow: row nowrap;
+	flex: 1 1 100%;
+	font-size: 1.2rem;
+	padding: 0.5vh 0 0 0;
+}
+
+.aboutBioImage {
+	display: flex;
+	flex-shrink: 1;
+	height: 20vh;
+	width: 20vh;
+	padding: 0 3vh 0 0;
+}
+
+.aboutBioInfo {
+	flex-shrink: 10;
+}
+
+.aboutBioHeading {
+	text-decoration: underline;
+	margin: 0 -8vh 1vh 0;
+}
+
+.aboutBioBody {
+	margin: 0 -8vh 4vh 0;
 }
 
 .aboutImage {
@@ -77,6 +145,57 @@
 }
 
 @media all and (max-width: 700px) {
+
+	.aboutCapabilitiesContainer {
+		display: flex;
+		flex-flow: column wrap;
+		font-size: 6vw;
+		margin: 2vh 2vh 2vh 2vh;
+	}
+	.aboutCapabilities {
+		display: flex;
+		flex-flow: column;
+		font-size: 6vw;
+		width: 100%;
+		margin: 0 0 0 2vh;
+	}
+	
+	.aboutHeading {
+		display: block;
+		flex: 1 1 100%;
+		font-size: 6vw;
+	}
+
+	.aboutBio {
+		display: flex;
+		flex-flow: column nowrap;
+		flex: 1 1 100%;
+		font-size: 6vw;
+		padding: 0.5vh 0 0 0;
+	}
+	.aboutBioImage {
+		display: block;
+		height: 30vh;
+		width: 30vh;
+		padding: 0 0 2vh 2vh;
+	}
+
+	.aboutBioContainer {
+		display: flex;
+		flex-flow: column wrap;
+		flex: 1 1 100%;
+		margin: 0 2vh 0 2vh;
+		padding: 0 0 5vh 0;
+	}
+
+	.aboutBioHeading {
+	text-decoration: underline;
+	margin: 0 0 2vh 2vh;
+		}
+
+	.aboutBioBody {
+	margin: 0 2vh 2vh 4vh;
+	}
 
 	/*hidden elements in mobile*/
 	.Top, .circleText, .backArrow {

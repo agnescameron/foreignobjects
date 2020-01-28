@@ -25,7 +25,14 @@ export default class ProjectModule extends React.Component{
 								<div>"{this.props.project.fields["Tag Line"]}"</div>
 								<div>{this.props.project.fields.Location}</div>
 								<div>{this.props.project.fields["Medium or Tools"]}</div>
-								<div>{this.props.project.fields["Services Involved"][0]}</div>
+								<div>{this.props.project.fields["Services Involved"][0]}
+									{this.props.project.fields["Services Involved"][1] 
+										&& <span>, {this.props.project.fields["Services Involved"][1]}</span>
+										}
+										{this.props.project.fields["Services Involved"][2] 
+										&& <span>, {this.props.project.fields["Services Involved"][2]}</span>
+										}
+										</div>
 								<div>{this.props.project.fields.Geolocation}</div>
 				  			</div>
 				
