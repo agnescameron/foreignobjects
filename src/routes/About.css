@@ -144,22 +144,28 @@
 	.aboutCapabilitiesContainer {
 		display: flex;
 		flex-flow: column wrap;
-		font-size: 2rem;
+		font-size: 6vw;
 		margin: 2vh 2vh 2vh 2vh;
 	}
 	.aboutCapabilities {
 		display: flex;
 		flex-flow: column;
+		font-size: 6vw;
 		width: 100%;
-		font-size: 2rem;
-		margin: 0 2vh 0 2vh;
+		margin: 0 0 0 2vh;
+	}
+	
+	.aboutHeading {
+		display: block;
+		flex: 1 1 100%;
+		font-size: 6vw;
 	}
 
 	.aboutBio {
 		display: flex;
 		flex-flow: column nowrap;
 		flex: 1 1 100%;
-		font-size: 1.3rem;
+		font-size: 6vw;
 		padding: 0.5vh 0 0 0;
 	}
 	.aboutBioImage {
