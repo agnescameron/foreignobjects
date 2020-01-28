@@ -98,10 +98,15 @@
 }
 
 .aboutBioImage {
-	display: block;
+	display: flex;
+	flex-shrink: 1;
 	height: 20vh;
 	width: 20vh;
 	padding: 0 3vh 0 0;
+}
+
+.aboutBioInfo {
+	flex-shrink: 10;
 }
 
 .aboutBioHeading {
