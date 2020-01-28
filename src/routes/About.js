@@ -74,7 +74,7 @@ export default class About extends React.Component{
                           Exhibition Design<br />
                           Web Development<br />
                           Website Design<br />
-                          Simulation Design & Modelling<br />
+                          Simulation Design & Modeling<br />
                           Cultural Strategy & Insight<br />
                           Concept Design<br />
                           Visual Identity Systems<br />
