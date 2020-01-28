@@ -29,7 +29,7 @@ export default class About extends React.Component{
                   <Link to='/' className="App-link Orange">FOREIGN OBJECTS LLC</Link> is a design and research studio exploring the internet through the production of cultural artifacts. We build environments, tools and discourses that imagine new ways of living with the web.  
                   <br/>
                   <br/>
-                  Formed by four foreigners at MIT, the interdisciplinary nature of our work draws on backgrounds in engineering, architecture, web design and conceptual art. Meeting at the intersection of technology, culture and the built environment, our collaboration interrogates the networked world with curious and critical eye. We work with artists, institutions and organizations to build projects that create more playful, experimental, imaginative and meaningful connections between the internet and society.
+                  Formed by four foreigners at MIT, the interdisciplinary nature of our work draws on backgrounds in engineering, architecture, web design and conceptual art. Meeting at the intersection of technology, culture and the built environment, our collaboration interrogates the networked world with curious and critical eye. We work with artists, institutions and organizations to build projects that create more playful, experimental, and meaningful connections between the internet and society.
                   <br/>
                   <br/>
                   FOREIGN OBJECTS's work has been presented publicly at The Internet Archive's Decentralized Web Summit (2018), the New Museum's cultural incubator (NEW INC. 2019-20) and the Bauhaus-100 Internationales Kolloquium (2019). In 2019 we were recipients of the Mozilla Creative Media Award, for a project exploring the future of human-like chatbots and other autonomous agents in society.
@@ -64,7 +64,7 @@ export default class About extends React.Component{
                   >NEW INC.</a>, at the New Museum in NYC. 
                 </div>
                 </div>
-                
+
                     <div className="aboutCapabilitiesContainer">
                       <div className="aboutHeading">
                         CAPABILITIES
