@@ -178,7 +178,7 @@ img:hover + .projectModuleText {
 .widgetPositionFour {
   position: absolute;  
   left: 100vw;
-  top: 0vh;
+  top: 5vh;
   z-index: 0;
   transform: rotate(90deg);
   transform-origin: top left;

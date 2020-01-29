@@ -82,7 +82,7 @@ export default class Home extends React.Component{
 
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
         <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget>
-        <Widget place="Widget widgetPositionFour">{Thoughts}</Widget>
+        <Widget type="thoughts" place="Widget widgetPositionFour">{Thoughts}</Widget>
         <Widget place="Widget widgetPositionThree">{Bubbles}</Widget>
 
           <ProjectContext.Consumer>

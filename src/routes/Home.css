@@ -19,7 +19,7 @@
 .centerText {
   font-family: "Adieu-Regular";
   font-size: 17vh;
-  line-height: 0.8;
+  line-height: 0.9;
   text-align: center;
   z-index: 5;
   /* border: 1px solid; */
@@ -33,8 +33,8 @@
 }
 
 .centerText:hover {
-  -webkit-filter: blur(4px) grayscale(5%);
-          filter: blur(4px) grayscale(5%);
+  -webkit-filter: blur(5px) grayscale(5%);
+          filter: blur(5px) grayscale(5%);
   cursor:  url('../assets/cursor-click.png'), auto;
 
 }
@@ -249,9 +249,13 @@
 
 @media all and (min-width: 800px) {
 
-  .Hello, .Top, .Right, .Bottom, .Left {
+  .Hello, .Right, .Bottom, .Left {
     display: none;
   }
+
+ .Center + .Top {
+  z-index: 0;
+ }
 
   .aside {
     -webkit-box-flex:  1;
