@@ -177,6 +177,114 @@ export default class ProjectPage extends React.Component{
 					</ProjectContext.Consumer>	
 					}
 				</div>
+
+
+				<div className="Verso">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[3] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[1].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+				<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[4] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[4].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+								<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[5] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[5].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+				<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[6] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[6].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+				<div className="Recto">
+					{project &&	
+					<ProjectContext.Consumer>
+						{value => { return (	
+							<div>
+				  		 		{project.fields.Image[7] && 
+									<div className="imgWrapper">		
+					  		 			<img src={project.fields.Image[7].url} className="projectImage"/> 
+										<div className="projectImageCaption">
+											{/* add code here to trim slug from image URL/filename and use as caption 
+											{project.fields.Image[0].url} */}
+										</div>
+									</div>
+								}
+							</div>
+							)}
+						}
+					</ProjectContext.Consumer>	
+					}
+				</div>
+
+
 			</div>
 		  </div>
 	  </div>
