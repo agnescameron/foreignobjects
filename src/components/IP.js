@@ -10,6 +10,7 @@ export default class IP extends React.Component{
     }
   }
 
+
   componentDidMount(){
 
   publicIP()
@@ -21,8 +22,10 @@ export default class IP extends React.Component{
     .catch(error => {
       console.log(error);
       // 'Unable to get IP address.'
-    });
+    })
 }
+
+
   render() {
      const ip = this.state.ip;
      // console.log("ip is", this.state.ip)
