@@ -88,15 +88,13 @@ export default class Home extends React.Component{
 
           <ProjectContext.Consumer>
             {value => { 
-              {HomeProject &&
-              // console.log(HomeProject);
               return (
                   HomeProject.map((project, i) => {
                   // Return the element. Also pass key
                     return (<HomeProjectModule key={i} index={i} project={HomeProject} />)
                   })
                 )
-            }
+            
             }
           }
           </ProjectContext.Consumer>
