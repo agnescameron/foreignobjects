@@ -38,7 +38,17 @@ export default class Projects extends React.Component{
                   )
               }}
             </ProjectContext.Consumer>
+ <div className="footerContainer">       
+          <div className="footerLeft"><span className="arrowNW"/>FOREIGN OBJECTS LLC<br/>231 Bowery FL2<br/>NYC, NY 10002<span className="arrowSE" /></div>
+          <div className="footerRight"> 
+            <a className="App-link"
+            href="mailto:hello@foreignobjects.net?subject='hello objects!'"
+            rel="noopener noreferrer">
+              <span className="arrowNW"/>hello@foreignobjects.net<span className="arrowSE"/>
+            </a><br/><span className="arrowNW"/>www.foreignobjects.net<span className="arrowSE"/><br/><span className="arrowNW"/>@foreignobj<span className="arrowSE"/></div>
         </div>
+                </div>
+
       </div>
     );
   }

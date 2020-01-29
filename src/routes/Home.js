@@ -90,11 +90,11 @@ componentDidMount(){
         >          
         <Center />
         </div>
-        {/* <Top hovering={this.state.hovering} onClick={this.handleLeave}/>*/}
+        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
         <div className="Hello">Hello.</div>
-        {/* <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
+        <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/> */}
+        <Left hovering={this.state.hovering} onClick={this.handleLeave}/> 
         
         <div className="footerContainer">       
           <div className="footerLeft"><span className="arrowNW"/>FOREIGN OBJECTS LLC<br/>231 Bowery FL2<br/>NYC, NY 10002<span className="arrowSE" /></div>

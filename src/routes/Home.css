@@ -116,12 +116,14 @@
 
 @media all and (max-width: 800px) {
 
-  .Center, .Blurb, .widgetPositionOne, .widgetPositionTwo, .widgetPositionFour{
+  .Center, .Blurb, .widgetPositionOne, .widgetPositionTwo, .widgetPositionFour, .projectHome, .projectHomeOffset {
     display: none;
   }
 
   .widgetPositionThree {
-  z-index: 0;
+    bottom: 25vh;
+    left: 10vw;
+    z-index: 0;
     }
 
   .App {
@@ -232,7 +234,7 @@
 
 @media all and (min-width: 800px) {
 
-  .Hello, .Top, .Right, .Bottom, .Left, {
+  .Hello, .Top, .Right, .Bottom, .Left {
     display: none;
   }
 
