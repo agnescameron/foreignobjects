@@ -12,7 +12,7 @@
       -ms-flex-pack: flex-end;
   justify-content: space-between;
   z-index: 100;	
-	padding-bottom: 10vh;
+	padding-bottom: vh;
 
  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
    -moz-animation: fadein 1s; /* Firefox < 16 */

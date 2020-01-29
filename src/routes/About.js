@@ -3,6 +3,8 @@ import React from 'react';
 import './About.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top';
+import Footer from '../components/Footer';
+
 import aboutImage from "../assets/aboutImage.png";
 import DragBox from '../components/DragBox';
 
@@ -145,16 +147,8 @@ export default class About extends React.Component{
 
             <div className="Recto">
             </div>
+           <Footer />
 
-             <div className="footerContainer">       
-          <div className="footerLeft"><span className="arrowNW"/>FOREIGN OBJECTS LLC<br/>231 Bowery FL2<br/>NYC, NY 10002<span className="arrowSE" /></div>
-          <div className="footerRight"> 
-            <a className="App-link"
-            href="mailto:hello@foreignobjects.net?subject='hello objects!'"
-            rel="noopener noreferrer">
-              <span className="arrowNW"/>hello@foreignobjects.net<span className="arrowSE"/>
-            </a><br/><span className="arrowNW"/>www.foreignobjects.net<span className="arrowSE"/><br/><span className="arrowNW"/>@foreignobj<span className="arrowSE"/></div>
-        </div>
 
               {/*<DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>*/}
               <img src={aboutImage} className="aboutImage" alt="About Us" />

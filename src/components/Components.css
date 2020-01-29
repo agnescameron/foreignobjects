@@ -200,6 +200,7 @@ img:hover + .projectModuleText {
   display: -ms-flexbox;
   display: flex;
   position: static;
+  align-self: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -208,7 +209,7 @@ img:hover + .projectModuleText {
       -ms-flex-pack: center;
   justify-content: space-around;
   text-align: center;
-  padding: 4vh 0 0 0;
+  padding: 4vh 0 5vh 0;
   width: 100vw;
   bottom: 5vh;
   z-index: 20;
@@ -220,10 +221,12 @@ img:hover + .projectModuleText {
 }
 
 .footerLeft {
-
+  padding: 0 0 1vh 0;
 }
 
+
 .footerRight {
+  padding: 0 0 1vh 0;
 
 }
 

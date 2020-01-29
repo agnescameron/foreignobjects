@@ -20,6 +20,7 @@
   align-items: flex-start;
   flex-grow: 1;
 
+
 }
 
 .projectBody {
@@ -185,5 +186,9 @@
 @media all and (min-width: 800px) {
   .mobileBackArrow, .lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
     display: none;
+  }
+
+  .Top {
+    display: block;
   }
 }

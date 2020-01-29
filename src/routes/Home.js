@@ -7,6 +7,8 @@ import Left from '../components/Left';
 import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
+import Footer from '../components/Footer';
+
 import Center from '../components/Center';
 import DragBox from '../components/DragBox';
 import Circle from '../components/Circle.js';
@@ -21,34 +23,17 @@ import Thoughts from '../assets/thoughts.gif';
 import Bubbles from '../assets/bubbles.gif';
 import Bearcam from '../assets/bearcam.gif';
 
-import publicIP from 'react-native-public-ip';
-
 import './Home.css';
 
 export default class Home extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      hovering : false,
-          ip: '',
+      hovering : false
     }
   }
 
   static contextType = ProjectContext;
-
-componentDidMount(){
-
-  publicIP()
-    .then(ip => {
-      console.log("ip");
-      // '47.122.71.234'
-      this.setState({ ip : ip })
-    })
-    .catch(error => {
-      console.log(error);
-      // 'Unable to get IP address.'
-    });
-}
 
   handleEnter = (event) => {
     event.preventDefault()
@@ -66,8 +51,6 @@ componentDidMount(){
 
   render() {
 
-      const ip = this.state.ip;
-      console.log("ip is", this.state.ip)
      
       const HomeProject = this.context.filter(function(project){
         if(project.fields["Show on Home Screen"] === true){
@@ -95,22 +78,12 @@ componentDidMount(){
         <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
         <Left hovering={this.state.hovering} onClick={this.handleLeave}/> 
-        
-        <div className="footerContainer">       
-          <div className="footerLeft"><span className="arrowNW"/>FOREIGN OBJECTS LLC<br/>231 Bowery FL2<br/>NYC, NY 10002<span className="arrowSE" /></div>
-          <div className="footerRight"> 
-            <a className="App-link"
-            href="mailto:hello@foreignobjects.net?subject='hello objects!'"
-            rel="noopener noreferrer">
-              <span className="arrowNW"/>hello@foreignobjects.net<span className="arrowSE"/>
-            </a><br/><span className="arrowNW"/>www.foreignobjects.net<span className="arrowSE"/><br/><span className="arrowNW"/>@foreignobj<span className="arrowSE"/></div>
-        </div>
+      
 
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
         <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget>
         <Widget place="Widget widgetPositionFour">{Thoughts}</Widget>
         <Widget place="Widget widgetPositionThree">{Bubbles}</Widget>
-        <div className="Widget widgetPositionThree">{this.state.ip}</div>
 
           <ProjectContext.Consumer>
             {value => { 
@@ -134,6 +107,8 @@ componentDidMount(){
               </Circle>
             </div> 
           </DragBox>
+
+        <Footer />
 
       </div>
     );

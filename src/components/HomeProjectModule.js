@@ -21,8 +21,8 @@ static contextType = ProjectContext;
          <img draggable="false" src={project.fields["Cover Image"][0].url} />             
                 <div className="Unselectable homeProjectModuleText">
                   <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>
-                  <span className="arrowNW" />
-                  </Link>{project.fields["Project Name"]}
+                  <span className="arrowNW" />{project.fields["Project Name"]}
+                  </Link>
                 </div>
         </div>  }
     </DragBox>     

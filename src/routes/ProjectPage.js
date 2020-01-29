@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './ProjectPage.css';
 import ProjectContext from '../ProjectContext';
 import Top from '../components/Top';
+import Footer from '../components/Footer';
 
 export default class ProjectPage extends React.Component{
     constructor(props) {
@@ -177,6 +178,8 @@ export default class ProjectPage extends React.Component{
 					}
 				</div>
 			</div>
+
+			<Footer />
 		  </div>
 	  </div>
   );	
