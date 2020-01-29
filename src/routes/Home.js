@@ -59,13 +59,6 @@ export default class Home extends React.Component{
         })
 
     return (
-      <div className="App Bg-blue">
-        <div className="mobileHeader">FOREIGN OBJECTS</div>
-        <div className="mobileNavContainer">
-          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
-          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
-          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
-        </div>
         <div className="Center"
         //for mobile
         onMouseEnter={this.handleEnter}
@@ -73,12 +66,20 @@ export default class Home extends React.Component{
         onMouseLeave={this.handleLeave}
         >          
         <Center />
+      <div className="App Bg-blue">
+        <div className="mobileHeader">FOREIGN OBJECTS</div>
+        <div className="mobileNavContainer">
+          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
+          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
+          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
         </div>
-        <Top hovering={this.state.hovering} onClick={this.handleLeave}/>
+      
+        </div>
+        <Top />
         <div className="Hello">Hello.</div>
-        <Right hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Bottom hovering={this.state.hovering} onClick={this.handleLeave}/>
-        <Left hovering={this.state.hovering} onClick={this.handleLeave}/> 
+        <Right />
+        <Bottom />
+        <Left /> 
       
 
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
