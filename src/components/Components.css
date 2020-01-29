@@ -71,15 +71,18 @@ img:hover + .projectModuleText {
 
 /*---vvvvvv------- test to remove later ------vvvvvvv-------*/
 
+/*.projectHome > * {
+  border: 1px white solid;
+}*/
+
 .homeProjectModuleText {
  font-family: 'Falster';
  font-size: 8vh;
  color: #fff;
- bottom: 25%;
- right: 40%;
+ bottom: 30%;
+ right: 50%;
  position: absolute;
  visibility: hidden;
- text-align: center;
  line-height: 0.9;
  text-shadow: 2px 2px 3px #00f;
  text-transform: uppercase;
@@ -90,6 +93,9 @@ img:hover + .projectModuleText {
   visibility: visible;
 }
 
+.homeProjectModuleText .App-link {
+  text-decoration: none;
+}
 
 .projectHome:hover img {
   visibility: visible;

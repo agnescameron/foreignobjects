@@ -18,11 +18,12 @@ static contextType = ProjectContext;
   <DragBox>
       <div className="projectHome imgWrapper">
          <img draggable="false" src={project.fields["Cover Image"][0].url} />             
-              <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>
-                <div className="Unselectable homeProjectModuleText">
-                    {project.fields["Project Name"]}
-                </div>
-              </Link>  
+              <div className="Unselectable homeProjectModuleText">
+                <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>  
+                  <span className="arrowNW" />
+                </Link>
+                {project.fields["Project Name"]}
+              </div>  
         </div> 
     </DragBox>     
     );
