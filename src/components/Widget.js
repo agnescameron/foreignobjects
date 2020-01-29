@@ -33,7 +33,6 @@ export default class Widget extends React.Component{
       four : "Widget widgetPositionFour",
     }
 
-
   	return (
 		<a href={this.props.type} className={this.props.place}><img draggable="false" src={this.props.children} /></a>
 	)
