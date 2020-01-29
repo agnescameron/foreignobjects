@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import ProjectProvider from './ProjectProvider';
 import Home from './routes/Home';
+import Thoughts from './routes/Thoughts';
 import About from './routes/About';
 import Projects from './routes/Projects';
 import ProjectPage from './routes/ProjectPage';
@@ -33,6 +34,7 @@ class App extends React.Component {
           {/*<Link to="/about" className="App-link-about">About</Link>*/}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/thoughts" component={Thoughts} />
           <Route path="/althome" component={AltHome} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/:id" component={ProjectPage} />

@@ -1,13 +1,9 @@
 import React from 'react';
-import ProjectModule from '../components/ProjectModule'
-import './Projects.css';
+import './Thoughts.css';
 import Top from '../components/Top.js';
-import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 
-export default class Projects extends React.Component{
-    
-  static contextType = ProjectContext
+export default class Thoughts extends React.Component{
 
   render() {
     return (
@@ -19,21 +15,8 @@ export default class Projects extends React.Component{
             <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
             <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
           </div>  
-          <Top hovering="true" />
           <Link to='/' className="App-link backArrowFixed" />     
-            <ProjectContext.Consumer>
-              {value => { 
-
-                const projects = this.context
-                console.log(projects)
-                return (
-                  projects.map((project, i) => {
-                  // Return the element. Also pass key
-                    return (<ProjectModule key={i} index={i} project={project} />)
-                  })
-                  )
-              }}
-            </ProjectContext.Consumer>
+            <div>~thoughts under construction~</div>
         </div>
       </div>
     );
