@@ -12,10 +12,11 @@ static contextType = ProjectContext;
 
   render() {
   const index = this.props.index
-  console.log(this.props.project[index].fields["Project Name"])
+  console.log(this.props.index<2)
   const project = this.props.project[index]
 	return (
   <DragBox>
+    { this.props.index<2 &&
       <div className={this.props.index%2 === 0 ? "projectHome imgWrapper": "projectHomeOffset imgWrapper"}>
          <img draggable="false" src={project.fields["Cover Image"][0].url} />             
               <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>
@@ -23,7 +24,7 @@ static contextType = ProjectContext;
                     {project.fields["Project Name"]}
                 </div>
               </Link>  
-        </div> 
+        </div>  }
     </DragBox>     
     );
   }
