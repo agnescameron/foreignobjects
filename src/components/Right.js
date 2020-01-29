@@ -6,7 +6,7 @@ export default class Right extends React.Component{
   render() {
     const className= this.props.hovering ? 'aside Right' : 'aside hidden Right'
     return (
-      <div className={className}>
+      <div className="Right">
         We are a <a
             className="App-link"
             href="https://www.are.na/foreign-objects"

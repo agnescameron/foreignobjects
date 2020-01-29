@@ -4,9 +4,8 @@ import './Components.css';
 export default class Left extends React.Component{
 
   render() {
-    const className= this.props.hovering ? 'aside Left' : 'aside hidden Left'
     return (
-      <div className={className}>
+      <div className="Left">
         <a
           className="App-link"
           href="mailto:hello@foreignobjects.net?subject='hello objects!'"

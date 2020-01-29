@@ -5,7 +5,7 @@ export default class Bottom extends React.Component{
   render() {
     const className= this.props.hovering ? 'Bottom' : 'hidden Bottom'
     return (
-      <div className={className}>
+      <div className="Bottom">
         We make&nbsp;<a
             className="App-link"
             href="/props-paper"
