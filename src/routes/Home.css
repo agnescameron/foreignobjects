@@ -20,6 +20,7 @@
   font-size: 17vh;
   line-height: 0.8;
   text-align: center;
+  z-index: 5;
   /* border: 1px solid; */
 }
 

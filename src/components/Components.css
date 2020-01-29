@@ -50,58 +50,7 @@
  position: absolute;
  visibility: hidden;
 /* border: 1px white solid;*/
-}
 
-
-/*---vvvvvv------- test to remove later ------vvvvvvv-------*/
-
-.homeProjectModuleText {
- font-family: 'Falster';
- font-size: 7vh;
- color: white;
- bottom: 35%;
- position: absolute;
- visibility: hidden;
- text-align: center;
-  text-shadow: 1px 2px #00f;
-/* border: 1px white solid;*/
-}
-
-.projectHome:hover .homeProjectModuleText {
-  visibility: visible;
-}
-
-.projectHome:hover img {
-  visibility: visible;
-  opacity: 0.7;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-  }
-
-.testModule .circleText {
-  /* test to remove late */
-  left: 30vw;
-  top: 15vh;  
-  font-family: 'Falster';
-  font-size: 1.5rem;
-  position: absolute;
-  animation: rotation 14s infinite linear;
-}
-.projectHome {
-  position: absolute;
-  right: 10vh;
-  top: 47vh;
-}
-
-.projectHome img {
-  width: 30vw;
-  opacity: 1;
-  z-index: 10;
-/* filter: sepia(1);
-*/}
-
-/*^^^------------------ test to remove later ---------^^^^-------*/
 
 .imgWrapper {
   display: inline-block;
@@ -114,7 +63,149 @@ img:hover + .projectModuleText {
 
 .projectModuleText:hover {
   visibility: visible;
+  }
 }
+
+/* ------------------------------------  WIDGETS ------------------------------------   */
+
+
+/*---vvvvvv------- test to remove later ------vvvvvvv-------*/
+
+.homeProjectModuleText {
+ font-family: 'Falster';
+ font-size: 8vh;
+ color: #fff;
+ bottom: 25%;
+ right: 40%;
+ position: absolute;
+ visibility: hidden;
+ text-align: center;
+ line-height: 0.9;
+ text-shadow: 2px 2px 3px #00f;
+ text-transform: uppercase;
+/* border: 1px white solid;*/
+}
+
+.projectHome:hover .homeProjectModuleText {
+  visibility: visible;
+}
+
+
+.projectHome:hover img {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  }
+
+.testModule .circleText {
+  /* test to remove late */
+  left: 30vw;
+  top: 15vh;  
+  font-family: 'Falster';
+  font-size: 1rem;
+  position: absolute;
+  animation: rotation 14s infinite linear;
+}
+.projectHome {
+  position: absolute;
+  right: 10vh;
+  top: 47vh;
+}
+
+.projectHome img {
+  width: 30vw;
+  opacity: 0.7;
+  z-index: 10;
+/* filter: sepia(1);
+*/}
+
+/*^^^------------------ test to remove later ---------^^^^-------*/
+
+
+
+.Widget:hover {
+  -webkit-filter: blur(1px) /*hue-rotate(-70deg) contrast(250%)*/;
+          filter: blur(1px) /*hue-rotate(-70deg) contrast(250%)*/;
+  cursor:  url('../assets/cursor-click.png'), auto;
+}
+
+.widgetPositionOne {
+  position: absolute;
+  left: 10vw;
+  top: 5vh; 
+  z-index: 10;
+
+}
+
+.widgetPositionTwo {
+  position: absolute;
+  right: 0vw;
+  bottom: 0vh;
+  z-index: 10;
+
+}
+
+.widgetPositionThree {
+  position: absolute;  
+  left: 15vw;
+  bottom: 50vh;
+  z-index: 0;
+
+}
+
+.widgetPositionFour {
+  position: absolute;  
+  left: 100vw;
+  top: 0vh;
+  z-index: 0;
+  transform: rotate(90deg);
+  transform-origin: top left;
+
+}
+
+.Unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.footerContainer {
+  font-family: 'Falster';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100vw;
+  bottom: 5vh;
+  z-index: 20;
+
+}
+
+.footerContainer .App-link {
+  text-decoration: none;
+}
+
+.footerLeft {
+
+}
+
+.footerRight {
+
+}
+
 
 /* ------------------------------------  ARROWS ------------------------------------   */
 
