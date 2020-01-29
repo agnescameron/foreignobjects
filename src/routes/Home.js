@@ -8,6 +8,7 @@ import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
+import IP from '../components/IP'
 
 import Center from '../components/Center';
 import DragBox from '../components/DragBox';

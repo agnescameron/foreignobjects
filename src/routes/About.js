@@ -5,7 +5,7 @@ import Circle from '../components/Circle.js';
 import Top from '../components/Top';
 import Footer from '../components/Footer';
 
-import aboutImage from "../assets/aboutImage.png";
+import aboutImage from "../assets/profile.gif";
 import DragBox from '../components/DragBox';
 
 import { Link } from 'react-router-dom';
