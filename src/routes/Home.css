@@ -63,7 +63,6 @@
 .Top, .Right, .Left, .Bottom {
 
   visibility: visible;
-  font-size: 2.5vh;
   line-height: 1;
   margin: 2vh;
   flex: 1 100%;
