@@ -14,7 +14,7 @@ export default class IP extends React.Component{
 
   publicIP()
     .then(ip => {
-      console.log("ip");
+      // console.log("ip");
       // '47.122.71.234'
       this.setState({ ip : ip })
     })
@@ -24,8 +24,8 @@ export default class IP extends React.Component{
     });
 }
   render() {
-       const ip = this.state.ip;
-      console.log("ip is", this.state.ip)
+     const ip = this.state.ip;
+     // console.log("ip is", this.state.ip)
     return (
       <div className="ipAddress">
         {this.state.ip}

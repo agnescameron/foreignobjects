@@ -12,7 +12,7 @@ static contextType = ProjectContext;
 
   render() {
   const index = this.props.index
-  console.log(this.props.index<2)
+  // console.log(this.props.index<2)
   const project = this.props.project[index]
 	return (
   <DragBox>

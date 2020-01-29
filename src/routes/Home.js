@@ -19,7 +19,7 @@ import ProjectModule from '../components/ProjectModule';
 import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 
-import WorkButton from '../assets/WorkButton.png';
+import WorkButton from '../assets/Workbutton.gif';
 import Thoughts from '../assets/thoughts.gif';
 import Bubbles from '../assets/bubbles.gif';
 import Bearcam from '../assets/bearcam.gif';
@@ -89,7 +89,7 @@ export default class Home extends React.Component{
           <ProjectContext.Consumer>
             {value => { 
               {HomeProject &&
-              console.log(HomeProject);
+              // console.log(HomeProject);
               return (
                   HomeProject.map((project, i) => {
                   // Return the element. Also pass key
