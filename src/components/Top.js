@@ -5,11 +5,8 @@ export default class Top extends React.Component{
   render() {
     const className= this.props.hovering ? 'Top' : 'hidden Top'
     return (
-      <div className="Top">
-       
+      <div className="Top">       
         <IP />
-
-       
       </div>
     );
   }

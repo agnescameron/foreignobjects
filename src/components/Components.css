@@ -71,12 +71,6 @@ img:hover + .projectModuleText {
 /* ------------------------------------  WIDGETS ------------------------------------   */
 
 
-/*---vvvvvv------- test to remove later ------vvvvvvv-------*/
-
-/*.projectHome > * {
-  border: 1px white solid;
-}*/
-
 .homeProjectModuleText, .homeProjectOffset {
  font-family: 'Falster';
  font-size: 8vh;
@@ -91,6 +85,7 @@ img:hover + .projectModuleText {
 /* border: 1px white solid;*/
 }
 
+/* the two home display projects*/
 .projectHome:hover .homeProjectModuleText {
   visibility: visible;
 }
@@ -105,7 +100,6 @@ img:hover + .projectModuleText {
 }
 
 .projectHomeOffset:hover img, .projectHome:hover img {
-  visibility: visible;
   opacity: 1;
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
@@ -113,7 +107,6 @@ img:hover + .projectModuleText {
   }
 
 .testModule .circleText {
-  /* test to remove late */
   left: 30vw;
   top: 15vh;  
   font-family: 'Falster';
@@ -140,10 +133,6 @@ img:hover + .projectModuleText {
   z-index: 10;
 /* filter: sepia(1);
 */}
-
-/*^^^------------------ test to remove later ---------^^^^-------*/
-
-
 
 .Widget:hover {
   -webkit-filter: blur(1px) /*hue-rotate(-70deg) contrast(250%)*/;

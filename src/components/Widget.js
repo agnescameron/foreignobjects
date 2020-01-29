@@ -1,7 +1,7 @@
 import React from 'react';
 import './Components.css';
 import CircleType from 'circletype';
-import WorkButton from '../assets/WorkButton.png';
+import WorkButton from '../assets/Workbutton.png';
 
 export default class Widget extends React.Component{
 	constructor (props) {

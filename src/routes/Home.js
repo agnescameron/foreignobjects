@@ -19,7 +19,7 @@ import ProjectModule from '../components/ProjectModule';
 import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 
-import WorkButton from '../assets/Workbutton.gif';
+import WorkButton from '../assets/Workbutton.png';
 import Thoughts from '../assets/thoughts.gif';
 import Bubbles from '../assets/bubbles.gif';
 import Bearcam from '../assets/bearcam.gif';
