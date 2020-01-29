@@ -12,19 +12,19 @@ static contextType = ProjectContext;
 
   render() {
   const index = this.props.index
-  console.log(this.props.project[index].fields["Project Name"])
+  console.log(this.props.index<2)
   const project = this.props.project[index]
 	return (
   <DragBox>
-      <div className="projectHome imgWrapper">
+    { this.props.index<2 &&
+      <div className={this.props.index%2 === 0 ? "projectHome imgWrapper": "projectHomeOffset imgWrapper"}>
          <img draggable="false" src={project.fields["Cover Image"][0].url} />             
-              <div className="Unselectable homeProjectModuleText">
-                <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>  
-                  <span className="arrowNW" />
-                </Link>
-                {project.fields["Project Name"]}
-              </div>  
-        </div> 
+              <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>
+                <div className="Unselectable homeProjectModuleText">
+                    {project.fields["Project Name"]}
+                </div>
+              </Link>  
+        </div>  }
     </DragBox>     
     );
   }
