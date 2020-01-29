@@ -2,6 +2,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-self: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -59,7 +60,6 @@
   /* border: 1px solid; */
 }
 
-
 .Top, .Right, .Left, .Bottom {
 
   visibility: visible;
@@ -67,7 +67,8 @@
   line-height: 1;
   margin: 2vh;
   flex: 1 100%;
-  text-align: center;
+  text-align: right;
+  z-index: 10;
   /*border: 1px solid;*/
 }
 
@@ -116,9 +117,29 @@
 
 @media all and (max-width: 800px) {
 
-  .Center, .Blurb {
+   .Top, .Center, .Blurb, .widgetPositionOne, .widgetPositionTwo, .widgetPositionFour, .projectHome, .projectHomeOffset {
     display: none;
   }
+
+.footerContainer {
+  font-family: 'Falster';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          padding: 2vh 0 2vh 0;
+        }
+
+  .widgetPositionThree {
+    bottom: 25vh;
+    left: 10vw;
+    z-index: 0;
+    }
 
   .App {
   display: -webkit-box;
@@ -139,11 +160,12 @@
     opacity: 1;
   }
 
-  .Top, .Right, .Bottom, .Left, .Hello {
+ .Right, .Bottom, .Left, .Hello {
     font-size: 6vw;
     margin: 0 2vh 2vh 2vh;
     text-align: left;
     flex: none;
+    z-index: 1;
   }  
 
   .Bottom {
@@ -169,6 +191,7 @@
     line-height: 1;
     margin: 3vh 2vh 2vh 0;
     font-family: "Adieu-Regular";
+    z-index: 5;
   }
 
   .mobileNavContainer {
@@ -176,8 +199,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 2vh 2vh 0;
+    margin: 0 1vh 1vh 0;
     font-family: "Falster";
+    z-index: 5;
   }
 
   .mobileTitleLeft, .mobileTitleCenter, .mobileTitleRight {
@@ -223,9 +247,9 @@
 /*---------------------------Desktop---------------------------*/
 
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 800px) {
 
-  .Hello {
+  .Hello, .Top, .Right, .Bottom, .Left {
     display: none;
   }
 
@@ -267,5 +291,10 @@
   .Center { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
 
   .Blurb { -webkit-box-ordinal-group: 3; -ms-flex-order: 3; order: 3; }
+
+    .footerContainer { -webkit-box-ordinal-group: 4; -ms-flex-order: 4; order: 4; }
+
+
+
     
 }

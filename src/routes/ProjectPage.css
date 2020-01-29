@@ -20,6 +20,7 @@
   align-items: flex-start;
   flex-grow: 1;
 
+
 }
 
 .projectBody {
@@ -54,6 +55,7 @@
   font-family: 'Adieu-Regular', 'Helvetica', sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
+  hyphens: auto;
 }
 
 .projectTag {
@@ -184,5 +186,9 @@
 @media all and (min-width: 800px) {
   .mobileBackArrow, .lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
     display: none;
+  }
+
+  .Top {
+    display: block;
   }
 }

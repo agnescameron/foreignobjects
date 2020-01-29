@@ -10,6 +10,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+            padding-bottom: 10vh;
+
 }
 
 /*.App > * {
@@ -71,25 +73,36 @@ img:hover + .projectModuleText {
 
 /*---vvvvvv------- test to remove later ------vvvvvvv-------*/
 
-.homeProjectModuleText {
+/*.projectHome > * {
+  border: 1px white solid;
+}*/
+
+.homeProjectModuleText, .homeProjectOffset {
  font-family: 'Falster';
  font-size: 8vh;
  color: #fff;
- bottom: 25%;
- right: 40%;
+ bottom: 30%;
+ right: 50%;
  position: absolute;
  visibility: hidden;
- text-align: center;
  line-height: 0.9;
  text-shadow: 2px 2px 3px #00f;
- text-transform: uppercase;
+ text-trangitsform: uppercase;
 /* border: 1px white solid;*/
 }
 
-.projectHomeOffset:hover, .projectHome:hover .homeProjectModuleText {
+.projectHome:hover .homeProjectModuleText {
   visibility: visible;
 }
 
+.projectHomeOffset:hover .homeProjectModuleText {
+  visibility: visible;
+}
+
+
+.homeProjectModuleText .App-link {
+  text-decoration: none;
+}
 
 .projectHomeOffset:hover img, .projectHome:hover img {
   visibility: visible;
@@ -112,13 +125,13 @@ img:hover + .projectModuleText {
 .projectHome {
   position: absolute;
   right: 10vh;
-  top: 47vh;
+  top: 53vh;
 }
 
 .projectHomeOffset {
   position: absolute;
-  left: 10vh;
-  top: 27vh;
+  right: 20vh;
+  top: 58vh;
 }
 
 .projectHomeOffset img, .projectHome img {
@@ -186,7 +199,8 @@ img:hover + .projectModuleText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: static;
+  align-self: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -195,6 +209,7 @@ img:hover + .projectModuleText {
       -ms-flex-pack: center;
   justify-content: space-around;
   text-align: center;
+  padding: 4vh 0 5vh 0;
   width: 100vw;
   bottom: 5vh;
   z-index: 20;
@@ -206,10 +221,12 @@ img:hover + .projectModuleText {
 }
 
 .footerLeft {
-
+  padding: 0 0 1vh 0;
 }
 
+
 .footerRight {
+  padding: 0 0 1vh 0;
 
 }
 

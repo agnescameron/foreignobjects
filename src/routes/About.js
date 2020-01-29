@@ -3,6 +3,8 @@ import React from 'react';
 import './About.css';
 import Circle from '../components/Circle.js';
 import Top from '../components/Top';
+import Footer from '../components/Footer';
+
 import aboutImage from "../assets/aboutImage.png";
 import DragBox from '../components/DragBox';
 
@@ -145,6 +147,8 @@ export default class About extends React.Component{
 
             <div className="Recto">
             </div>
+           <Footer />
+
 
               {/*<DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>*/}
               <img src={aboutImage} className="aboutImage" alt="About Us" />

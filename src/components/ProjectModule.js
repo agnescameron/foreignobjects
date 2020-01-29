@@ -39,7 +39,7 @@ export default class ProjectModule extends React.Component{
 			  			</div>
 				  		<div className="imgWrapper">
 		  					<Link className="App-link" to={{	pathname: "/" + [projectURL] }}>
-					  		 	<img src={this.props.project.fields.Image[0].url} alt={this.props.project.fields["Project Name"]}/>
+					  		 	<img src={this.props.project.fields["Cover Image"][0].url} alt={this.props.project.fields["Project Name"]}/>
 					  			<div className="lowerLineTitle">
 					      			{this.props.project.fields["Project Name"]}
 					      		</div>
