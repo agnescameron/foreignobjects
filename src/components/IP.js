@@ -26,7 +26,8 @@ componentDidMount(){
       console.log(error);
     })
 
-      fetch(cors + ipinfo + this.state.ip + '/json')
+    setTimeout(
+      (fetch(cors + ipinfo + this.state.ip + '/json')
       // return ipresponse.json from API and set it to ipData prop
       .then(
         (ipresponse) => {
@@ -36,11 +37,12 @@ componentDidMount(){
         // console.log(ipresponse);
         this.setState({ ipData : ipresponse });
         })
+      ), 400)
             
   }
 
   render() {
-     console.log("ipData is", this.state.ipData)
+     console.log("delayed ipData is", this.state.ipData)
     return (
  <div className="ipAddress">
             {this.state.ipData.city}... {this.state.ipData.region}... {this.state.ipData.country}... {this.state.ipData.longitude}&deg; N, {this.state.ipData.latitude}&deg; E, {this.state.ipData.org} 
