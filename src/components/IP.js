@@ -27,6 +27,7 @@ componentDidMount(){
         return ipresponse.json();
       }).then(
       (ipresponse) => {
+        console.log(ipresponse);
         this.setState({ ipData : ipresponse });
       })
     .catch(error => {
