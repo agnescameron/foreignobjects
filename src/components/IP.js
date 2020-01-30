@@ -20,8 +20,8 @@ componentDidMount(){
 
     publicIP()
     .then(ip => {
-      fetch(cors + ipinfo + ip + '/json') 
-      console.log("ip is", ip)
+      fetch(cors + ipinfo + ip + '/json')
+      console.log("ip is", ip, "and fetching is ", cors,ipinfo,ip,'/json')
       // return ipresponse.json from API and set it to ipData prop
     }).then(
       (ipresponse) => {
