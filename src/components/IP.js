@@ -20,13 +20,15 @@ componentDidMount(){
 
     publicIP()
     .then(ip => {
-      console.log("ip is", ip);
       fetch(cors + ipinfo + ip + '/json') })
       // return ipresponse.json from API and set it to ipData prop
     .then(
       (ipresponse) => {
+        return ipresponse.json();
+      }).then(
+      (ipresponse) => {
         this.setState({ ipData : ipresponse });
-    })
+      })
     .catch(error => {
       console.log(error);
     })
