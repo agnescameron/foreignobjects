@@ -12,9 +12,10 @@ class ProjectProvider extends React.Component {
     componentDidMount() {
         fetch(".netlify/functions/lambda")
         .then(function(response) {
-          console.log(response)
+          // console.log(response)
           return response.json();
-        }).then( (data) => {
+        })
+          .then( (data) => {
           //omits projects tagged as private
           var publicProjects = data.records.filter(function(project){ 
             if(project.fields["Release Status"]){
