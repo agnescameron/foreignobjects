@@ -12,7 +12,6 @@ export default class IP extends React.Component{
     }
   }
 
-
 componentDidMount(){
 
   // used for making IP API call and avoiding CORS error
@@ -21,11 +20,10 @@ componentDidMount(){
 
     publicIP()
     .then(ip => {
-      console.log("ip");
+      console.log(ip);
       this.setState({ ip : ip })
     }).catch(error => {
       console.log(error);
-      // 'Unable to get IP address.'
     })
     // uses iplocation to fetch ipapi IP location API data
         .then(
