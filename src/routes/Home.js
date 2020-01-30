@@ -59,13 +59,7 @@ export default class Home extends React.Component{
         })
 
     return (
-        <div className="Center"
-        //for mobile
-        onMouseEnter={this.handleEnter}
-        //for desktop
-        onMouseLeave={this.handleLeave}
-        >          
-        <Center />
+
       <div className="App Bg-blue">
         <div className="mobileHeader">FOREIGN OBJECTS</div>
         <div className="mobileNavContainer">
@@ -73,7 +67,13 @@ export default class Home extends React.Component{
           <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
           <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
         </div>
-      
+              <div className="Center"
+        //for mobile
+        onMouseEnter={this.handleEnter}
+        //for desktop
+        onMouseLeave={this.handleLeave}
+        >          
+        <Center />
         </div>
         <Top />
         <div className="Hello">Hello.</div>

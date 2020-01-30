@@ -8,7 +8,6 @@ import Thoughts from './routes/Thoughts';
 import About from './routes/About';
 import Projects from './routes/Projects';
 import ProjectPage from './routes/ProjectPage';
-import AltHome from './routes/AltHome';
 
 import './App.css';
 
@@ -35,7 +34,6 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/thoughts" component={Thoughts} />
-          <Route path="/althome" component={AltHome} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/:id" component={ProjectPage} />
         </Switch>
