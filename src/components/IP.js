@@ -19,29 +19,30 @@ componentDidMount(){
     const cors = "https://cors-anywhere.herokuapp.com/"
     const ipinfo = "https://ipapi.co/"
 
-
     publicIP()
     .then(ip => {
-      fetch(cors + ipinfo + ip + '/json')
-      console.log(ip)
+      console.log("ip");
+      // '47.122.71.234'
+      this.setState({ ip : ip })
     })
-      .then(
-      (ipresponse) => {
-      return ipresponse.json();
-      }).then(
-      (ipresponse) => {
-      // console.log(ipresponse);
-      this.setState({ ipData : ipresponse });
-      }).catch(error => {
+    // uses iplocation to fetch ipapi IP location API data
+        .then(
+            fetch(cors + ipinfo + this.state.ip + '/json')
+            // return ipresponse.json from API and set it to ipData prop
+            .then(
+              (ipresponse) => {
+            return ipresponse.json();
+            }).then(
+              (ipresponse) => {
+              // console.log(ipresponse);
+              this.setState({ ipData : ipresponse });
+              })
+            )
+    .catch(error => {
       console.log(error);
       // 'Unable to get IP address.'
     })    
 }
-
-
-
-
-
 
   render() {
      const ipData = this.state.ipData;
