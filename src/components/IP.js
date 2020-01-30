@@ -20,25 +20,16 @@ componentDidMount(){
 
     publicIP()
     .then(ip => {
-      console.log(ip);
-      this.setState({ ip : ip })
-    }).catch(error => {
+      fetch(cors + ipinfo + ip + '/json') })
+      // return ipresponse.json from API and set it to ipData prop
+    .then(
+      (ipresponse) => {
+        this.setState({ ipData : ipresponse });
+    })
+    .catch(error => {
       console.log(error);
     })
-    // uses iplocation to fetch ipapi IP location API data
-        .then(
-            fetch(cors + ipinfo + this.state.ip + '/json')
-            // return ipresponse.json from API and set it to ipData prop
-            .then(
-              (ipresponse) => {
-            return ipresponse.json();
-            }).then(
-              (ipresponse) => {
-              // console.log(ipresponse);
-              this.setState({ ipData : ipresponse });
-              })
-            )
-    }
+  }
 
   render() {
      const ipData = this.state.ipData;
