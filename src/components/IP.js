@@ -24,8 +24,7 @@ componentDidMount(){
       // return ipresponse.json from API and set it to ipData prop
     .then(
       (ipresponse) => {
-        return ipresponse.json()
-        this.setState({ ipData : ipresponse });
+        this.setState({ ipData : ipresponse.json() });
     })
     .catch(error => {
       console.log(error);
