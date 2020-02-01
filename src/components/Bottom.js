@@ -3,7 +3,6 @@ import './Components.css';
 
 export default class Bottom extends React.Component{
   render() {
-    const className= this.props.hovering ? 'Bottom' : 'hidden Bottom'
     return (
       <div className="Bottom">
         We make&nbsp;<a

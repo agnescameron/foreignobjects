@@ -1,12 +1,7 @@
 import React from 'react';
 import './Components.css';
-import CircleType from 'circletype';
-import WorkButton from '../assets/WorkButton.png';
 
 export default class Widget extends React.Component{
-	constructor (props) {
-		super(props);
-  }
 
 // componentDidMount(){
 //   new CircleType(this.circleRefObject.current)
@@ -19,22 +14,21 @@ export default class Widget extends React.Component{
   render() {
 
 //props for different widgets
-    const type = {
-      projects : "/projects",
-      thoughts : "/thoughts",
-      about : "/about",
-      none : "none",
-    }
+    // const type = {
+    //   projects : "/projects",
+    //   thoughts : "/thoughts",
+    //   about : "/about",
+    // }
 
-    const place = {
-      one : "Widget widgetPositionOne",
-      two : "Widget widgetPositionTwo",
-      three : "Widget widgetPositionThree",
-      four : "Widget widgetPositionFour",
-    }
+    // const place = {
+    //   one : "Widget widgetPositionOne",
+    //   two : "Widget widgetPositionTwo",
+    //   three : "Widget widgetPositionThree",
+    //   four : "Widget widgetPositionFour",
+    // }
 
   	return (
-		<a href={this.props.type} className={this.props.place}><img draggable="false" src={this.props.children} /></a>
+		<a href={this.props.type} className={this.props.place}><img draggable="false" src={this.props.children} alt={"image of " + this.props.children}/></a>
 	)
   }
 }

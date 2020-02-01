@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ProjectPage.css';
 import ProjectContext from '../ProjectContext';
 import Top from '../components/Top';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 export default class ProjectPage extends React.Component{
     constructor(props) {
@@ -86,7 +86,7 @@ export default class ProjectPage extends React.Component{
 					<ProjectContext.Consumer>
 						{value => { return (	
 									<div className="imgWrapper">		
-						  		 		<img src={project.fields.Image[0].url} className="projectImage"/> 
+						  		 		<img src={project.fields.Image[0].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -105,7 +105,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[1] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[1].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[1].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -164,7 +164,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[2] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[2].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[2].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -186,7 +186,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[3] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[3].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[3].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -207,7 +207,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[4] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[4].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[4].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -228,7 +228,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[5] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[5].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[5].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -249,7 +249,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[6] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[6].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[6].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}
@@ -270,7 +270,7 @@ export default class ProjectPage extends React.Component{
 							<div>
 				  		 		{project.fields.Image[7] && 
 									<div className="imgWrapper">		
-					  		 			<img src={project.fields.Image[7].url} className="projectImage"/> 
+					  		 			<img src={project.fields.Image[7].url} className="projectImage" alt={"image of " + project.fields["Project Name"]}/> 
 										<div className="projectImageCaption">
 											{/* add code here to trim slug from image URL/filename and use as caption 
 											{project.fields.Image[0].url} */}

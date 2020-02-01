@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './About.css';
-import Circle from '../components/Circle.js';
+// import Circle from '../components/Circle.js';
 import Top from '../components/Top';
 import Footer from '../components/Footer';
 
 import aboutImage from "../assets/profile.gif";
-import DragBox from '../components/DragBox';
+// import DragBox from '../components/DragBox';
 
 import { Link } from 'react-router-dom';
 
@@ -99,7 +99,7 @@ export default class About extends React.Component{
                       <div className="aboutHeading">WHO ARE WE</div>
 
                       <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/65e9a6bf98bb13a3d14cb74dbb9678f2/444f9fe3" className="aboutBioImage" />
+                        <img src="https://dl.airtable.com/.attachmentThumbnails/65e9a6bf98bb13a3d14cb74dbb9678f2/444f9fe3" alt="photograph of Agnes Fury Cameron" className="aboutBioImage" />
                           <div className="aboutBioInfo">
                             <div className="aboutBioHeading">
                               AGNES FURY CAMERON</div>
@@ -110,7 +110,7 @@ export default class About extends React.Component{
                       </div>
 
                       <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/7918db4ff2cfca513a08b5b55a294719/f7a16ff9" className="aboutBioImage" />
+                        <img src="https://dl.airtable.com/.attachmentThumbnails/7918db4ff2cfca513a08b5b55a294719/f7a16ff9" alt="photograph of Sam Ghantous" className="aboutBioImage" />
                           <div className="aboutBioInfo">
                             <div className="aboutBioHeading">
                               SAM GHANTOUS</div>
@@ -121,7 +121,7 @@ export default class About extends React.Component{
                       </div> 
 
                       <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/8b59dc95956e1c49c86edc614eeef7dd/f0a2796f" className="aboutBioImage" />
+                        <img src="https://dl.airtable.com/.attachmentThumbnails/8b59dc95956e1c49c86edc614eeef7dd/f0a2796f" alt="photograph of Kalli Retzepi" className="aboutBioImage" />
                           <div className="aboutBioInfo">
                             <div className="aboutBioHeading">
                               KALLI RETZEPI</div>
@@ -132,7 +132,7 @@ export default class About extends React.Component{
                       </div>
 
                       <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/895de0c593f4aa41de5f3ec5e342a66d/07cc1aba" className="aboutBioImage" />
+                        <img src="https://dl.airtable.com/.attachmentThumbnails/895de0c593f4aa41de5f3ec5e342a66d/07cc1aba" alt="photograph of Gary Zhexi Zhang" className="aboutBioImage" />
                           <div className="aboutBioInfo">
                             <div className="aboutBioHeading">
                               GARY ZHEXI ZHANG</div>

@@ -4,7 +4,6 @@ import './Components.css';
 
 export default class Right extends React.Component{
   render() {
-    const className= this.props.hovering ? 'aside Right' : 'aside hidden Right'
     return (
       <div className="Right">
         We are a <a

@@ -1,7 +1,6 @@
 import React from 'react';
 import './Components.css';
 import publicIP from 'react-native-public-ip';
-import iplocation from "iplocation";
 
 export default class IP extends React.Component{
   
@@ -17,22 +16,21 @@ componentDidMount(){
 
   const cors = "https://cors-anywhere.herokuapp.com/"
   const ipinfo = "https://ipapi.co/"
-  const ip = this.state.ip
 
   publicIP()
   .then(ip => {
-    console.log(ip);
+    // console.log(ip);
     // '47.122.71.234'
     this.setState({ ip : ip });
-    console.log ("the newly found ip is ", this.state.ip);
+    // console.log ("the newly found ip is ", this.state.ip);
     fetch(cors + ipinfo + ip + '/json')
     .then (
     (ipresponse) => {
-      console.log("initiated second bit")
+      // console.log("initiated second bit")
       return ipresponse.json();
     }).then (
     (ipresponse) => {
-      console.log("initiated third bit, it's", ipresponse, "hopefully ends here!")
+      // console.log("initiated third bit, it's", ipresponse, "hopefully ends here!")
       this.setState({ipData : ipresponse})
       })
     })
@@ -43,7 +41,7 @@ render() {
      // console.log("ipData is", ipData)
     return (
  <div className="ipAddress">
-            {ipData.city}... {ipData.region}... {ipData.country} ... { ipData.in_eu ? "In the EU..." : "Not in the EU..." } {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} 
+            {ipData.city}... {ipData.country_name}... Population {ipData.country_population}... { ipData.in_eu ? "In the EU..." : "Not in the EU..." } {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} 
     </div>
     );
   }

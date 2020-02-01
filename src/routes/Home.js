@@ -8,14 +8,12 @@ import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
-import IP from '../components/IP'
 
 import Center from '../components/Center';
 import DragBox from '../components/DragBox';
 import Circle from '../components/Circle.js';
 import Widget from '../components/Widget.js';
 import HomeProjectModule from '../components/HomeProjectModule';
-import ProjectModule from '../components/ProjectModule';
 import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 

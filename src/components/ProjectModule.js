@@ -1,7 +1,7 @@
 import React from 'react';
 import './Components.css';
 import { Link } from 'react-router-dom';
-import Circle from './Circle';
+// import Circle from './Circle';
 
 export default class ProjectModule extends React.Component{
 // records delta state of the dragged object

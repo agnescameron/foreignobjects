@@ -9,6 +9,7 @@ export default class Thoughts extends React.Component{
     return (
       <div className="App Bg-white">
         <div className="projectsContainer">
+        <Top />
           <div className="mobileHeader">FOREIGN OBJECTS</div>
           <div className="mobileNavContainer">
             <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>

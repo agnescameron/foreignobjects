@@ -230,7 +230,7 @@
     text-decoration: none;
   }
 
-/*---------------------------Other Mobile---------------------------*/
+/*---------------------------Misc Mobile---------------------------*/
 
   .circleText {
     left: 50vh;
@@ -248,7 +248,7 @@
 
 @media all and (min-width: 800px) {
 
-  .Hello, .Right, .Bottom, .Left {
+  .Hello, .Right, .Bottom, .Left, .mobileNavContainer, .mobileHeader {
     display: none;
   }
 
@@ -296,8 +296,6 @@
   .Blurb { -webkit-box-ordinal-group: 3; -ms-flex-order: 3; order: 3; }
 
     .footerContainer { -webkit-box-ordinal-group: 4; -ms-flex-order: 4; order: 4; }
-
-
 
     
 }

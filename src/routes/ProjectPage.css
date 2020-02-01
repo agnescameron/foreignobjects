@@ -184,7 +184,7 @@
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-  .mobileBackArrow, .lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+  .mobileBackArrow, .lowerLineTitle, .mobileNavContainer, .mobileHeader {
     display: none;
   }
 
