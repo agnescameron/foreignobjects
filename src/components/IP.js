@@ -43,7 +43,7 @@ render() {
      // console.log("ipData is", ipData)
     return (
  <div className="ipAddress">
-            {this.state.ipData.city}... {this.state.ipData.region}... {this.state.ipData.country}... {this.state.ipData.longitude}&deg; N, {this.state.ipData.latitude}&deg; E, {this.state.ipData.org} 
+            {ipData.city}... {ipData.region}... {ipData.country} ... { ipData.in_eu ? "In the EU..." : "Not in the EU..." } {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} 
     </div>
     );
   }
