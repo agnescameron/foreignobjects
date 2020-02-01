@@ -8,6 +8,8 @@ import Top from '../components/Top';
 import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
+import Hogs from '../components/Hogs';
+
 
 import Center from '../components/Center';
 import DragBox from '../components/DragBox';
@@ -28,29 +30,25 @@ export default class Home extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      hovering : false
+      hogs : '',
     }
   }
 
   static contextType = ProjectContext;
 
-  handleEnter = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: true}))
-  }
-  handleLeave = (event) => {
-    event.preventDefault()
-    this.setState(prevState => ({hovering: !prevState.hovering}))
-  }
-  handleClick= (event) => {
-    event.preventDefault()
-    window.location = "mailto:hello@foreignobjects.net";
-  }
-
+componentDidMount() {
+  fetch("https://www.quandl.com/api/v3/datasets/CHRIS/CME_LN1.json")
+  .then (
+  (quandl) => {
+    return quandl.json();
+  }).then (
+  (quandl) => {
+  console.log ("hog data shows", quandl)
+  this.setState ({ hogs : quandl })
+  })
+}
 
   render() {
-
-     
       const HomeProject = this.context.filter(function(project){
         if(project.fields["Show on Home Screen"] === true){
           return project}
@@ -65,12 +63,7 @@ export default class Home extends React.Component{
           <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
           <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
         </div>
-              <div className="Center"
-        //for mobile
-        onMouseEnter={this.handleEnter}
-        //for desktop
-        onMouseLeave={this.handleLeave}
-        >          
+              <div className="Center">          
         <Center />
         </div>
         <Top />
@@ -79,7 +72,6 @@ export default class Home extends React.Component{
         <Bottom />
         <Left /> 
       
-
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
         <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget>
         <Widget type="thoughts" place="Widget widgetPositionFour">{Thoughts}</Widget>
@@ -92,17 +84,18 @@ export default class Home extends React.Component{
                   // Return the element. Also pass key
                     return (<HomeProjectModule key={i} index={i} project={HomeProject} />)
                   })
-                )
-            
+                ) 
             }
           }
           </ProjectContext.Consumer>
          
           <DragBox>
-            <div className="ProjectModule testModule">
-              <Circle>
-                wooooooo &#8598; whattttttt $$$$$$$$$$$$$$$$$ NASDAQ 2.4252 523.500 &#8600; 25.0001
-              </Circle>
+            <div className="testModule">
+                {this.state.hogs &&
+                  <Circle>
+                    <Hogs hogs={this.state.hogs} />
+                  </Circle>               
+                }
             </div> 
           </DragBox>
 

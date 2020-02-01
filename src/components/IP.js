@@ -38,9 +38,9 @@ componentDidMount(){
 
 render() {
      const ipData = this.state.ipData;
-     // console.log("ipData is", ipData)
+     // console.log("ipData is", ipData)  Hog lows: {hogs.}... Hog changes: {hogs.}... Hog value:{hogs.}...
     return (
- <div className="ipAddress">
+  <div className="ipAddress">
             {ipData.city}... {ipData.country_name}... Population {ipData.country_population}... { ipData.in_eu ? "In the EU..." : "Not in the EU..." } {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} 
     </div>
     );
