@@ -28,20 +28,7 @@
 /*------------------------ projectModule ------------------------ */
 
 
-.projectsContainer:hover .circleText  {
-	z-index: 10;
-	display: visible;
-}
-
-.projectLeft {
-  text-align: left;
-}
-
-.projectRight {
-  text-align: left;
-}
-
-.projectModuleContainer {
+.projectModule {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +41,7 @@
           justify-content: space-between;
   }
 
-.projectModuleContainerReverse {
+.projectModuleReverse {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,60 +54,64 @@
           justify-content: space-between;
   }
 
-.projectModuleInfo {
+.projectModule:hover * {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+}
+
+.projectModuleReverse:hover * {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+}
+
+.projectModule img {
+  width: 50vw;
+  opacity: 0.75;
+}
+
+.projectModuleReverse img {
+  width: 50vw;
+  opacity: 0.75;
+}
+
+.imgWrapper {
+  display: inline-block;
+  padding: 0 0 0 0;
+}
+
+.asideProjectInfo {
   margin: 0 4vh 4vh 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  visibility: hidden;
+
 }
 
-.asideInfo { 
+.asideProjectDetails { 
   position: relative;
   font-family: 'Falster';
   font-size: 1.5rem;
-  visibility: hidden;
   /*border: blue 1px solid;*/
 }
 
-.asideTitle { 
+.asideProjectTitle { 
   position: relative;
   font-family: 'Falster';
   font-size: 3rem;
-  visibility: hidden;
   text-transform: uppercase;  
-  /*border: blue 1px solid;*/
 }
 
-.asideTitle a {
+.asideProjectTitle a {
   text-decoration: none;
-}
-
-.projectLeft img {
-  width: 50vw;
-  opacity: 0.75;
-}
-
-.projectRight img {
-  width: 50vw;
-  opacity: 0.75;
-}
-
- .projectModuleContainer:hover * {
-	visibility: visible;
- 	opacity: 1;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
-}
-
-.projectModuleContainerReverse:hover * {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
 }
 
 /*---------------------------animations---------------------------*/
@@ -138,23 +129,23 @@
 
 @media all and (max-width: 800px) {
 
- 	.projectLeft, .projectRight {
+ 	.projectModule, .projectModuleReverse {
  		text-align: center;
  	}
 
-	.projectLeft img {
+	.projectModule img {
 		opacity: 1;
 		width: 90vw;
 		margin: 0 2vh 0 2vh ;
 	}
 
-	.projectRight img {
+	.projectModuleReverse img {
 		opacity: 1;
 		width: 90vw;
 		margin: 0 2vh 0 2vh ;
 	}
 
-	.lowerLineTitle { 
+	.mobileProjectTitle { 
 		font-family: 'Falster';
 		font-size: 2rem;
 		text-transform: uppercase;
@@ -178,7 +169,7 @@
 
 /*---------------------------hidden elements in mobile---------------------------*/
 
-	.backArrowFixed, .projectModuleInfo, .Top, .circleText {
+	.asideProjectInfo, .backArrowFixed, .projectModuleInfo, .Top {
 		display: none;
 	}
 
@@ -197,7 +188,7 @@
 /*---------------------------DESKTOP---------------------------*/
 
 @media all and (min-width: 800px) {
-	.lowerLineTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
+	.mobileProjectTitle, .mobileNavContainer, .mobileHeader, .mobileTitleLeft, .mobileTitleRight, .mobileTitleCenter {
 		display: none;
 	}
 }
@@ -206,7 +197,7 @@
 
 @media all and (min-width: 1600px) {
 
-.projectModuleContainer {
+.projectModule {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +210,7 @@
           justify-content: space-around;
 }
 
-.projectModuleContainerReverse {
+.projectModuleReverse {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -74,7 +74,7 @@ componentDidMount() {
       
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
         <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget>
-        <Widget type="thoughts" place="Widget widgetPositionFour">{Thoughts}</Widget>
+{/*}        <Widget type="thoughts" place="Widget widgetPositionFour">{Thoughts}</Widget> */}
         <Widget place="Widget widgetPositionThree">{Bubbles}</Widget>
 
           <ProjectContext.Consumer>
@@ -90,7 +90,7 @@ componentDidMount() {
           </ProjectContext.Consumer>
          
           <DragBox>
-            <div className="testModule">
+            <div>
                 {this.state.hogs &&
                   <Circle>
                     <Hogs hogs={this.state.hogs} />

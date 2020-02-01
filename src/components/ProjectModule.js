@@ -13,16 +13,15 @@ export default class ProjectModule extends React.Component{
 		<div>
 			{this.props.project.fields["Display on FO Website"] && this.props.project.fields.Image &&
 				<div>
-			      	<div className={this.props.index%2 === 0 ? "projectLeft" : "projectRight"}>			  			
-			      	<div className={this.props.index%2 === 0 ? "projectModuleContainer" : "projectModuleContainerReverse"}>			  			
+			      	<div className={this.props.index%2 === 0 ? "projectModule" : "projectModuleReverse"}>			  			
 
-			  			<div className="projectModuleInfo">
-	  			  			<div className="asideTitle">
+			  			<div className="asideProjectInfo">
+	  			  			<div className="asideProjectTitle">
 			  					<Link className="App-link" to={{	pathname: "/" + [projectURL] }}>
 									{this.props.project.fields["Project Name"]}
 								</Link>
 			      			</div>
-				  			<div className="asideInfo">
+				  			<div className="asideProjectDetail">
 								<div>"{this.props.project.fields["Tag Line"]}"</div>
 								<div>{this.props.project.fields.Location}</div>
 								<div>{this.props.project.fields["Medium or Tools"]}</div>
@@ -41,13 +40,12 @@ export default class ProjectModule extends React.Component{
 				  		<div className="imgWrapper">
 		  					<Link className="App-link" to={{	pathname: "/" + [projectURL] }}>
 					  		 	<img src={this.props.project.fields["Cover Image"][0].url} alt={this.props.project.fields["Project Name"]}/>
-					  			<div className="lowerLineTitle">
+					  			<div className="mobileProjectTitle">
 					      			{this.props.project.fields["Project Name"]}
 					      		</div>
 					  		</Link>
 		      			</div>
 	      		</div> 
-      		</div>
       		</div>
 	     }
     	</div>

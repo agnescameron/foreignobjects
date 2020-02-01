@@ -127,15 +127,6 @@
 
 }
 
-.circleText {
-  left: 70vw;
-  top: 25vh;
-  font-family: 'Falster';
-  font-size: 1.5rem;
-  position: absolute;
-  animation: rotation 14s infinite linear;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);

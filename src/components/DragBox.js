@@ -30,9 +30,7 @@ export default class DragBox extends React.Component{
 	const {deltaPosition, controlledPosition} = this.state;
 	return (
 		<Draggable onDrag={this.handleDrag} {...dragHandlers}>
-	      		<div className="projectModule">
 	          			 {this.props.children}
-	      		</div>  
     	</Draggable>
     );
   }
