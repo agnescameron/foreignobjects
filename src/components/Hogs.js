@@ -5,7 +5,7 @@ export default class Hogs extends React.Component{
 
 render() {
   const hogs = this.props.hogs;
-  console.log(hogs)
+  // console.log(hogs)
   return (
     <a href={ "https://www.quandl.com/data/" + hogs.dataset.dataset_code + "/" + hogs.dataset.database_code}>
       <div className="ipAddress">

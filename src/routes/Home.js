@@ -43,7 +43,7 @@ componentDidMount() {
     return quandl.json();
   }).then (
   (quandl) => {
-  console.log ("hog data shows", quandl)
+  // console.log ("hog data shows", quandl)
   this.setState ({ hogs : quandl })
   })
 }
