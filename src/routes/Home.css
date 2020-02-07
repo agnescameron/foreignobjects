@@ -1,4 +1,6 @@
-
+.Home {
+  overflow: hidden;
+}
 
 .Center {
   display: -webkit-box;
@@ -192,6 +194,13 @@
   z-index: 0;
   transform: rotate(90deg);
   transform-origin: top left;
+}
+
+.dumbObject {
+  position: absolute;  
+  left: 20vw;
+  top: 5vh;
+  z-index: 100;
 }
 
 /*---------------------------animation---------------------------*/

@@ -9,6 +9,7 @@ import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
 import Hogs from '../components/Hogs';
+import Objects from '../components/Objects';
 
 
 import Center from '../components/Center';
@@ -54,6 +55,11 @@ componentDidMount() {
           return project}
         })
 
+      const DumbObjects = this.context.filter(function(project){
+        if(project.fields["Project Name"] === "Dumb Objects"){
+          return project.fields.Image}
+      })
+
     return (
 
       <div className="App Bg-blue">
@@ -81,7 +87,7 @@ componentDidMount() {
             {value => { 
               return (
                   HomeProject.map((project, i) => {
-                  // Return the element. Also pass key
+                    console.log(HomeProject)
                     return (<HomeProjectModule key={i} index={i} project={HomeProject} />)
                   })
                 ) 
@@ -89,6 +95,27 @@ componentDidMount() {
           }
           </ProjectContext.Consumer>
          
+           <ProjectContext.Consumer>
+            {value => {
+              return (
+                  DumbObjects.map((dumbImage, i) => {
+                    let DumbImage = DumbObjects[0].fields.Image;
+                    return (
+                      DumbImage.map((dumbImage, i) => {
+                        return (
+                          <Objects key={i} index={i} dumbImage={DumbImage} />
+                        )
+                      })
+                    )
+                  }
+                )
+              )
+            }}
+                
+          </ProjectContext.Consumer>
+
+
+
           <DragBox>
             <div>
                 {this.state.hogs &&
