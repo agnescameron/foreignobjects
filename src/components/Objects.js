@@ -1,7 +1,6 @@
 import React from 'react';
 import './Components.css';
 import '../routes/Projects.css';
-import ProjectContext from '../ProjectContext';
 import DragBox from '../components/DragBox';
 
 export default class Objects extends React.Component{
@@ -32,11 +31,10 @@ export default class Objects extends React.Component{
       'left': (Math.floor(Math.random() * window.innerWidth - 200)),
       'top': (Math.floor(Math.random() * window.innerHeight - 150)),
       'zIndex': '100',
-      '-webkit-animation' : 'fadein ' + (20 - (Math.floor(Math.random() * 20))) + 's',
+      'WebkitAnimation' : 'fadein ' + (20 - (Math.floor(Math.random() * 20))) + 's',
       'display': 'none',
-      'background-image': 'none',
+      'backgroundImage': 'none',
        'border': 'dashed white 1px',
-      'border-radius': '5px',
     }
 
   return (
