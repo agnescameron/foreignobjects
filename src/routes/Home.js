@@ -97,13 +97,11 @@ componentDidMount() {
            <ProjectContext.Consumer>
             {value => {
               return (
-                  DumbObjects.map((dumbImage) => {
+                  DumbObjects.map((dumbImage, i) => {
                     let DumbImage = DumbObjects[0].fields.Image;
                     return (
                       DumbImage.map((dumbImage, i) => {
-                            return (
-                              <Objects key={i} index={i} dumbImage={DumbImage} />
-                            )
+                            return <Objects key={i} index={i} dumbImage={DumbImage} />
                           },
                       ))   
                   })

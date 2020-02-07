@@ -21,7 +21,7 @@ body {
   font-size: 17vh;
   line-height: 0.9;
   text-align: center;
-  z-index: 5;
+  z-index: 0;
   /* border: 1px solid; */
 }
 
@@ -89,7 +89,7 @@ body {
 /* ------------------------------------  WIDGETS ------------------------------------   */
 
 
-.homeProjectModuleText, .homeProjectOffset {
+.homeProjectModuleText {
  font-family: 'Falster';
  font-size: 8vh;
  color: #fff;
@@ -100,6 +100,7 @@ body {
  line-height: 0.9;
  text-shadow: 2px 2px 3px #00f;
  text-trangitsform: uppercase;
+ zIndex: 10;
 /* border: 1px white solid;*/
 }
 
@@ -112,7 +113,6 @@ body {
 .projectHomeOffset:hover .homeProjectModuleText {
   visibility: visible;
 }
-
 
 .homeProjectModuleText .App-link {
   text-decoration: none;
@@ -128,14 +128,16 @@ body {
 
 .projectHome {
   position: absolute;
-  right: 10vh;
+  left: 10vh;
   top: 53vh;
+  z-index: 1;
 }
 
 .projectHomeOffset {
   position: absolute;
-  right: 20vh;
+  left: 20vh;
   top: 58vh;
+  z-index: 1;
 }
 
 .projectHomeOffset img, .projectHome img {
@@ -147,8 +149,8 @@ body {
 
 /* circling dragbox */
 .circleText {
-  left: 70vw;
-  top: 10vh;  
+  left: 80vw;
+  top: -10vh;  
   font-family: 'Falster';
   font-size: 1rem;
   position: absolute;
