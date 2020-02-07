@@ -1,4 +1,4 @@
-.Home {
+body {
   overflow: hidden;
 }
 
@@ -400,7 +400,7 @@
 
   .Blurb { -webkit-box-ordinal-group: 3; -ms-flex-order: 3; order: 3; }
 
-    .footerContainer { -webkit-box-ordinal-group: 4; -ms-flex-order: 4; order: 4; }
+  .footerContainer { -webkit-box-ordinal-group: 4; -ms-flex-order: 4; order: 4; }
 
     
 }
