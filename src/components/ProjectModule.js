@@ -35,8 +35,8 @@ export default class ProjectModule extends React.Component{
 										</div>
 								<div>{this.props.project.fields.Geolocation}</div>
 				  			</div>
-				
 			  			</div>
+			  			
 				  		<div className="imgWrapper">
 		  					<Link className="App-link" to={{	pathname: "/" + [projectURL] }}>
 					  		 	<img src={this.props.project.fields["Cover Image"][0].url} alt={this.props.project.fields["Project Name"]}/>

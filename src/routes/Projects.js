@@ -21,9 +21,9 @@ export default class Projects extends React.Component{
           </div>  
           <Top hovering="true" />
           <Link to='/' className="App-link backArrowFixed" />     
+           
             <ProjectContext.Consumer>
               {value => { 
-
                 const projects = this.context
                 console.log(projects)
                 return (
@@ -34,7 +34,9 @@ export default class Projects extends React.Component{
                   )
               }}
             </ProjectContext.Consumer>
- <div className="footerContainer">       
+      
+
+      <div className="footerContainer">       
           <div className="footerLeft"><span className="arrowNW"/>FOREIGN OBJECTS LLC<br/>231 Bowery FL2<br/>NYC, NY 10002<span className="arrowSE" /></div>
           <div className="footerRight"> 
             <a className="App-link"

@@ -52,6 +52,7 @@
   -webkit-box-pack: flex-start;
       -ms-flex-pack: flex-start;
           justify-content: space-between;
+          align-items: flex-end;
   }
 
 .projectModule:hover * {
@@ -81,12 +82,11 @@
 }
 
 .imgWrapper {
-  display: inline-block;
-  padding: 0 0 0 0;
+  background-color: white; 
 }
 
 .asideProjectInfo {
-  margin: 0 4vh 4vh 4vh;
+  padding: 0 4vh 4vh 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,13 +225,9 @@
 
 	.projectLeft img {
 	  width: 1000px;
-	/*  opacity: 0.9;
-	*//* filter: sepia(1);
-	*/}
+}
 
 	.projectRight img {
 	  width: 1000px;
-	/*  opacity: 0.9;*/
-	/* filter: sepia(1);
-	*/}
+}
 }

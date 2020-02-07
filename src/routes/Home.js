@@ -57,7 +57,7 @@ componentDidMount() {
 
       const DumbObjects = this.context.filter(function(project){
         if(project.fields["Project Name"] === "Dumb Objects"){
-          return project.fields.Image}
+          return project}
       })
 
     return (
@@ -87,7 +87,6 @@ componentDidMount() {
             {value => { 
               return (
                   HomeProject.map((project, i) => {
-                    console.log(HomeProject)
                     return (<HomeProjectModule key={i} index={i} project={HomeProject} />)
                   })
                 ) 
@@ -98,23 +97,19 @@ componentDidMount() {
            <ProjectContext.Consumer>
             {value => {
               return (
-                  DumbObjects.map((dumbImage, i) => {
+                  DumbObjects.map((dumbImage) => {
                     let DumbImage = DumbObjects[0].fields.Image;
                     return (
                       DumbImage.map((dumbImage, i) => {
-                        return (
-                          <Objects key={i} index={i} dumbImage={DumbImage} />
-                        )
-                      })
-                    )
-                  }
-                )
+                            return (
+                              <Objects key={i} index={i} dumbImage={DumbImage} />
+                            )
+                          },
+                      ))   
+                  })
               )
-            }}
-                
+          }}
           </ProjectContext.Consumer>
-
-
 
           <DragBox>
             <div>

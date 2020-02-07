@@ -10,16 +10,28 @@ export default class Objects extends React.Component{
 
 static contextType = ProjectContext;
 
+
   render() {
+    
     const index = this.props.index
     const dumbImage = this.props.dumbImage[index]
-    console.log(dumbImage)
+    // console.log(dumbImage)
+    let dumbObjectStyle = {
 
-	return (
+      'width': ((Math.floor(Math.random() * 30))) + '%',
+      'position': 'absolute',
+      'border': '1px white dashed',
+      'borderRadius': '50px',
+      'left': (Math.floor(Math.random() * window.innerWidth - 200)),
+      'top': (Math.floor(Math.random() * window.innerHeight - 150)),
+      'z-index': '100'
+    }
+
+  return (
     <div>
        <DragBox>
-        <img draggable="false" className="dumbObject" src={dumbImage.url}/>               
-        </DragBox>     
+        <img draggable="false" style={dumbObjectStyle} src={dumbImage.url}/>           
+        </DragBox>
     </div>
     );
   }
