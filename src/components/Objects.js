@@ -15,7 +15,7 @@ export default class Objects extends React.Component{
     var image = document.images[0];
     var downloadingImage = new Image();
     
-    downloadingImage.src = "../assets/bg-4.gif";
+    downloadingImage.src = "../assets/bubbles.gif";
 
     downloadingImage.onload = function(){
     image.src = this.src;  
@@ -24,23 +24,29 @@ export default class Objects extends React.Component{
 
     let dumbObjectStyle = {
 
-      'width': (Math.floor(Math.random() * 30)) + '%',
+      'width': ( 3 + (Math.floor(Math.random() * (20 + Math.floor(Math.random() * 30)))) ) + '%',
       'position': 'absolute',
-      // 'border': '1px white dashed',
       'borderRadius': '5px',
       'left': (Math.floor(Math.random() * window.innerWidth - 200)),
-      'top': (Math.floor(Math.random() * window.innerHeight - 150)),
+      'top': (Math.floor(Math.random() * window.innerHeight - 100)),
       'zIndex': '100',
-      'WebkitAnimation' : 'fadein ' + (20 - (Math.floor(Math.random() * 20))) + 's',
+      'WebkitAnimation' : 'fadein ' + (14 - (Math.floor(Math.random() * 12))) + 's',
+      'WebkitTransition' : (30 - (Math.floor(Math.random() * 12))) + 's',
+      'background-image': 'url("../assets/bg-4.gif")',
+       // 'border': 'dashed white 1px',
+       // 'display': 'none',
+    }
+
+    let dumbObjectNone = {
+
       'display': 'none',
-      'backgroundImage': 'none',
-       'border': 'dashed white 1px',
+
     }
 
   return (
     <div>
        <DragBox>
-        <img draggable="false" style={dumbObjectStyle} src={dumbImage.url} alt={dumbImage.url} />           
+        <img draggable="false" style={window.innerWidth > 800 ? dumbObjectStyle : dumbObjectNone} src={dumbImage.url} alt={dumbImage.url} />           
         </DragBox>
     </div>
     );

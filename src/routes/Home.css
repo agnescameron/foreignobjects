@@ -17,7 +17,7 @@ body {
 }
 
 .centerText {
-  font-family: "Adieu-Regular";
+  font-family: "Adieu-Regular",'Helvetica', sans-serif;
   font-size: 17vh;
   line-height: 0.9;
   text-align: center;
@@ -195,10 +195,7 @@ body {
   transform-origin: top left;
 }
 
-.dumbObject {
-  position: absolute;  
-  z-index: 100;
-}
+
 
 /*---------------------------animation---------------------------*/
 @keyframes fadein {
