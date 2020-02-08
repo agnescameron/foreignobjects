@@ -32,6 +32,7 @@ export default class Home extends React.Component{
     super(props);
     this.state = {
       hogs : '',
+      timeout : false
     }
   }
 
@@ -47,19 +48,20 @@ componentDidMount() {
   // console.log ("hog data shows", quandl)
   this.setState ({ hogs : quandl })
   })
+
 }
 
   render() {
-      const HomeProject = this.context.filter(function(project){
-        if(project.fields["Show on Home Screen"] === true){
-          return project}
-        })
-
-      const DumbObjects = this.context.filter(function(project){
-        if(project.fields["Project Name"] === "Dumb Objects"){
-          return project}
+    const HomeProject = this.context.filter(function(project){
+      if(project.fields["Show on Home Screen"] === true){
+        return project}
       })
 
+    const DumbObjects = this.context.filter(function(project){
+      if(project.fields["Project Name"] === "Dumb Objects"){
+        return project}
+    })
+    
     return (
 
       <div className="App Bg-blue">

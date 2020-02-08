@@ -19,8 +19,6 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-grow: 1;
-
-
 }
 
 .projectBody {
@@ -30,7 +28,7 @@
 }
 
 .Recto .projectBody {
-  margin: 4vh 6vh 4vh 0;
+  margin: 4vh 6vh 4vh 4vh;
 
 }
 
@@ -70,13 +68,13 @@
 }
 
 .Verso .projectImage {
-  width: 40vw;
-  margin: 2vh 0 0 0vh;
+  width: 50vw;
+  margin: 2vh 2vh 0 0vh;
 }
 
 .Recto .projectImage {
-  width: 50vw;
-
+  width: 48vw;
+  margin: 2vh 0 0 2vh;
 }
 
 .projectImageCaption {

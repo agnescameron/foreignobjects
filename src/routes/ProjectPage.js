@@ -221,7 +221,7 @@ export default class ProjectPage extends React.Component{
 					}
 				</div>
 
-								<div className="Recto">
+				<div className="Verso">
 					{project &&	
 					<ProjectContext.Consumer>
 						{value => { return (	
@@ -263,7 +263,7 @@ export default class ProjectPage extends React.Component{
 					}
 				</div>
 
-				<div className="Recto">
+				<div className="Verso">
 					{project &&	
 					<ProjectContext.Consumer>
 						{value => { return (	
