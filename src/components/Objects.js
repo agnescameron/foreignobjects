@@ -31,10 +31,10 @@ export default class Objects extends React.Component{
       'top': (Math.floor(Math.random() * window.innerHeight - 100)),
       'zIndex': '100',
       'WebkitAnimation' : 'fadein ' + (14 - (Math.floor(Math.random() * 12))) + 's',
-      'WebkitTransition' : (30 - (Math.floor(Math.random() * 12))) + 's',
+      // 'WebkitTransition' : (30 - (Math.floor(Math.random() * 12))) + 's',
       'background-image': 'url("../assets/bg-4.gif")',
        // 'border': 'dashed white 1px',
-       // 'display': 'none',
+       'display': 'none',
     }
 
     let dumbObjectNone = {
