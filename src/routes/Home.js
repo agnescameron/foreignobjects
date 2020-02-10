@@ -9,7 +9,7 @@ import Right from '../components/Right';
 import Bottom from '../components/Bottom';
 import Footer from '../components/Footer';
 import Hogs from '../components/Hogs';
-import Objects from '../components/Objects';
+// import Objects from '../components/Objects';
 
 
 import Center from '../components/Center';
@@ -57,10 +57,10 @@ componentDidMount() {
         return project}
       })
 
-    const DumbObjects = this.context.filter(function(project){
-      if(project.fields["Project Name"] === "Dumb Objects"){
-        return project}
-    })
+    // const DumbObjects = this.context.filter(function(project){
+    //   if(project.fields["Project Name"] === "Dumb Objects"){
+    //     return project}
+    // })
     
     return (
 
@@ -96,7 +96,8 @@ componentDidMount() {
           }
           </ProjectContext.Consumer>
          
-           <ProjectContext.Consumer>
+{/*   load loads of dumb object!  
+         <ProjectContext.Consumer>
             {value => {
               return (
                   DumbObjects.map((dumbImage, i) => {
@@ -109,7 +110,7 @@ componentDidMount() {
                   })
               )
           }}
-          </ProjectContext.Consumer>
+          </ProjectContext.Consumer> */}
 
           <DragBox>
             <div>

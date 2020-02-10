@@ -195,8 +195,6 @@ body {
   transform-origin: top left;
 }
 
-
-
 /*---------------------------animation---------------------------*/
 @keyframes fadein {
     from { opacity: 0; }
