@@ -16,6 +16,13 @@ body {
           flex-direction: column;
 }
 
+
+.Center {
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+}
+
 .centerText {
   font-family: "Adieu-Regular",'Helvetica', sans-serif;
   font-size: 17vh;
@@ -160,17 +167,22 @@ body {
 /* Widget positions */
 
 .Widget:hover {
-  -webkit-filter: blur(1px) /*hue-rotate(-70deg) contrast(250%)*/;
-          filter: blur(1px) /*hue-rotate(-70deg) contrast(250%)*/;
+  -webkit-filter: blur(2px) /*hue-rotate(-70deg) contrast(250%)*/;
+          filter: blur(2px) /*hue-rotate(-70deg) contrast(250%)*/;
   cursor:  url('../assets/cursor-click.png'), auto;
 }
 
 .widgetPositionOne {
   position: absolute;
-  left: 10vw;
+  right: 5vw;
   top: 5vh; 
   z-index: 10;
 }
+
+.widgetPositionOne > img {
+  width: 70vh;
+}
+
 
 .widgetPositionTwo {
   position: absolute;
@@ -181,8 +193,8 @@ body {
 
 .widgetPositionThree {
   position: absolute;  
-  left: 15vw;
-  bottom: 50vh;
+  right: 10vw;
+  bottom: 45vh;
   z-index: 0;
 }
 

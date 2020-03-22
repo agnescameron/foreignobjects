@@ -1,6 +1,7 @@
 import React from 'react';
 import './Components.css';
 import publicIP from 'react-native-public-ip';
+import Hogs from '../components/Hogs';
 
 export default class IP extends React.Component{
   
@@ -9,6 +10,7 @@ export default class IP extends React.Component{
     this.state = {
           ip: '',
           ipData: '',
+          hogs: '',
     }
   }
 
@@ -34,14 +36,25 @@ componentDidMount(){
       this.setState({ipData : ipresponse})
       })
     })
+
+  fetch("https://www.quandl.com/api/v3/datasets/LBMA/GOLD.json")
+  .then (
+  (quandl) => {
+    return quandl.json();
+  }).then (
+  (quandl) => {
+  // console.log ("hog data shows", quandl)
+  this.setState ({ hogs : quandl })
+  })
 }
 
 render() {
      const ipData = this.state.ipData;
+     console.log(this.state.hogs);
      // console.log("ipData is", ipData)  Hog lows: {hogs.}... Hog changes: {hogs.}... Hog value:{hogs.}...
     return (
   <div className="ipAddress">
-            Another fine day to be quarantined in {ipData.city}. {/* Population {ipData.country_population}... {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} */}
+          Another fine day to be quarantined {ipData.city && "in " + ipData.city}! {this.state.hogs && <Hogs hogs={this.state.hogs} /> } {/* Population {ipData.country_population}... {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} */}
     </div>
     );
   }

@@ -31,7 +31,7 @@ export default class Home extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      hogs : '',
+      // hogs : '',
       timeout : false
     }
   }
@@ -39,15 +39,6 @@ export default class Home extends React.Component{
   static contextType = ProjectContext;
 
 componentDidMount() {
-  fetch("https://www.quandl.com/api/v3/datasets/CHRIS/CME_LN1.json")
-  .then (
-  (quandl) => {
-    return quandl.json();
-  }).then (
-  (quandl) => {
-  // console.log ("hog data shows", quandl)
-  this.setState ({ hogs : quandl })
-  })
 
 }
 
@@ -112,7 +103,7 @@ componentDidMount() {
           }}
           </ProjectContext.Consumer> */}
 
-          <DragBox>
+{/*          <DragBox>
             <div>
                 {this.state.hogs &&
                   <Circle>
@@ -120,7 +111,7 @@ componentDidMount() {
                   </Circle>               
                 }
             </div> 
-          </DragBox>
+          </DragBox> */}
 
         <Footer />
 

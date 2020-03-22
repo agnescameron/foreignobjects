@@ -5,16 +5,14 @@ export default class Hogs extends React.Component{
 
 render() {
   const hogs = this.props.hogs;
-  // console.log(hogs)
+  console.log(hogs)
   return (
-    <a href={ "https://www.quandl.com/data/" + hogs.dataset.dataset_code + "/" + hogs.dataset.database_code}>
-      <div className="ipAddress">
-        Hog for the day: {hogs ? hogs.dataset.data[0][0] : "no hogs"}... 
-        Hog lows: {hogs ? hogs.dataset.data[0][2] : "no hogs"}... 
-        Hog changes: {hogs ? hogs.dataset.data[0][3] : "no hogs"}... 
-        {hogs ? hogs.dataset.name : "no hogs"}: {hogs ? hogs.dataset.data[0][5] : "no hogs"}...
-      </div>
-    </a>
+      <span className="ipAddress">
+        An ounce of gold today costs only ${hogs ? hogs.dataset.data[0][1] : "no hogs"} today! {/* down ${ Math.abs(hogs.dataset.data[0][1] - hogs.dataset.data[7][1]).toFixed(2) } since last week.*/} Always believe in your soul...
+
+        {/* This time last week it was ${hogs ? hogs.dataset.data[7][1] : "no hogs"}.
+        This time last year it was ${hogs ? hogs.dataset.data[365][1] : "no hogs"}.*/}
+      </span>
     );
   }
 }
