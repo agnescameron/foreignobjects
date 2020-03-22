@@ -37,7 +37,7 @@ componentDidMount(){
       })
     })
 
-  fetch("https://www.quandl.com/api/v3/datasets/LBMA/GOLD.json")
+  fetch(cors + "https://www.quandl.com/api/v3/datasets/LBMA/GOLD")
   .then (
   (quandl) => {
     return quandl.json();
@@ -50,7 +50,7 @@ componentDidMount(){
 
 render() {
      const ipData = this.state.ipData;
-     console.log(this.state.hogs);
+     // console.log(this.state.hogs);
      // console.log("ipData is", ipData)  Hog lows: {hogs.}... Hog changes: {hogs.}... Hog value:{hogs.}...
     return (
   <div className="ipAddress">

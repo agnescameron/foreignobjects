@@ -11,6 +11,11 @@
         animation: fadein 0.5s;
   }
 
+.projectPageContainer .Top {
+  visibility: hidden;
+  flex: none;
+}
+
 .projectPage {
   display: flex;
   width: 100vw;

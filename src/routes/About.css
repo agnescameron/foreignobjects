@@ -15,6 +15,7 @@
 }
 
 .aboutContainer .Top {
+	visibility: hidden;
 	flex: none;
 }
 

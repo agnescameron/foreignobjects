@@ -25,6 +25,12 @@
 	color: #00f;
 }
 
+.projectsContainer .Top {
+  visibility: hidden;
+  flex: none;
+}
+
+
 /*------------------------ projectModule ------------------------ */
 
 
