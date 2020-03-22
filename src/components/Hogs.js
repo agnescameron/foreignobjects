@@ -5,7 +5,7 @@ export default class Hogs extends React.Component{
 
 render() {
   const hogs = this.props.hogs;
-  console.log(hogs)
+  // console.log(hogs)
   return (
       <span className="ipAddress">
         An ounce of gold today costs only ${hogs ? hogs.dataset.data[0][1] : "no hogs"} today! {/* down ${ Math.abs(hogs.dataset.data[0][1] - hogs.dataset.data[7][1]).toFixed(2) } since last week.*/} Always believe in your soul...
