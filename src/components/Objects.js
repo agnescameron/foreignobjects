@@ -11,7 +11,7 @@ export default class Objects extends React.Component{
     const index = this.props.index
     const dumbImage = this.props.dumbImage[index]
     const fileName = (this.props.dumbImage[index].filename).substring(0, (this.props.dumbImage[index].filename).length -4)
-    console.log(dumbImage)
+    // console.log(dumbImage)
 
     // var image = document.images[0];
     // var downloadingImage = new Image();

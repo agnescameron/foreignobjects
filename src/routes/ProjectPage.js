@@ -24,7 +24,7 @@ export default class ProjectPage extends React.Component{
   render () {
   		// return current proejct by matching id with the "Unique URL" field in the object 
   		const project = this.context.find(o => o.fields["Unique URL"] === this.state.id);
-  		console.log(project);
+  		// console.log(project);
   	return (
       <div className="App Bg-white">
 	      <div className="projectPageContainer">

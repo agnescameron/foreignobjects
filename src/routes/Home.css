@@ -65,7 +65,7 @@ body {
   line-height: 1;
   margin: 2vh;
   flex: 1 100%;
-  text-align: right;
+  text-align: left;
   z-index: 10;
   /*border: 1px solid;*/
 }

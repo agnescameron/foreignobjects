@@ -41,7 +41,7 @@ render() {
      // console.log("ipData is", ipData)  Hog lows: {hogs.}... Hog changes: {hogs.}... Hog value:{hogs.}...
     return (
   <div className="ipAddress">
-            {ipData.city}... {ipData.country_name}... Population {ipData.country_population}... { ipData.in_eu ? "In the EU..." : "Not in the EU..." } {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} 
+            Another fine day to be quarantined in {ipData.city}. {/* Population {ipData.country_population}... {ipData.longitude}&deg; N, {ipData.latitude}&deg; E, {ipData.org} */}
     </div>
     );
   }
