@@ -37,7 +37,7 @@ componentDidMount(){
       })
     })
 
-  fetch(cors + "https://www.quandl.com/api/v3/datasets/LBMA/GOLD")
+  fetch("https://www.quandl.com/api/v3/datasets/LBMA/GOLD")
   .then (
   (quandl) => {
     return quandl.json();
