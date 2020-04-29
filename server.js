@@ -8,8 +8,6 @@ const bundler = new Bundler('src/site/index.html', {
 
 const app = express()
 
-// i made a change to this file
-
 app.use(
   '/.netlify/functions',
   proxy({
@@ -22,4 +20,6 @@ app.use(
 
 app.use(bundler.middleware())
 
-app.listen(Number(process.env.PORT || 1234))
+app.listen(Number(process.env.PORT || 1234), function() {
+	console.log('server listening on port 1234')
+})

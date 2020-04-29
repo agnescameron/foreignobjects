@@ -3,7 +3,7 @@ const process_api_key = process.env.AIRTABLE_API_KEY;
 const MAX_RECORDS = 50;
 
 exports.handler = async (event) => {
-  // We can retrive type of http method in event parameter
+  // Retrive type of http method
   const { httpMethod } = event;
   
   if (httpMethod === 'GET') {
@@ -14,4 +14,3 @@ exports.handler = async (event) => {
   }
   return { statusCode: 404 };
 }
-
