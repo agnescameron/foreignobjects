@@ -17,7 +17,7 @@ static contextType = ProjectContext;
 	return (
   <DragBox>
     { this.props.index<2 &&
-      <div className={this.props.index%2 === 0 ? "projectHome imgWrapper": "projectHomeOffset imgWrapper"}>
+      <div className={this.props.index%2 === 0 ? "projectHome App-link": "projectHomeOffset App-link"}>
          <img draggable="false" src={project.fields["Cover Image"][0].url} alt={project.fields["Project Name"]}/>             
                 <div className="homeProjectModuleText">
                   <Link className="App-link" to={{  pathname: "/" + [project.fields["Unique URL"]] }}>

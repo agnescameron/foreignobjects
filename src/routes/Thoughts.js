@@ -1,5 +1,4 @@
 import React from 'react';
-import './Thoughts.css';
 import Top from '../components/Top.js';
 import { Link } from 'react-router-dom';
 

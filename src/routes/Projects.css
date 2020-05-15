@@ -30,9 +30,7 @@
   flex: none;
 }
 
-
 /*------------------------ projectModule ------------------------ */
-
 
 .projectModule {
   display: -webkit-box;
@@ -85,9 +83,6 @@
 .projectModuleReverse img {
   width: 50vw;
   opacity: 0.75;
-}
-
-.imgWrapper {
 }
 
 .asideProjectInfo {
@@ -183,7 +178,6 @@
 		margin: 0 2vh 0 2vh;
 	}
 
-/*where to display image in mobile?*/
 	.aboutImage {
 		display: none;
 		position: relative;

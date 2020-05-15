@@ -1,14 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './About.css';
-// import Circle from '../components/Circle.js';
 import Top from '../components/Top';
 import Footer from '../components/Footer';
-
 import aboutImage from "../assets/profile.gif";
-// import DragBox from '../components/DragBox';
 
-import { Link } from 'react-router-dom';
+// import Circle from '../components/Circle.js';
+// import DragBox from '../components/DragBox';
 
 export default class About extends React.Component{
 
@@ -65,94 +64,93 @@ export default class About extends React.Component{
                   rel="noopener noreferrer"
                   >NEW INC.</a>, at the New Museum in NYC. 
                 </div>
+              </div>
+
+              <div className="aboutCapabilitiesContainer">
+                <div className="aboutHeading">
+                  CAPABILITIES
+                </div>
+                 <div className="aboutCapabilities">      
+                  <div>
+                    Exhibition Design<br />
+                    Web Development<br />
+                    Website Design<br />
+                    Simulation Design & Modeling<br />
+                    Cultural Strategy & Insight<br />
+                    Concept Design<br />
+                    Visual Identity Systems<br />
+                  </div>
+                  <div>      
+                    UX/UI Design<br />
+                    Software Development<br />
+                    Electronics Prototyping<br />
+                    Publication Design & Editing<br />
+                    Artists' Technical Consultation<br /> 
+                    Environmental Design<br />
+                    Architectural Design<br />
+                    Sound Design<br />
+                    Video Post-Production<br />
+                  </div>
+                </div>
+              </div>
+
+              <div className="aboutBioContainer">
+                <div className="aboutHeading">WHO ARE WE</div>
+
+                <div className="aboutBio">
+                  <img src="https://dl.airtable.com/.attachmentThumbnails/65e9a6bf98bb13a3d14cb74dbb9678f2/444f9fe3" alt="photograph of Agnes Fury Cameron" className="aboutBioImage" />
+                    <div className="aboutBioInfo">
+                      <div className="aboutBioHeading">
+                        AGNES FURY CAMERON</div>
+                      <div className="aboutBioBody">
+                        Agnes Fury Cameron (b. Brighton, UK) is a co-director of FOREIGN OBJECTS, where she develops hardware and software, and leads technical research projects. Her interests include simulation and modelling, machine intelligence and environmental sensing. She is a graduate of the MIT Media Lab, and holds a MEng degree in Information and Computer Engineering from the University of Cambridge.
+                      </div>
+                    </div>
                 </div>
 
-                    <div className="aboutCapabilitiesContainer">
-                      <div className="aboutHeading">
-                        CAPABILITIES
-                      </div>
-                       <div className="aboutCapabilities">      
-                        <div>
-                          Exhibition Design<br />
-                          Web Development<br />
-                          Website Design<br />
-                          Simulation Design & Modeling<br />
-                          Cultural Strategy & Insight<br />
-                          Concept Design<br />
-                          Visual Identity Systems<br />
-                        </div>
-                        <div>      
-                          UX/UI Design<br />
-                          Software Development<br />
-                          Electronics Prototyping<br />
-                          Publication Design & Editing<br />
-                          Artists' Technical Consultation<br /> 
-                          Environmental Design<br />
-                          Architectural Design<br />
-                          Sound Design<br />
-                          Video Post-Production<br />
-                        </div>
+                <div className="aboutBio">
+                  <img src="https://dl.airtable.com/.attachmentThumbnails/7918db4ff2cfca513a08b5b55a294719/f7a16ff9" alt="photograph of Sam Ghantous" className="aboutBioImage" />
+                    <div className="aboutBioInfo">
+                      <div className="aboutBioHeading">
+                        SAM GHANTOUS</div>
+                      <div className="aboutBioBody">
+                        Sam Ghantous (b. Muscat, Oman) is a co-director of FOREIGN OBJECTS, where he leads design projects focusing on architecture, exhibition design, and graphics. Sam has taught at Cornell AAP and MIT School of Architecture, from where he received his Master of Architecture. Sam's work addresses form, program, and media for working, living, and coming together under contemporary technological and social change.
                       </div>
                     </div>
+                </div> 
 
-                    <div className="aboutBioContainer">
-                      <div className="aboutHeading">WHO ARE WE</div>
-
-                      <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/65e9a6bf98bb13a3d14cb74dbb9678f2/444f9fe3" alt="photograph of Agnes Fury Cameron" className="aboutBioImage" />
-                          <div className="aboutBioInfo">
-                            <div className="aboutBioHeading">
-                              AGNES FURY CAMERON</div>
-                            <div className="aboutBioBody">
-                              Agnes Fury Cameron (b. Brighton, UK) is a co-director of FOREIGN OBJECTS, where she develops hardware and software, and leads technical research projects. Her interests include simulation and modelling, machine intelligence and environmental sensing. She is a graduate of the MIT Media Lab, and holds a MEng degree in Information and Computer Engineering from the University of Cambridge.
-                            </div>
-                          </div>
+                <div className="aboutBio">
+                  <img src="https://dl.airtable.com/.attachmentThumbnails/8b59dc95956e1c49c86edc614eeef7dd/f0a2796f" alt="photograph of Kalli Retzepi" className="aboutBioImage" />
+                    <div className="aboutBioInfo">
+                      <div className="aboutBioHeading">
+                        KALLI RETZEPI</div>
+                      <div className="aboutBioBody">
+                        Kalli Retzepi (b. Thessaloniki, Greece) is a co-director of FOREIGN OBJECTS. She is a graduate of the MIT Media Lab and also holds advanced degrees in engineering and neuroscience. Her work uses technology, design and images in order to explore the politics of digital interfaces, the narrative of the user and to imagine new metaphors for the Web.
                       </div>
-
-                      <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/7918db4ff2cfca513a08b5b55a294719/f7a16ff9" alt="photograph of Sam Ghantous" className="aboutBioImage" />
-                          <div className="aboutBioInfo">
-                            <div className="aboutBioHeading">
-                              SAM GHANTOUS</div>
-                            <div className="aboutBioBody">
-                              Sam Ghantous (b. Muscat, Oman) is a co-director of FOREIGN OBJECTS, where he leads design projects focusing on architecture, exhibition design, and graphics. Sam has taught at Cornell AAP and MIT School of Architecture, from where he received his Master of Architecture. Sam's work addresses form, program, and media for working, living, and coming together under contemporary technological and social change.
-                            </div>
-                          </div>
-                      </div> 
-
-                      <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/8b59dc95956e1c49c86edc614eeef7dd/f0a2796f" alt="photograph of Kalli Retzepi" className="aboutBioImage" />
-                          <div className="aboutBioInfo">
-                            <div className="aboutBioHeading">
-                              KALLI RETZEPI</div>
-                            <div className="aboutBioBody">
-                              Kalli Retzepi (b. Thessaloniki, Greece) is a co-director of FOREIGN OBJECTS. She is a graduate of the MIT Media Lab and also holds advanced degrees in engineering and neuroscience. Her work uses technology, design and images in order to explore the politics of digital interfaces, the narrative of the user and to imagine new metaphors for the Web.
-                            </div>
-                          </div>
-                      </div>
-
-                      <div className="aboutBio">
-                        <img src="https://dl.airtable.com/.attachmentThumbnails/895de0c593f4aa41de5f3ec5e342a66d/07cc1aba" alt="photograph of Gary Zhexi Zhang" className="aboutBioImage" />
-                          <div className="aboutBioInfo">
-                            <div className="aboutBioHeading">
-                              GARY ZHEXI ZHANG</div>
-                            <div className="aboutBioBody">
-                              Gary Zhexi Zhang (b. Suzhou, China) is a co-director of FOREIGN OBJECTS, where he focuses on cultural consultancy, curatorial research and exhibition design projects. He is an artist and writer whose work navigates socio-technical systems such as ecology, finance and the web. Gary received his S.M. from the MIT Program in Art, Technology and teaches communication design at the New School.
-                            </div>
-                          </div>
-                      </div>                
                     </div>
+                </div>
 
+                <div className="aboutBio">
+                  <img src="https://dl.airtable.com/.attachmentThumbnails/895de0c593f4aa41de5f3ec5e342a66d/07cc1aba" alt="photograph of Gary Zhexi Zhang" className="aboutBioImage" />
+                    <div className="aboutBioInfo">
+                      <div className="aboutBioHeading">
+                        GARY ZHEXI ZHANG</div>
+                      <div className="aboutBioBody">
+                        Gary Zhexi Zhang (b. Suzhou, China) is a co-director of FOREIGN OBJECTS, where he focuses on cultural consultancy, curatorial research and exhibition design projects. He is an artist and writer whose work navigates socio-technical systems such as ecology, finance and the web. Gary received his S.M. from the MIT Program in Art, Technology and teaches communication design at the New School.
+                      </div>
+                    </div>
+                </div>                
               </div>
+
+            </div>
 
             <div className="Recto">
             </div>
-           <Footer />
-
-
-              {/*<DragBox><Circle>look wow it turns this took soooo long to make i hope you like it</Circle></DragBox>*/}
-              <img src={aboutImage} className="aboutImage" alt="About Us" />
-            </div>
+            
+            <Footer />
+            <img src={aboutImage} className="aboutImage" alt="About Us" />
+          
+          </div>
         </div>  
       </div>
     );

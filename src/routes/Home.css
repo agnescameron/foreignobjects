@@ -3,33 +3,21 @@ body {
 }
 
 .Center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-self: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-
-.Center {
-  display: inline-block;
   text-align: center;
-  z-index: 1;
+  z-index: 0;
+  align-self: flex-end;
+  z-index: 3;
+
 }
+
 
 .centerText {
+  display: inline;
   font-family: "Adieu-Regular",'Helvetica', sans-serif;
   font-size: 17vh;
   line-height: 0.9;
   text-align: center;
-  z-index: 1;
-  /* border: 1px solid; */
+   /*border: 1px solid; */
 }
 
 .centerText a {
@@ -45,36 +33,12 @@ body {
   cursor:  url('../assets/cursor-click.png'), auto;
 }
 
-.Blurb {
-   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1s; /* Firefox < 16 */
-        -ms-animation: fadein 1s; /* Internet Explorer */
-         -o-animation: fadein 1s; /* Opera < 12.1 */
-            animation: fadein 1s;
-  font-size: 2.5vh;
-  line-height: 1.2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-grow: 2;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: left;
-  /* border: 1px solid; */
-}
-
 .Top, .Right, .Left, .Bottom {
-
   visibility: visible;
   line-height: 1;
   margin: 2vh;
   flex: 1 100%;
-  text-align: left;
   z-index: 10;
-  /*border: 1px solid;*/
 }
 
 .Bottom {
@@ -95,23 +59,42 @@ body {
 
 /* ------------------------------------  WIDGETS ------------------------------------   */
 
+/* the two home display projects, .projectHome and .projectHome */
+
+.projectHome {
+  position: absolute;
+  left: 15vh;
+  top: 53vh;
+  z-index: 10;
+}
+
+.projectHomeOffset {
+  position: absolute;
+  left: 35vh;
+  top: 58vh;
+  z-index: 10;
+}
+
+.projectHomeOffset img, .projectHome img {
+  width: 30vw;
+  opacity: 0.7;
+  z-index: 10;
+}
 
 .homeProjectModuleText {
  font-family: 'Falster';
- font-size: 8vh;
+ font-size: 7vh;
+ width: 100%;
  color: #fff;
  bottom: 30%;
- right: 50%;
+ right: 10%;
  position: absolute;
  visibility: hidden;
  line-height: 0.9;
  text-shadow: 2px 2px 3px #00f;
- text-trangitsform: uppercase;
  zIndex: 10;
-/* border: 1px white solid;*/
+ /*border: red 1px solid;*/
 }
-
-/* the two home display projects*/
 
 .projectHome:hover .homeProjectModuleText {
   visibility: visible;
@@ -132,29 +115,8 @@ body {
   transition: 0.1s;
   }
 
+/* Draggable circlular text widget */
 
-.projectHome {
-  position: absolute;
-  left: 10vh;
-  top: 53vh;
-  z-index: 1;
-}
-
-.projectHomeOffset {
-  position: absolute;
-  left: 20vh;
-  top: 58vh;
-  z-index: 1;
-}
-
-.projectHomeOffset img, .projectHome img {
-  width: 30vw;
-  opacity: 0.7;
-  z-index: 10;
-}
-
-
-/* circling dragbox */
 .circleText {
   left: 80vw;
   top: -10vh;  
@@ -183,28 +145,18 @@ body {
   width: 70vh;
 }
 
-
 .widgetPositionTwo {
   position: absolute;
   right: 0vw;
   bottom: 0vh;
-  z-index: 10;
+  z-index: 1;
 }
 
 .widgetPositionThree {
   position: absolute;  
   right: 10vw;
   bottom: 45vh;
-  z-index: 0;
-}
-
-.widgetPositionFour {
-  position: absolute;  
-  left: 100vw;
-  top: 5vh;
-  z-index: 0;
-  transform: rotate(90deg);
-  transform-origin: top left;
+  z-index: 1;
 }
 
 /*---------------------------animation---------------------------*/

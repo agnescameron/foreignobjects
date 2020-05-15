@@ -25,10 +25,8 @@ export default class Projects extends React.Component{
             <ProjectContext.Consumer>
               {value => { 
                 const projects = this.context
-                // console.log(projects)
                 return (
                   projects.map((project, i) => {
-                  // Return the element. Also pass key
                     return (<ProjectModule key={i} index={i} project={project} />)
                   })
                   )

@@ -21,7 +21,6 @@ import ProjectContext from '../ProjectContext';
 import { Link } from 'react-router-dom';
 
 import WorkButton from '../assets/WorkButton.png';
-import Thoughts from '../assets/thoughts.gif';
 import Bubbles from '../assets/bubbles.gif';
 import Bearcam from '../assets/bearcam.gif';
 
@@ -31,7 +30,6 @@ export default class Home extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      // hogs : '',
       timeout : false
     }
   }
@@ -72,8 +70,7 @@ componentDidMount() {
         <Left /> 
       
         <Widget type="projects" place="Widget widgetPositionOne">{WorkButton}</Widget>
-        <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget>
-{/*}        <Widget type="thoughts" place="Widget widgetPositionFour">{Thoughts}</Widget> */}
+{/*        <Widget place="Widget widgetPositionTwo">{Bearcam}</Widget> */}
         <Widget place="Widget widgetPositionThree">{Bubbles}</Widget>
 
           <ProjectContext.Consumer>
