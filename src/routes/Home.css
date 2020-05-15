@@ -202,7 +202,7 @@ body {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
           justify-content: space-between;
-          padding: 2vh 0 2vh 0;
+          padding: 2vh 0 15vh 0;
         }
 
   .widgetPositionThree {
@@ -291,6 +291,10 @@ body {
   .mobileTitleCenter {
     text-align: center;
   } 
+
+  .mobileNavContainer .App-link {
+    text-decoration: none;
+  }
   
   .Orange {
     color: #FF696B;

@@ -56,9 +56,9 @@ componentDidMount() {
       <div className="App Bg-blue">
         <div className="mobileHeader">FOREIGN OBJECTS</div>
         <div className="mobileNavContainer">
-          <div className="mobileNavLeft"><span><Link to='/' className="Orange Arrow">&#8598;</Link>HOME</span></div>
-          <div className="mobileNavCenter">ABOUT<span><Link to='/About' className="Orange Arrow">&#8600;</Link></span></div>
-          <div className="mobileNavRight">WORK<span><Link to='/Projects' className="Orange Arrow">&#8594;</Link></span></div>
+          <div className="mobileNavLeft"><span><Link to='/' className="App-link"> <span className="Orange Arrow">&#8598;</span>HOME</Link></span></div>
+          <div className="mobileNavCenter"><span><Link to='/About' className="App-link">ABOUT<span className="Orange Arrow">&#8600;</span></Link></span></div>
+          <div className="mobileNavRight"><span><Link to='/Projects' className="App-link">WORK<span className="Orange Arrow">&#8594;</span></Link></span></div>
         </div>
               <div className="Center">          
         <Center />
