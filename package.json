@@ -9,7 +9,7 @@
     "dark-sky-api": "^0.6.32",
     "express": "^4.17.1",
     "geoip-lite": "^1.4.0",
-    "http-proxy": "^1.18.0",
+    "http-proxy": "^1.18.1",
     "http-proxy-middleware": "^0.20.0",
     "ip-to-location": "^1.0.1",
     "iplocation": "^6.1.0",
