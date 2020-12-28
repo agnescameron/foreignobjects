@@ -10,7 +10,6 @@ body {
 
 }
 
-
 .centerText {
   display: inline;
   font-family: "Adieu-Regular",'Helvetica', sans-serif;
@@ -63,15 +62,15 @@ body {
 
 .projectHome {
   position: absolute;
-  left: 15vh;
-  top: 53vh;
+  left: 10vh;
+  top: 17vh;
   z-index: 10;
 }
 
 .projectHomeOffset {
   position: absolute;
-  left: 35vh;
-  top: 58vh;
+  right: 16vh;
+  top: 42vh;
   z-index: 10;
 }
 
