@@ -7,7 +7,7 @@
     "babel-cli": "^6.26.0",
     "circletype": "^2.3.0",
     "dark-sky-api": "^0.6.32",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "geoip-lite": "^1.4.0",
     "http-proxy": "^1.18.0",
     "http-proxy-middleware": "^0.20.0",
